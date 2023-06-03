@@ -3,7 +3,9 @@
 const Comp01 = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <form className="flex flex-col w-11/12 md:w-1/2 lg:w-1/3 xl:w-1/4 px-4 py-8 bg-white rounded-lg shadow-md">
+      <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
+        <p id="close" className=" absolute top-0 right-0">X</p>
+        <p>Claim your gift</p>
         <input
           type="text"
           placeholder="Your Name"

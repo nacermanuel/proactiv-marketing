@@ -1,14 +1,14 @@
 import styles from './page.module.css'
 
 import Comp01 from './components/Comp01'
+import  {Spinning}  from './components/Spinning/Spinning'
 
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-        <div id="containerNEW" className="flex justify-center items-start w-[1200px] h-auto min-h-[100vh] pt-4">
+        <div id="containerNEW" className="flex flex-col justify-center items-start h-auto pt-4 ">
           <Comp01/>
+          <Spinning/>
         </div>
-    </main>
   )
 }
