@@ -38,22 +38,22 @@ export const Spinning = () => {
   },[calc])
 
   return (
-    <>
-    <p>{prize}</p>
-    <div className='flex justify-center max-w-full items-center my-7 px-2'>
-      <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
-        <div class="containerDIV containerONE">3 months<br/>FREE</div>
-        <div class="containerDIV containerTWO">3 mos. free<br/>+ 3 mos. half<br/>price</div>
-        <div class="containerDIV containerTHREE">6 months<br/>FREE</div>
-        <div class="containerDIV containerFOUR">6 mos. free<br/>+ 6 mos. half<br/>price</div>
-        <div class="containerDIV containerFIVE">9 months<br/>FREE</div>
-        <div class="containerDIV containerSIX">12 months<br/>FREE</div>
-      </div>
-   		<span class="mid"></span>
+    <div id='containerSpinner' className='h-auto w-full bg-slate-200 flex flex-col justify-center items-center'>
+      <p>{prize}</p>
+      <div className='flex justify-center max-w-[95%] items-center my-7 px-2'>
+        <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
+          <div class="containerDIV containerONE">3 months<br/>FREE</div>
+          <div class="containerDIV containerTWO">3 mos. free<br/>+ 3 mos. half<br/>price</div>
+          <div class="containerDIV containerTHREE">6 months<br/>FREE</div>
+          <div class="containerDIV containerFOUR">6 mos. free<br/>+ 6 mos. half<br/>price</div>
+          <div class="containerDIV containerFIVE">9 months<br/>FREE</div>
+          <div class="containerDIV containerSIX">12 months<br/>FREE</div>
+        </div>
+        <span class="mid"></span>
+        <div class="stoper"></div>
+      </div>    
       <button id="spin" onClick={handleSpin}>Spin</button>
-   		<div class="stoper"></div>
-    </div>    
-    </>
+    </div>
 
 
   )
