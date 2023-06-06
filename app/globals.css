@@ -14,9 +14,14 @@
 
 .fontTitle{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
+    color: brown;
     line-height: 1;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
 }
 
 .fontGeneral{
