@@ -1,9 +1,10 @@
-import styles from './page.module.css'
+
 
 import Comp01 from './components/Comp01'
 import  {Spinning}  from './components/Spinning/Spinning'
 import Comp02 from './components/Comp02'
 import Comp03 from './components/Comp03'
+import Comp04 from './components/Comp04'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Spinning/>
           <Comp02/>
           <Comp03/>
+          <Comp04/>
         </div>
   )
 }

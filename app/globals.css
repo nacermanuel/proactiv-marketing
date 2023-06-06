@@ -3,3 +3,46 @@
 @tailwind utilities;
 
 
+:root {
+    background-color: white;
+    /* --main-bg-color: black;
+    --text-color-primary: red;
+    --text-color-secondary: blue; */
+}
+
+
+
+.fontTitle{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.fontGeneral{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.fontForm{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.buttonsMain{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgb(246, 81, 59);
+    color: rgb(255 255 255 );
+    border-radius: 0.5rem ;
+}
+
+.buttonsMain:hover{
+    background-color: rgb(37 99 235)
+}
