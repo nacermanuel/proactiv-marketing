@@ -7,6 +7,7 @@ import Comp03 from './components/Comp03'
 import Comp04 from './components/Comp04'
 import ReferalMktText from './components/ReferalMktText.jsx'
 import ReferalMktDiagram from './components/ReferalMktDiagram'
+import FAQ from './components/FAQ'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Comp04/>
           <ReferalMktText/>
           <ReferalMktDiagram/>
+          <FAQ/>
         </div>
   )
 }
