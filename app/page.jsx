@@ -37,8 +37,6 @@ export default function Home() {
       <Faqs/>
       <span className="w-full bg-black h-1"></span>
 
-
-
       <CardsFree/>
       <span className="w-full bg-black h-1"></span>
 
