@@ -5,7 +5,7 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px gray;
-    transition: 3s all;
+    transition: 13s transform;
 }
 
 .containerDIV {
