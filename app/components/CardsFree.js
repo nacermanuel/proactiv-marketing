@@ -4,7 +4,7 @@ const CardsFree = () => {
 
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
 
-        <p id="close" className=" absolute top-0 right-0">X</p>
+        {/* <p id="close" className=" absolute top-0 right-0">X</p> */}
         <p className="fontTitle">100 FREE PLASTIC CARDS</p>
 
 
