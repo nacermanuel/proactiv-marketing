@@ -8,6 +8,7 @@ import ReferalMktDiagram from "./components/ReferalMktDiagram.jsx";
 import Faqs from "./components/Faqs.jsx";
 import CardsFree from "./components/CardsFree";
 import RequiredInformation from "./components/RequiredInformation.jsx";
+import CardSamples from "./components/CardSamples";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       id="containerNEW"
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
+      <CardSamples/>
+      <span className="w-full bg-black h-1"></span>      
 
       <ClaimGiftForm />
       <span className="w-full bg-black h-1"></span>

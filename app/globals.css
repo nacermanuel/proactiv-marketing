@@ -110,3 +110,25 @@
     /* Adjust the value to fit the content */
     transition: max-height 0.3s ease;
 }
+
+/* CODE USED FOR ZOOM IMAGE */
+
+.samples-zoomable-imageLeft {
+  transition: transform 0.3s;
+}
+
+.samples-zoomable-imageLeft:hover {
+
+  transform: translate(60%, 0) scale(2.2);
+  /* Adjust the scale factor as needed */
+}
+
+.samples-zoomable-imageRight {
+  transition: transform 0.3s;
+}
+
+.samples-zoomable-imageRight:hover {
+
+  transform: translate(-60%, 0) scale(2.2);
+  /* Adjust the scale factor as needed */
+}
