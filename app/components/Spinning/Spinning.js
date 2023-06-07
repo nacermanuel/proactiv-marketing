@@ -44,7 +44,7 @@ export const Spinning = () => {
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
         <p>{prize}</p>
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
-          <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
+          <div class="containerCSS" style={{transform: `rotate(${deg}deg) translateZ(0)`}}>
             <div class="containerDIV containerONE"><div className='text-center w-[42px] h-[115px]'> 3 months FREE</div></div>
             <div class="containerDIV containerTWO"><div className='text-center w-[42px] h-[115px]'> 3M free + 3M <p className='text-sm inline'>1/2</p> price </div></div>
             <div class="containerDIV containerTHREE"><div className='text-center w-[42px] h-[115px]'>6 months FREE</div></div>
