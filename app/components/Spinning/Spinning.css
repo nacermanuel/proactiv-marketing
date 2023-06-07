@@ -1,7 +1,7 @@
 .containerCSS {
     height: 350px;
     width: 350px;
-    background: #4ed4c6;
+  
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -23,39 +23,39 @@
     font-size: 18px;
 
     font-weight: 400;
-    color: #008276;
+    color: #ffffff;
     writing-mode: vertical-rl;
     padding-top: 15px;
     line-height: 1;
 }
 
 .containerONE {
-    background: #baf4ee;
+    background: var(--color-primary);
     left: 50%;
 }
 
 .containerTWO {
-    background: #4ed4c6;
+    background: var(--color-secondary);
     transform: rotate(60deg);
 }
 
 .containerTHREE {
-    background: #baf4ee;
+    background: var(--color-thrid);
     transform: rotate(120deg);
 }
 
 .containerFOUR {
-    background: #4ed4c6;
+    background: var(--color-primary);
     transform: rotate(180deg);
 }
 
 .containerFIVE {
-    background: #baf4ee;
+    background: var(--color-secondary);
     transform: rotate(240deg);
 }
 
 .containerSIX {
-    background: #4ed4c6;
+    background: var(--color-thrid);
     transform: rotate(300deg);
 }
 
@@ -64,10 +64,10 @@
     width: 25px;
     border-radius: 50%;
     position: absolute;
-    background: #008276;
+    background: #1b6146;
 }
 
-#spin {
+/* #spin {
     height: 60px;
     width: 200px;
     background: #4ed4c6;
@@ -79,7 +79,7 @@
     cursor: pointer;
     box-shadow: 0 5px 10px gray;
     transition: 0.2s all;
-}
+} */
 
 #spin:hover {
     box-shadow: none;
@@ -88,7 +88,7 @@
 .stoper {
     height: 30px;
     width: 40px;
-    background: #ffd600;
+    background: var(--color-secondary);
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     margin-top: -350px;
