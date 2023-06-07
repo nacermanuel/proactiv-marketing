@@ -43,6 +43,7 @@ export const Spinning = () => {
       <p className="fontTitle">Spinning Wheel</p>
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
         <p>{prize}</p>
+        <p>testing{deg}</p>
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
           <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
           {/* <div class="containerCSS" style={{rotate: `${deg}deg`}}> */}
