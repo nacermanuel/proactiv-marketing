@@ -53,9 +53,9 @@ export const Spinning = () => {
             <div class="containerDIV containerSIX"><div className='text-center w-[42px] h-[115px]'>12 months FREE</div></div> */}
 
             <div class="containerDIV containerONE"> 3 months FREE</div>
-            <div class="containerDIV containerTWO"> 3M free + 3M <p className='text-sm inline'>1/2</p> price </div>
+            <div class="containerDIV containerTWO"> 3M free + 3M price </div>
             <div class="containerDIV containerTHREE">6 months FREE</div>
-            <div class="containerDIV containerFOUR">6M free + 6M <p className='text-sm inline'>1/2</p>  price</div>
+            <div class="containerDIV containerFOUR">6M free + 6M  price</div>
             <div class="containerDIV containerFIVE">9 months FREE</div>
             <div class="containerDIV containerSIX">12 months FREE</div>
 

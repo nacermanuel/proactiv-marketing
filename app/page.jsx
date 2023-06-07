@@ -1,5 +1,5 @@
 import ClaimGiftForm from "./components/ClaimGiftForm";
-import { Spinning } from "./components/Spinning/Spinning.jsx";
+import { Spinning } from "./components/Spinning/Spinning";
 import CardsForm from "./components/CardsForm";
 import ArtworkDelivery from "./components/ArtworkDelivery";
 import SoftwareSubscription from "./components/SoftwareSubscription.jsx";

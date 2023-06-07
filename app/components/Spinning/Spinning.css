@@ -1,7 +1,6 @@
 .containerCSS {
     height: 350px;
     width: 350px;
-  
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -21,7 +20,6 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 18px;
-
     font-weight: 400;
     color: #ffffff;
     writing-mode: vertical-rl;
