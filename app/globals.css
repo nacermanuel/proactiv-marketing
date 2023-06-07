@@ -7,7 +7,7 @@
   /* --main-bg-color: black;
     --text-color-primary: red;
     --text-color-secondary: blue; */
-  --color-primary: rgb(246, 81, 59);
+  --color-primary: rgb(165, 42, 42);
   --color-secondary: rgba(246, 81, 59, 0.664);
   --color-thrid: rgba(209, 93, 78, 0.664);
 }
@@ -33,13 +33,20 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  color: brown;
+  color: var(--color-primary);
   line-height: 1;
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.fontSubTitle {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .fontGeneral {
