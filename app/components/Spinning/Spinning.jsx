@@ -40,7 +40,7 @@ export const Spinning = () => {
   return (
 
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
-      <p className="fontTitle">SPINWHEEL</p>
+      <p className="fontTitle">Spinning Wheel</p>
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
         <p>{prize}</p>
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
@@ -56,7 +56,7 @@ export const Spinning = () => {
           <div class="stoper"></div>
         </div>    
       </div>
-      <button className='buttonsMain' onClick={handleSpin} >Spin</button>
+      <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
 
     </div>
 
