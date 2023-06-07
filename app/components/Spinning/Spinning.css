@@ -34,27 +34,27 @@
 
 .containerTWO {
     background: var(--color-secondary);
-    transform: rotate(60deg);
+    rotate: 60deg;
 }
 
 .containerTHREE {
     background: var(--color-thrid);
-    transform: rotate(120deg);
+    rotate: 120deg;
 }
 
 .containerFOUR {
     background: var(--color-primary);
-    transform: rotate(180deg);
+    rotate: 180deg;
 }
 
 .containerFIVE {
     background: var(--color-secondary);
-    transform: rotate(240deg);
+    rotate: 240deg;
 }
 
 .containerSIX {
     background: var(--color-thrid);
-    transform: rotate(300deg);
+    rotate: 300deg;
 }
 
 .mid {
