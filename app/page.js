@@ -4,6 +4,8 @@ import Comp02 from "./components/Comp02";
 import Comp03 from "./components/Comp03";
 import Comp04 from "./components/Comp04";
 import SoftwareSubscription from "./components/SoftwareSubscription";
+import ReferalMktText from "./components/ReferalMktText.jsx";
+import ReferalMktDiagram from "./components/ReferalMktDiagram";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Comp02 />
       <Comp03 />
       <Comp04 />
+      <ReferalMktText />
+      <ReferalMktDiagram />
     </div>
   );
 }
