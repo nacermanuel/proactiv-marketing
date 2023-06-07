@@ -45,19 +45,19 @@ export const Spinning = () => {
         <p>{prize}</p>
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
           <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
-            {/* <div class="containerDIV containerONE"><div className='text-center w-[42px] h-[115px]'> 3 months FREE</div></div>
+            <div class="containerDIV containerONE"><div className='text-center w-[42px] h-[115px]'> 3 months FREE</div></div>
             <div class="containerDIV containerTWO"><div className='text-center w-[42px] h-[115px]'> 3M free + 3M <p className='text-sm inline'>1/2</p> price </div></div>
             <div class="containerDIV containerTHREE"><div className='text-center w-[42px] h-[115px]'>6 months FREE</div></div>
             <div class="containerDIV containerFOUR"><div className='text-center w-[42px] h-[115px]'>6M free + 6M <p className='text-sm inline'>1/2</p>  price</div></div>
             <div class="containerDIV containerFIVE"><div className='text-center w-[42px] h-[115px]'>9 months FREE</div></div>
-            <div class="containerDIV containerSIX"><div className='text-center w-[42px] h-[115px]'>12 months FREE</div></div> */}
+            <div class="containerDIV containerSIX"><div className='text-center w-[42px] h-[115px]'>12 months FREE</div></div>
 
-            <div class="containerDIV containerONE"> 3 months FREE</div>
+            {/* <div class="containerDIV containerONE"> 3 months FREE</div>
             <div class="containerDIV containerTWO"> 3M free + 3M price </div>
             <div class="containerDIV containerTHREE">6 months FREE</div>
             <div class="containerDIV containerFOUR">6M free + 6M  price</div>
             <div class="containerDIV containerFIVE">9 months FREE</div>
-            <div class="containerDIV containerSIX">12 months FREE</div>
+            <div class="containerDIV containerSIX">12 months FREE</div> */}
 
 
           </div>

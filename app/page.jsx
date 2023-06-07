@@ -16,8 +16,8 @@ export default function Home() {
       id="containerNEW"
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
-      {/* <CardSamples/>
-      <span className="w-full bg-black h-1"></span>       */}
+      <CardSamples/>
+      <span className="w-full bg-black h-1"></span>      
 
       <ClaimGiftForm />
       <span className="w-full bg-black h-1"></span>
