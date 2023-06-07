@@ -1,6 +1,6 @@
 
 
-const Comp04 = () => {
+const ArtworkDelivery = () => {
 
   return (
     <div className="flex flex-col justify-center items-center  h-full w-[100vw]">
@@ -16,4 +16,4 @@ const Comp04 = () => {
   )
 }
 
-export default Comp04
+export default ArtworkDelivery
