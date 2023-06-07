@@ -1,6 +1,6 @@
 
 
-const FAQ = () => {
+const Faqs = () => {
 
 
   return (
@@ -192,4 +192,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default Faqs

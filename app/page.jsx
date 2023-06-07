@@ -4,10 +4,10 @@ import CardsForm from "./components/CardsForm";
 import ArtworkDelivery from "./components/ArtworkDelivery";
 import SoftwareSubscription from "./components/SoftwareSubscription.jsx";
 import ReferalMktText from "./components/ReferalMktText.jsx";
-import ReferalMktDiagram from "./components/ReferalMktDiagram";
-import FAQ from "./components/FAQ";
+import ReferalMktDiagram from "./components/ReferalMktDiagram.jsx";
+import Faqs from "./components/Faqs.jsx";
 import CardsFree from "./components/CardsFree";
-import RequiredInformation from "./components/RequiredInformation";
+import RequiredInformation from "./components/RequiredInformation.jsx";
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
       <ReferalMktDiagram />
       <span className="w-full bg-black h-1"></span>
 
-      <FAQ/>
+      <Faqs/>
       <span className="w-full bg-black h-1"></span>
 
 
