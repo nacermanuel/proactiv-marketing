@@ -7,6 +7,7 @@ const SoftwareSubscription = () => {
   const [period, setPeriod] = useState(0);
   const [total, setTotal] = useState();
 
+
   const changePeriod = (e) => {
     setPeriod(e.target.value);
   };
@@ -41,7 +42,7 @@ const SoftwareSubscription = () => {
       <p className="fontTitle text-center colorPrimary">
         Get your free software subscription
       </p>
-      <p className="fontTitle my-8 text-center">
+      {/* <p className="fontTitle my-8 text-center">
         You have won{" "}
         <span className="fontTitle" style={{color: "rgba(246, 81, 59, 0.664)"}}>
           6 months FREE + 6 months{" "}
@@ -50,13 +51,19 @@ const SoftwareSubscription = () => {
           </span>{" "}
           price!!
         </span>
+      </p> */}
+
+      <p className="fontTitle my-8 text-center">
+        You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
       </p>
-      <h3 className="fontSubTitle colorPrimary mb-2">Software Subscription</h3>
-      <p className="fontGeneral">
-        After your FREE trial ONLY pay for what you need for as long as you
-        need.
+
+
+      <p className="fontSubTitle colorPrimary mb-2">Software Subscription</p>
+      <p className="fontGeneral" style={{textAlign: 'center'}}>
+        After your FREE trial ONLY pay for what features you want to use. <br />
+        (NO CONTRACT - cancel at any time - 30 days notice)
       </p>
-      <p>&#40;NO CONTRACT - 30 day rolling agreement&#41;</p>
+
       
       
       {/* <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
