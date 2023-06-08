@@ -5,7 +5,7 @@
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 10px gray;
-    transition: 10s transform;
+    transition: 7s transform;
 }
 
 .containerDIV {
@@ -20,41 +20,46 @@
     align-items: center;
     justify-content: flex-start;
     font-size: 18px;
-    font-weight: 400;
-    color: #ffffff;
+    font-weight: 700;
     writing-mode: vertical-rl;
     padding-top: 15px;
     line-height: 1;
 }
 
 .containerONE {
-    background: var(--color-primary);
+    background: #ff7504;
     left: 50%;
+    color: #000000;
 }
 
 .containerTWO {
-    background: var(--color-secondary);
+    background: #fbff0a;
     transform: rotate(60deg);
+    color: #000000;
 }
 
 .containerTHREE {
-    background: var(--color-thrid);
+    background: #0e2cec;
     transform: rotate(120deg);
+    color: #000000;
 }
 
 .containerFOUR {
-    background: var(--color-primary);
+    background: #ff0000;
     transform: rotate(180deg);
+    color: #000000;
 }
 
 .containerFIVE {
-    background: var(--color-secondary);
+    background: #00ff15;
     transform: rotate(240deg);
+    color: #000000;
 }
 
 .containerSIX {
-    background: var(--color-thrid);
+    background: #e100ff;
     transform: rotate(300deg);
+    color: #000000;
 }
 
 .mid {
@@ -86,7 +91,7 @@
 .stoper {
     height: 30px;
     width: 40px;
-    background: var(--color-secondary);
+    background: rgba(0, 255, 234, 0.842);
     position: absolute;
     clip-path: polygon(100% 0, 50% 100%, 0 0);
     margin-top: -350px;

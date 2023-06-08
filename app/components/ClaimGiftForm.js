@@ -4,8 +4,8 @@ const ClaimGiftForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
-        <p className="fontTitle">Free to 100 salon owners. Claim your gift today!</p>
-        
+        <p className="fontTitle">FREE to 100 Salon Owners - Value up to £653</p>
+        <p className="fontTitle">Claim Your FREE Gift Today!</p>        
          <label for="Name" className="fontForm mb-1">
           Full Name*
         </label>       
@@ -47,7 +47,7 @@ const ClaimGiftForm = () => {
           type="submit"
           className="px-4 py-2 buttonsMain"
         >
-          Click to claim your gift
+          Click to claim your FREE gift
         </button>
       </form>
     </div>
