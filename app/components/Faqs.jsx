@@ -5,7 +5,7 @@ const Faqs = () => {
 
   return (
 
-    <div className="flex flex-col justify-center items-center  h-full w-[100vw]">
+    <div className="flex flex-col justify-center items-center min-h-screen">
 
 
         <p className="fontTitle">Frequently Asked Questions</p>

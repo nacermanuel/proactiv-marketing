@@ -9,7 +9,7 @@
     --text-color-secondary: blue; */
   --color-primary: rgb(165, 42, 42);
   --color-secondary: rgba(246, 81, 59, 0.664);
-  --color-thrid: rgba(209, 93, 78, 0.664);
+  --color-thrid: #d15d4ea9;
 }
 
 .colorPrimary {
@@ -131,4 +131,115 @@
 
   transform: translate(-60%, 0) scale(2.2);
   /* Adjust the scale factor as needed */
+}
+
+
+/* CODE USED FOR CAROUSEL */
+.carousel-wrapper {
+  /* height: 400px; */
+  position: relative;
+  /* width: 800px; */
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+  color: white;
+}
+
+@media (max-width: 480px) {
+
+  .arrow,
+  .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+
+
+/*Select every element*/
+[id^="item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background-size: cover;
+}
+
+.item-2 {
+  background-size: cover;
+}
+
+.item-3 {
+  background-size: cover;
+}
+
+.item-4 {
+  background-size: cover;
+}
+
+*:target~.item-1 {
+  opacity: 0;
+}
+
+#item-1:target~.item-1 {
+  opacity: 1;
+}
+
+#item-5:target~.item-5,
+#item-4:target~.item-4,
+#item-2:target~.item-2,
+#item-3:target~.item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+
+
+
+.custom-bullets {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  /* Adjust the padding as needed */
+}
+
+.custom-bullets li::before {
+  content: "\2022";
+  /* Unicode character for bullet point, can be replaced with other symbols or images */
+  color: #333;
+  /* Adjust the color as needed */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }

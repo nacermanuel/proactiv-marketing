@@ -4,10 +4,10 @@ const ClaimGiftForm = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
-        <p className="fontTitle">Claim your gift</p>
+        <p className="fontTitle">Free to 100 salon owners. Claim your gift today!</p>
         
-         <label for="Your Name" className="fontForm mb-1">
-          Your Name*
+         <label for="Name" className="fontForm mb-1">
+          Full Name*
         </label>       
         <input
           type="text"
@@ -15,8 +15,8 @@ const ClaimGiftForm = () => {
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-         <label for="Your Business Name" className="fontForm mb-1">
-          Your Business Name*
+         <label for="Business Name" className="fontForm mb-1">
+          Business Name*
         </label> 
         <input
           type="text"
@@ -24,8 +24,8 @@ const ClaimGiftForm = () => {
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-         <label for="Your Email" className="fontForm mb-1">
-          Your Email*
+         <label for="Email" className="fontForm mb-1">
+          Email*
         </label>         
         <input
           type="email"
@@ -35,8 +35,8 @@ const ClaimGiftForm = () => {
 
 
 
-        <label for="Your Contact Number" className="fontForm mb-1">
-          Your Contact Number*
+        <label for="Contact Number" className="fontForm mb-1">
+          Contact Number*
         </label>          
         <input
           type="tel"
@@ -47,7 +47,7 @@ const ClaimGiftForm = () => {
           type="submit"
           className="px-4 py-2 buttonsMain"
         >
-          Watch Video to Understand Benefits.
+          Click to claim your gift
         </button>
       </form>
     </div>

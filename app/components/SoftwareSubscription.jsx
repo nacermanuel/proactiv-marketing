@@ -271,7 +271,7 @@ const SoftwareSubscription = () => {
         />
 
         <button type="submit" className="px-4 py-2 buttonsMain">
-          Subscribe
+          Watch the video to understand the benefits!
         </button>
       </form>
     </div>

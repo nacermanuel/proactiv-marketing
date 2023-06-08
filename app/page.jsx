@@ -9,6 +9,8 @@ import Faqs from "./components/Faqs.jsx";
 import CardsFree from "./components/CardsFree";
 import RequiredInformation from "./components/RequiredInformation.jsx";
 import CardSamples from "./components/CardSamples";
+import CardsTestimonials from "./components/CardsTestimonials";
+import SoftwareForYou from "./components/SoftwareForYou";
 
 export default function Home() {
   return (
@@ -16,9 +18,8 @@ export default function Home() {
       id="containerNEW"
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
-      <CardSamples/>
-      <span className="w-full bg-black h-1"></span>      
 
+      
       <ClaimGiftForm />
       <span className="w-full bg-black h-1"></span>
 
@@ -37,6 +38,18 @@ export default function Home() {
       <Faqs/>
       <span className="w-full bg-black h-1"></span>
 
+      <CardSamples/>
+      <span className="w-full bg-black h-1"></span> 
+
+      <CardsTestimonials/>
+      <span className="w-full bg-black h-1"></span> 
+
+      <SoftwareForYou/>
+      <span className="w-full bg-black h-1"></span> 
+
+      <ArtworkDelivery />
+      <span className="w-full bg-black h-1"></span>      
+
       <CardsFree/>
       <span className="w-full bg-black h-1"></span>
 
@@ -46,8 +59,11 @@ export default function Home() {
       <RequiredInformation/>
       <span className="w-full bg-black h-1"></span>
 
-      <ArtworkDelivery />
-      <span className="w-full bg-black h-1"></span>
+
+
+        
+
+
 
 
 
