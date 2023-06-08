@@ -62,6 +62,53 @@ export const Spinning = () => {
       </div>
       <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
 
+      <div id='software components' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3'>
+        <p className="mt-5 mb-3 colorThird">Sofware Components</p>
+        <ul className="fontGeneral">
+          <li className=" flex justify-around items-center h-[65px]">
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>1.- Database</p>
+            </div>
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>2.- Referral Marketing &#40;NEW
+          Customers&#41;</p>
+            </div>
+          </li>
+
+          <li className=" flex justify-around items-center h-[75px]">
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>3.-Gift Cards &#40;Improve Cashflow&#41;</p>
+            </div>
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>4.- Loyalty / Incentives &#40;Increase revenue & Profits&#41;</p>
+            </div>
+          </li>
+
+          <li className=" flex justify-around items-center h-[60px]">
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>5.- Digital Diary</p>
+            </div>
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>6.- Stock Control</p>
+            </div>
+          </li>
+
+
+          <li className=" flex justify-around items-center h-[60px]">
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>7.- Invoicing</p>
+            </div>
+            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>8.- Email & Text Marketing</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+
     </div>
 
   )

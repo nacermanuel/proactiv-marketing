@@ -38,26 +38,28 @@ const SoftwareSubscription = () => {
 
   return (
     <div className="p-3">
-      <h3 className="fontSubTitle text-center colorPrimary">
+      <p className="fontTitle text-center colorPrimary">
         Get your free software subscription
-      </h3>
-      <h2 className="fontTitle my-8 text-center">
+      </p>
+      <p className="fontTitle my-8 text-center">
         You have won{" "}
-        <span className="colorSecondary">
+        <span className="fontTitle" style={{color: "rgba(246, 81, 59, 0.664)"}}>
           6 months FREE + 6 months{" "}
-          <span className="text-[1rem] font-bold">
+          <span className="fontTitle text-[1rem] font-bold">
             <sup>1</sup>/<sub>2</sub>
           </span>{" "}
           price!!
         </span>
-      </h2>
+      </p>
       <h3 className="fontSubTitle colorPrimary mb-2">Software Subscription</h3>
       <p className="fontGeneral">
         After your FREE trial ONLY pay for what you need for as long as you
         need.
       </p>
       <p>&#40;NO CONTRACT - 30 day rolling agreement&#41;</p>
-      <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
+      
+      
+      {/* <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
       <ul className="fontGeneral">
         <li className="border p-1">
           <span className="mx-5">1</span> Database
@@ -85,7 +87,9 @@ const SoftwareSubscription = () => {
         <li className="border p-1">
           <span className="mx-5">8</span> Email & Text Marketing
         </li>
-      </ul>
+      </ul> */}
+
+      
       <h4 className="mt-5 mb-3 colorThird">Price After Free Trial</h4>
       <table className="fontGeneral table-auto mx-auto">
         <thead>
