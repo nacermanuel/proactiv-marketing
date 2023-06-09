@@ -11,7 +11,7 @@ import RequiredInformation from "./components/RequiredInformation.jsx";
 import CardSamples from "./components/CardSamples";
 import CardsTestimonials from "./components/CardsTestimonials";
 import SoftwareForYou from "./components/SoftwareForYou";
-import Celebration from "./components/Celebration";
+// import Celebration from "./components/Celebration";
 import PageSpinning from "./funnel/spin/page";
 
 export default function Home() {
@@ -21,8 +21,16 @@ export default function Home() {
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
 
+<a className="p-6 font-bold" href="/funnel"> GO TO FUNNEL</a>
 
-      <a className="text-center p-5 font-bold" href="/funnel">Go to funnel</a>
+      <PageSpinning/>
+      <span className="w-full bg-black h-1"></span>
+
+      <ClaimGiftForm />
+      <span className="w-full bg-black h-1"></span>
+
+      <Spinning />
+      <span className="w-full bg-black h-1"></span>
 
       <SoftwareSubscription />
       <span className="w-full bg-black h-1"></span>

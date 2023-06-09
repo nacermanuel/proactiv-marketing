@@ -1,6 +1,6 @@
 
 
-const ClaimGiftForm = () => {
+const ClaimGiftForm = ( {handleSubmit}) => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
@@ -46,6 +46,7 @@ const ClaimGiftForm = () => {
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
+          onClick={handleSubmit}
         >
           Click to claim your FREE gift
         </button>

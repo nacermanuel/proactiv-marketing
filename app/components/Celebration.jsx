@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
+import { useRouter } from 'next/navigation';
 
 const Celebration = () => {
 
@@ -15,12 +16,19 @@ const Celebration = () => {
         setHeight(height1)
     },[])
 
+    const router = useRouter();
+    const clickCongrat = () => {
+        router.push('/funnel');
+    }
+
+
+
+
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-[#ccffee]">
+    <div className="flex flex-col items-center min-h-screen bg-[#ccffee]" onClick={clickCongrat}>
 
         <p className='fontTitle'>Congratulations!</p>
         <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" />
-        <p>we can replace the GIF by any in this web: <a href="https://giphy.com/" target="_blank">https://giphy.com/</a> </p>
         
 
         {   width == 'Infinity' || height == 'Infinity' ? null :

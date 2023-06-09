@@ -3,13 +3,19 @@ import React, { useEffect, useState } from 'react'
 import './Spinning.css'
 
 
-export const Spinning = () => {
+export const Spinning = ({setCongrats}) => {
   const [deg, setDeg] = useState(0)
   const [calc, setCalc] =useState(0)
   const [prize, setPrize] = useState('')
+  const [clicked, setClicked] = useState(false)
 
   const handleSpin = () => {
     setDeg(Math.ceil(Math.random() * 100000))
+    setClicked(true)
+
+    setTimeout(()=>{
+      setCongrats(false)
+    },8000)
   }
 
   useEffect(()=>{
@@ -60,7 +66,13 @@ export const Spinning = () => {
           <div class="stoper"></div>
         </div>    
       </div>
-      <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
+
+      {
+        !clicked ?
+        <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
+        :
+        <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg opacity-50' disabled >Spin!</button>
+      }
 
       <div id='software components' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3'>
         <p className="mt-5 mb-3 colorThird">Software Components</p>
