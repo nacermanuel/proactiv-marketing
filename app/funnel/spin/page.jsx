@@ -2,14 +2,37 @@
 import React, { useEffect, useState } from 'react'
 import './Spinning.css'
 
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+import { useRouter } from 'next/navigation';
 
-export const Spinning = () => {
+const PageSpinning = () => {
   const [deg, setDeg] = useState(0)
   const [calc, setCalc] =useState(0)
   const [prize, setPrize] = useState('')
+  const [clicked, setClicked] = useState(false)
+  const [congrats, setCongrats] =useState(true)
+
+  const [width , setWidth] =useState(0)
+  const [height , setHeight] =useState(0)
+  
+  let { width1, height1 } = useWindowSize()
+  
+  useEffect(()=>{
+      setWidth(width1)
+      setHeight(height1)
+  },[])
+
+
 
   const handleSpin = () => {
     setDeg(Math.ceil(Math.random() * 100000))
+    setClicked(true)
+
+    setTimeout(()=>{
+      console.log('prueba de tiempo')
+      setCongrats(false)
+    },8000)
   }
 
   useEffect(()=>{
@@ -37,7 +60,14 @@ export const Spinning = () => {
     
   },[calc])
 
+  const router = useRouter();
+  const clickCongrat = () => {
+    router.push('/funnel');
+  }
+
   return (
+
+    congrats ?
 
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
       {/* <p className="fontTitle">Spin The Wheel</p> */}
@@ -60,7 +90,13 @@ export const Spinning = () => {
           <div class="stoper"></div>
         </div>    
       </div>
-      <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
+
+      {
+        !clicked ?
+        <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg' onClick={handleSpin} >Spin!</button>
+        :
+        <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg opacity-50' disabled >Spin!</button>
+      }
 
       <div id='software components' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3'>
         <p className="mt-5 mb-3 colorThird">Software Components</p>
@@ -105,11 +141,33 @@ export const Spinning = () => {
 
         </ul>
       </div>
+    </div>
 
+    // ------------------END OF SPINNING WHEEL-------------------
+    
+    :
 
+    <div className="flex flex-col justify-center items-center min-h-screen bg-[#ccffee]" onClick={clickCongrat}>
 
+        <p className='fontTitle'>Congratulations!</p>
+        <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" />
+        
+        
+
+        {   width == 'Infinity' || height == 'Infinity' ? null :
+            <Confetti
+                width={width}
+                height={height}
+                gravity={0.3}
+                numberOfPieces={400}
+            />
+        }
 
     </div>
 
+
+
   )
 }
+
+export default PageSpinning
