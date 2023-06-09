@@ -11,6 +11,7 @@ import RequiredInformation from "./components/RequiredInformation.jsx";
 import CardSamples from "./components/CardSamples";
 import CardsTestimonials from "./components/CardsTestimonials";
 import SoftwareForYou from "./components/SoftwareForYou";
+import Celebration from "./components/Celebration";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
 
+      <Celebration />
+      <span className="w-full bg-black h-1"></span>
       
       <ClaimGiftForm />
       <span className="w-full bg-black h-1"></span>
