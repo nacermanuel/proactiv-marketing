@@ -4,7 +4,7 @@ import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 import { useRouter } from 'next/navigation';
 
-const Celebration = () => {
+const Celebration = ({result}) => {
 
     const [width , setWidth] =useState(0)
     const [height , setHeight] =useState(0)
@@ -18,17 +18,16 @@ const Celebration = () => {
 
     const router = useRouter();
     const clickCongrat = () => {
+        localStorage.setItem('software', JSON.stringify(result));
         router.push('/funnel/software');
     }
-
-
 
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-[#ccffee]" onClick={clickCongrat}>
 
         <p className='fontTitle'>
-            Congratulations! You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
+            Congratulations! You have won {result.description} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
         </p>
         <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" />
         

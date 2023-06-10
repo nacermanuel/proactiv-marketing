@@ -1,12 +1,25 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/navigation';
 
-const SoftwareSubscription = ({handleSubmit}) => {
+const SoftwareSubscription = () => {
   const [packages, setPackages] = useState();
   const [period, setPeriod] = useState(0);
   const [total, setTotal] = useState();
+  const [prize, setPrize] = useState({})
+  const [data, setData] = useState({fullname:'',businessname:'',email:'',number:'',industry:'',web:'',address:''})
 
+
+  const router = useRouter();
+
+  useEffect(()=>{
+    let prizeStored = JSON.parse(localStorage.getItem('software'));
+    setPrize(prizeStored)
+    let dataStored = JSON.parse(localStorage.getItem('data'));
+    setData({...data, fullname: dataStored.fullname , businessname: dataStored.businessname, email: dataStored.email, number: dataStored.number})
+
+  },[])
 
   const changePeriod = (e) => {
     setPeriod(e.target.value);
@@ -40,7 +53,13 @@ const SoftwareSubscription = ({handleSubmit}) => {
 
   const handleClick = (e) =>{
     e.preventDefault()
-    handleSubmit()
+    localStorage.setItem('data', JSON.stringify(data));
+    router.push('/funnel/referal');
+  }
+
+
+  const handleChange = (e) =>{
+    setData({...data , [e.target.name]:e.target.value})
   }
 
   return (
@@ -64,7 +83,8 @@ const SoftwareSubscription = ({handleSubmit}) => {
       </p> */}
 
 
-      <p className="fontSubTitle colorPrimary mb-2">Software Subscription</p>
+      <p className="fontSubTitle colorPrimary mb-2 text-center">{prize.description} <br />Software Subscription</p>
+
       <p className="fontGeneral" style={{textAlign: 'center'}}>
         After your FREE trial ONLY pay for what features you want to use. <br />
         (NO CONTRACT - cancel at any time - 30 days notice)
@@ -218,24 +238,28 @@ const SoftwareSubscription = ({handleSubmit}) => {
         id="form"
         className="w-full flex flex-col px-4 py-8  bg-white rounded-lg shadow-md relative"
       >
-        <label for="YourName" className="fontForm mb-1">
-          Your Name *
+        <label for="FullName" className="fontForm mb-1">
+          Full Name *
         </label>
         <input
           required={true}
           id="YourName"
           type="text"
-          placeholder=""
+          name="fullname"
+          onChange={handleChange}
+          value={data.fullname}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="Business" className="fontForm mb-1">
-          Your Business Name *
+          Business Name *
         </label>
         <input
           required={true}
           id="Business"
           type="text"
-          placeholder=""
+          name="businessname"
+          onChange={handleChange}          
+          value={data.businessname}   
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="Industry" className="fontForm mb-1">
@@ -244,7 +268,9 @@ const SoftwareSubscription = ({handleSubmit}) => {
         <input
           id="Industry"
           type="text"
-          placeholder=""
+          name="industry"
+          onChange={handleChange}
+          value={data.industry}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="Phone" className="fontForm mb-1">
@@ -254,7 +280,9 @@ const SoftwareSubscription = ({handleSubmit}) => {
           required={true}
           id="Phone"
           type="text"
-          placeholder=""
+          name="number"
+          onChange={handleChange}
+          value={data.number}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="email" className="fontForm mb-1">
@@ -264,7 +292,9 @@ const SoftwareSubscription = ({handleSubmit}) => {
           required={true}
           id="email"
           type="text"
-          placeholder=""
+          name="email"
+          onChange={handleChange}
+          value={data.email}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="web" className="fontForm mb-1">
@@ -273,7 +303,9 @@ const SoftwareSubscription = ({handleSubmit}) => {
         <input
           id="web"
           type="text"
-          placeholder=""
+          name="web"
+          onChange={handleChange}
+          value={data.web} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="Address" className="fontForm mb-1">
@@ -283,7 +315,9 @@ const SoftwareSubscription = ({handleSubmit}) => {
           required={true}
           id="Address"
           type="text"
-          placeholder=""
+          name="address"
+          onChange={handleChange}
+          value={data.address} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 

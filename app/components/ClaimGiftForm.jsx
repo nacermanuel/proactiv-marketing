@@ -1,6 +1,25 @@
+'use client'
+import { useState } from "react"
+import { useRouter } from 'next/navigation';
+
+const ClaimGiftForm = ( ) => {
+  const [data, setData] = useState({fullname:'',businessname:'',email:'',number:''})
+
+  const router = useRouter();
+
+  const handleChange = (e) =>{
+    setData({...data , [e.target.name]:e.target.value})
+
+  }
+
+  const handleClick = (e)=>{
+    e.preventDefault()
+    localStorage.setItem('data', JSON.stringify(data));
+    router.push('/funnel/spin');
+  }
 
 
-const ClaimGiftForm = ( {handleSubmit}) => {
+
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
@@ -11,6 +30,9 @@ const ClaimGiftForm = ( {handleSubmit}) => {
         </label>       
         <input
           type="text"
+          name="fullname"
+          value={data.fullname}
+          onChange={handleChange}
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
@@ -20,6 +42,9 @@ const ClaimGiftForm = ( {handleSubmit}) => {
         </label> 
         <input
           type="text"
+          name="businessname"
+          value={data.businessname}
+          onChange={handleChange}
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
@@ -29,6 +54,9 @@ const ClaimGiftForm = ( {handleSubmit}) => {
         </label>         
         <input
           type="email"
+          name="email"
+          value={data.email}
+          onChange={handleChange}
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
@@ -40,13 +68,16 @@ const ClaimGiftForm = ( {handleSubmit}) => {
         </label>          
         <input
           type="tel"
+          name="number"
+          value={data.number}
+          onChange={handleChange}
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
-          onClick={handleSubmit}
+          onClick={handleClick}
         >
           Click to claim your FREE gift
         </button>

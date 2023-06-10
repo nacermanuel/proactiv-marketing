@@ -14,14 +14,17 @@ import SoftwareForYou from "./components/SoftwareForYou";
 // import Celebration from "./components/Celebration";
 import PageSpinning from "./funnel/spin/page";
 
+
+
 export default function Home() {
+
   return (
     <div
       id="containerNEW"
       className="flex flex-col justify-center items-start h-auto pt-4 "
     >
 
-<a className="p-6 font-bold" href="/funnel"> GO TO FUNNEL</a>
+<a className="p-6 font-bold bg-[#ff0000]" href="/funnel"> GO TO FUNNEL</a>
 
 
       <ClaimGiftForm />

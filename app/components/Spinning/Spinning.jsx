@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react'
 import './Spinning.css'
 
 
-export const Spinning = ({setCongrats}) => {
+export const Spinning = ({setCongrats,setResult}) => {
   const [deg, setDeg] = useState(0)
   const [calc, setCalc] =useState(0)
-  const [prize, setPrize] = useState('')
+  const [prize, setPrize] = useState({description:'',number:0})
   const [clicked, setClicked] = useState(false)
 
   const handleSpin = () => {
@@ -14,9 +14,15 @@ export const Spinning = ({setCongrats}) => {
     setClicked(true)
 
     setTimeout(()=>{
-      setCongrats(false)
-    },8000)
+       setCongrats(false)
+    },8000)  
   }
+
+  useEffect(()=>{
+    setResult(prize)
+
+  },[prize])
+
 
   useEffect(()=>{
     setCalc(deg%360)
@@ -25,19 +31,19 @@ export const Spinning = ({setCongrats}) => {
   useEffect(()=>{
 
     if (calc >= 0 && calc <= 29) {
-      setPrize("3 months FREE");
+      setPrize({description:"3 months FREE",number:1});
     } else if (calc >= 30 && calc <= 89) {
-      setPrize("12 months FREE");
+      setPrize( {description:"12 months FREE",number:2});
     } else if (calc >= 90 && calc <= 149) {
-      setPrize("9 months FREE");
+      setPrize( {description:"9 months FREE",number:3});
     } else if (calc >= 150 && calc <= 209) {
-      setPrize("6 months FREE + 6 months half price");
+      setPrize({description:"6 months FREE + 6 months half price",number:4});
     } else if (calc >= 210 && calc <= 269) {
-      setPrize("6 months FREE");
+      setPrize( {description:"6 months FREE",number:5});
     } else if (calc >= 270 && calc <= 329) {
-      setPrize("3 months FREE + 3 months half price");
+      setPrize( {description:"3 months FREE + 3 months half price",number:6});
     } else if (calc >= 330 && calc <= 359) {
-      setPrize("3 months FREE");
+      setPrize( {description:"3 months FREE",number:1});
     }
     
     
@@ -51,7 +57,7 @@ export const Spinning = ({setCongrats}) => {
       <p className="fontTitle">Spin The Wheel To See How Many Free Months Use You Get To Go With Your 100 FREE Plastic Referral Marketing Cards (value £53)</p>         
       
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
-        <p>test: {prize}</p>
+        {/* <p>test: {prize}</p> */}
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
           <div class="containerCSS" style={{transform: `rotate(${deg}deg)`}}>
           {/* <div class={`containerCSS rotate-[${deg}deg]`}> */}
