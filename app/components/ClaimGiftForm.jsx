@@ -14,8 +14,19 @@ const ClaimGiftForm = ( ) => {
 
   const handleClick = (e)=>{
     e.preventDefault()
-    localStorage.setItem('data', JSON.stringify(data));
-    router.push('/funnel/spin');
+
+    if( 
+      data.fullname.length == 0 || 
+      data.businessname.length == 0 || 
+      data.email.length == 0 || 
+      data.number.length == 0 
+      ){
+        alert('Complete the fields')
+      } else{
+        localStorage.setItem('data', JSON.stringify(data));
+        router.push('/funnel/spin');
+      }
+
   }
 
 

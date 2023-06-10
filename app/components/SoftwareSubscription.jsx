@@ -53,8 +53,21 @@ const SoftwareSubscription = () => {
 
   const handleClick = (e) =>{
     e.preventDefault()
-    localStorage.setItem('data', JSON.stringify(data));
-    router.push('/funnel/referal');
+
+    if( 
+      data.fullname.length == 0 || 
+      data.businessname.length == 0 || 
+      data.email.length == 0 || 
+      data.number.length == 0 ||
+      data.industry.length == 0 ||
+      data.web.length == 0 ||
+      data.address.length == 0 
+      ){
+        alert('Complete the fields')
+      } else{    
+        localStorage.setItem('data', JSON.stringify(data));
+        router.push('/funnel/referal');
+      }
   }
 
 
