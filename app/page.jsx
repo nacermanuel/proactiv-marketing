@@ -23,8 +23,6 @@ export default function Home() {
 
 <a className="p-6 font-bold" href="/funnel"> GO TO FUNNEL</a>
 
-      <PageSpinning/>
-      <span className="w-full bg-black h-1"></span>
 
       <ClaimGiftForm />
       <span className="w-full bg-black h-1"></span>

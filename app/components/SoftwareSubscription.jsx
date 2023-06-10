@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const SoftwareSubscription = () => {
+const SoftwareSubscription = ({handleSubmit}) => {
   const [packages, setPackages] = useState();
   const [period, setPeriod] = useState(0);
   const [total, setTotal] = useState();
@@ -37,6 +37,12 @@ const SoftwareSubscription = () => {
     }
   }, [packages, period]);
 
+
+  const handleClick = (e) =>{
+    e.preventDefault()
+    handleSubmit()
+  }
+
   return (
     <div className="p-3">
       <p className="fontTitle text-center colorPrimary">
@@ -53,9 +59,9 @@ const SoftwareSubscription = () => {
         </span>
       </p> */}
 
-      <p className="fontTitle my-8 text-center">
+      {/* <p className="fontTitle my-8 text-center">
         You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
-      </p>
+      </p> */}
 
 
       <p className="fontSubTitle colorPrimary mb-2">Software Subscription</p>
@@ -281,7 +287,7 @@ const SoftwareSubscription = () => {
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-        <button type="submit" className="px-4 py-2 buttonsMain">
+        <button type="submit" className="px-4 py-2 buttonsMain" onClick={handleClick}>
           Watch the video to understand the benefits!
         </button>
       </form>

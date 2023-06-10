@@ -18,7 +18,7 @@ const Celebration = () => {
 
     const router = useRouter();
     const clickCongrat = () => {
-        router.push('/funnel');
+        router.push('/funnel/software');
     }
 
 
@@ -27,7 +27,9 @@ const Celebration = () => {
   return (
     <div className="flex flex-col items-center min-h-screen bg-[#ccffee]" onClick={clickCongrat}>
 
-        <p className='fontTitle'>Congratulations!</p>
+        <p className='fontTitle'>
+            Congratulations! You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
+        </p>
         <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" />
         
 
