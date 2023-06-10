@@ -19,7 +19,7 @@ export const Spinning = ({setCongrats,setResult}) => {
   }
 
   useEffect(()=>{
-    //setResult(prize)
+    setResult(prize)
 
   },[prize])
 

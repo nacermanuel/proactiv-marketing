@@ -14,10 +14,19 @@ const SoftwareSubscription = () => {
   const router = useRouter();
 
   useEffect(()=>{
-    let prizeStored = JSON.parse(localStorage.getItem('software'));
-    setPrize(prizeStored)
+    let prizeStored = JSON.parse(localStorage.getItem('software')); //{description:'',number:0}
+    if( prizeStored.description.length == 0){
+      setPrize({description:'',number:0})
+    }else{
+      setPrize(prizeStored)
+    }
+
     let dataStored = JSON.parse(localStorage.getItem('data'));
-    setData({...data, fullname: dataStored.fullname , businessname: dataStored.businessname, email: dataStored.email, number: dataStored.number})
+    if( dataStored.fullname.length == 0 || dataStored.email.length == 0){
+      setData({fullname:'none',businessname:'none',email:'none',number:'none',industry:'none',web:'none',address:'none'})
+    }else{
+      setData({...data, fullname: dataStored.fullname , businessname: dataStored.businessname, email: dataStored.email, number: dataStored.number})
+    }    
 
   },[])
 
