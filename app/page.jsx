@@ -27,34 +27,11 @@ export default function Home() {
 <a className="p-6 font-bold bg-[#ff0000]" href="/funnel"> GO TO FUNNEL</a>
 
 
-      <ClaimGiftForm />
-      <span className="w-full bg-black h-1"></span>
 
-      <Spinning />
-      <span className="w-full bg-black h-1"></span>
 
-      <SoftwareSubscription />
-      <span className="w-full bg-black h-1"></span>
 
-      <ReferalMktText />
-      <span className="w-full bg-black h-1"></span>
 
-      <ReferalMktDiagram />
-      <span className="w-full bg-black h-1"></span>
-
-      <Faqs/>
-      <span className="w-full bg-black h-1"></span>
-
-      <CardSamples/>
-      <span className="w-full bg-black h-1"></span> 
-
-      <CardsTestimonials/>
-      <span className="w-full bg-black h-1"></span> 
-
-      <SoftwareForYou/>
-      <span className="w-full bg-black h-1"></span> 
-
-      <ArtworkDelivery />
+      {/* <ArtworkDelivery />
       <span className="w-full bg-black h-1"></span>      
 
       <CardsFree/>
@@ -64,7 +41,7 @@ export default function Home() {
       <span className="w-full bg-black h-1"></span>
 
       <RequiredInformation/>
-      <span className="w-full bg-black h-1"></span>
+      <span className="w-full bg-black h-1"></span> */}
 
 
 
