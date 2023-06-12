@@ -15,17 +15,30 @@ const ClaimGiftForm = ( ) => {
   const handleClick = (e)=>{
     e.preventDefault()
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const numberRegex = /^0[127]\d{9}$/;
+
     if( 
       data.fullname.length == 0 || 
       data.businessname.length == 0 || 
       data.email.length == 0 || 
       data.number.length == 0 
       ){
-        alert('Complete the fields')
-      } else{
+        alert('Complete all the fields')
+      }else if (!emailRegex.test(data.email)) {
+      alert('Invalid email');
+      } else if (!numberRegex.test(data.number)) {
+        alert('Invalid number')
+      } else {
         localStorage.setItem('data', JSON.stringify(data));
         router.push('/funnel/spin');
       }
+      
+      
+
+
+
 
   }
 

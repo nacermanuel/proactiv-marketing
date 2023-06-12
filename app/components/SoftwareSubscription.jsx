@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 
 const SoftwareSubscription = () => {
-  const [packages, setPackages] = useState();
-  const [period, setPeriod] = useState(0);
+  const [packages, setPackages] = useState("Diamond");
+  const [period, setPeriod] = useState("Quarterly");
   const [total, setTotal] = useState();
   const [prize, setPrize] = useState({})
   const [data, setData] = useState({fullname:'',businessname:'',email:'',number:'',industry:'',web:'',address:''})
@@ -15,14 +15,14 @@ const SoftwareSubscription = () => {
 
   useEffect(()=>{
     let prizeStored = JSON.parse(localStorage.getItem('software')); //{description:'',number:0}
-    if( prizeStored.description.length == 0){
+    if( prizeStored.description?.length == 0 || prizeStored == 'undefined'){
       setPrize({description:'',number:0})
     }else{
       setPrize(prizeStored)
     }
 
     let dataStored = JSON.parse(localStorage.getItem('data'));
-    if( dataStored.fullname.length == 0 || dataStored.email.length == 0){
+    if( dataStored.fullname?.length == 0 || dataStored.email.length == 0 || dataStored == 'undefined'){
       setData({fullname:'none',businessname:'none',email:'none',number:'none',industry:'none',web:'none',address:'none'})
     }else{
       setData({...data, fullname: dataStored.fullname , businessname: dataStored.businessname, email: dataStored.email, number: dataStored.number})
@@ -38,13 +38,13 @@ const SoftwareSubscription = () => {
   };
 
   useEffect(() => {
-    if (packages === "Gold") {
+    if (packages === "Silver") {
       if (period === "Monthly") {
         setTotal(29.99);
       } else {
         setTotal(79.99);
       }
-    } else if (packages == "Silver") {
+    } else if (packages == "Gold") {
       if (period === "Monthly") {
         setTotal(49.99);
       } else {
@@ -157,13 +157,13 @@ const SoftwareSubscription = () => {
         </thead>
         <tbody>
           <tr className="border-b bg-neutral-200">
-            <td className="py-1 px-2">Gold</td>
+            <td className="py-1 px-2">Silver</td>
             <td className="py-1 px-2">Database + 1</td>
             <td className="py-1 px-2">&#163;29.99</td>
             <td className="py-1 px-2">&#163;79.99</td>
           </tr>
           <tr>
-            <td className="py-1 px-2">Silver</td>
+            <td className="py-1 px-2">Gold</td>
             <td className="py-1 px-2">Database + 3</td>
             <td className="py-1 px-2">&#163;49.99</td>
             <td className="py-1 px-2">&#163;135</td>
