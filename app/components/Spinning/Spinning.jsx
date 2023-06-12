@@ -54,7 +54,7 @@ export const Spinning = ({setCongrats,setResult}) => {
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
       {/* <p className="fontTitle">Spin The Wheel</p> */}
       {/* <p className="fontSubTitle whitespace-nowrap">To See How Many Free Months Use You Get</p>          */}
-      <p className="fontTitle">Spin The Wheel To See How Many Free Months Use You Get To Go With Your 100 FREE Plastic Referral Marketing Cards (value £53)</p>         
+      <p className="fontTitle"> <span className='block'>Spin The Wheel</span>To See How Many Free Months Use You Get To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards (value £53)</p>         
       
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
         {/* <p>test: {prize}</p> */}
