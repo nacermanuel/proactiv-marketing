@@ -24,12 +24,12 @@ const Celebration = ({result}) => {
 
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-[#331C8D]" onClick={clickCongrat}>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-[#331C8D] overflow-hidden" onClick={clickCongrat}>
 
         <p className='fontTitle absolute' style={{fontSize:"3rem" , color: 'white'}}>
-            Congratulations! You have won {result.description} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
+            Congratulations! You have won {result.description} software valued &#163;{result.valued} to use for free up to {result.date} ! 
         </p>
-        <img className='w-[140vw] overflow-hidden' style={{ maxWidth: 'none'}} src="https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif" alt="baloons" />
+        <img className='h-[100vh]' style={{ maxWidth: 'none'}} src="https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif" alt="baloons" />
         {/* <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" /> */}
         
 
