@@ -1,6 +1,13 @@
-
+'use client'
+import { useRouter } from 'next/navigation';
 
 const ArtworkDelivery = () => {
+  const router = useRouter();
+
+  const handleClick = () =>{
+    
+    router.push('/funnel/cards');
+  }
 
   return (
     <div className="flex flex-col justify-center items-center  h-full w-[100vw]">
@@ -10,8 +17,12 @@ const ArtworkDelivery = () => {
         <source src={'https://res.cloudinary.com/dbhtt5ozr/video/upload/v1686066069/VIDEO_3_FINAL_v3_wau6e4.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="h-[20px]"></div>
       
+
+        <button className="px-4 py-2 buttonsMain m-5" onClick={handleClick}>
+          Get Your Free Cards!
+        </button>
+              
     </div>
   )
 }

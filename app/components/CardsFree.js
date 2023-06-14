@@ -1,8 +1,8 @@
 const CardsFree = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center">
 
-      <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
+      <form id="formulario" className="flex flex-col px-4 pb-8 mx-5 bg-white rounded-lg shadow-md relative">
 
         {/* <p id="close" className=" absolute top-0 right-0">X</p> */}
         <p className="fontTitle">100 FREE PLASTIC CARDS</p>

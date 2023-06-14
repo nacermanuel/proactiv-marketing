@@ -190,7 +190,7 @@ const SoftwareSubscription = () => {
       </div>
       <p className="fontGeneral mb-4">
         Your free trial will end on{" "}
-        <span className="font-semibold">Mon Nov 20 2023</span>{" "}
+        <span className="font-semibold">{prize.date}</span>{" "}
       </p>
       <p className="fontGeneral mb-2">
         Please choose your Package after free trial period:
@@ -293,7 +293,7 @@ const SoftwareSubscription = () => {
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <label for="Industry" className="fontForm mb-1">
-          Industry
+          Industry *
         </label>
         <input
           id="Industry"
