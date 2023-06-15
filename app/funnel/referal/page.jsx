@@ -13,25 +13,25 @@ const FunnelReferal = () => {
     <>
     
       <ReferalMktText />
-      <span className="w-full bg-black h-1 block"></span>
+      {/* <span className="w-full h-[1.25rem] block"></span> */}
 
       <ReferalMktDiagram />
-      <span className="w-full bg-black h-1 block"></span>
+      {/* <span className="w-full h-[1.25rem] block"></span> */}
 
       <Faqs/>
-      <span className="w-full bg-black h-1 block"></span>
+      {/* <span className="w-full h-[1.25rem] block"></span> */}
 
       <CardSamples/>
-      <span className="w-full bg-black h-1 block"></span> 
+      {/* <span className="w-full h-[1.25rem] block"></span>  */}
 
       <CardsTestimonials/>
-      <span className="w-full bg-black h-1 block"></span> 
+      {/* <span className="w-full h-[1.25rem] block"></span>  */}
 
       <SoftwareForYou/>
-      <span className="w-full bg-black h-1 block"></span>     
+      {/* <span className="w-full h-[1.25rem] block"></span>      */}
 
       <ArtworkDelivery/>
-      <span className="w-full bg-black h-1 block"></span>   
+      {/* <span className="w-full h-[1.25rem] block"></span>    */}
 
     </>
 

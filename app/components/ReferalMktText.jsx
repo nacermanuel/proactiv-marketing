@@ -1,8 +1,11 @@
 const ReferalMktText = () => {
 
   return (
-    <div className="flex flex-col justify-center items-center  h-full w-[100vw]">
-      <p className="fontTitle">Watch the short video and read the text</p>
+    <div className="flex flex-col justify-center items-center h-full w-[100vw]">
+
+      <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
+
+      <p className="fontTitle">Watch The Short Video And Read The Text</p>
 
       <video controls className="w-[80vw] rounded-md" poster={"https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686090940/pos_w900d9.png"}>
         <source src={'https://res.cloudinary.com/dbhtt5ozr/video/upload/v1686088948/VIDEO_2_FINAL_v4_1_ithsyz.mp4'} type="video/mp4" />
@@ -22,6 +25,9 @@ const ReferalMktText = () => {
       <span style={{fontWeight: "bold"}}>The Referral Marketing Concept </span>
       This doesn’t work on cardboard cards. Why? Because cardboard cards are not kept and even for the small percentage that are, the QR Code won’t last too long. All it takes is a crease or smudge and its obsolete. Ovet 90% of of plastic cards are kept. Up to 30% are passed on during their 1st circulation. They last for decades so can be circulated 100’s of times in their lifetime. 
       </p>
+
+
+      </div>
 
 
     </div>

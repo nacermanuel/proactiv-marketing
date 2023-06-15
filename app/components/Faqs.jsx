@@ -7,9 +7,9 @@ const Faqs = () => {
 
     <div className="flex flex-col justify-center items-center min-h-screen">
 
+        <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
 
         <p className="fontTitle">Frequently Asked Questions</p>
-
 
         <div id="FAQs" className="flex flex-col justify-center items-center gap-2 w-full mt-3">
 
@@ -19,7 +19,7 @@ const Faqs = () => {
 
             <input type="checkbox" id="collapsible-checkbox-1" className="collapsible-checkbox" />
             <label htmlFor="collapsible-checkbox-1" className="collapsible-label">
-                <p className="fontSubTitle">
+                <p className="fontAlternative">
                     What kind of customer data can I collect?
                 </p>
             </label>
@@ -42,7 +42,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-2" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-2" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
                         What can I do with the customer data collected?
                     </p>
                 </label>
@@ -65,7 +65,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-3" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-3" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
 
                         My EPOS already offers a loyalty program. Why do I need yours?
                     
@@ -90,7 +90,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-4" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-4" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
                         Is my data private and secure?
                     </p>
                 </label>
@@ -113,7 +113,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-5" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-5" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
 
                         What if your service doesn`t meet my requirements?                    
                     
@@ -138,7 +138,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-6" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-6" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
 
                         How long am I tied into my Contract?
 
@@ -164,7 +164,7 @@ const Faqs = () => {
 
                 <input type="checkbox" id="collapsible-checkbox-7" className="collapsible-checkbox" />
                 <label htmlFor="collapsible-checkbox-7" className="collapsible-label">
-                    <p className="fontSubTitle">
+                    <p className="fontAlternative">
                         I can`t afford to give away discounts and free products.
                     </p>
                 </label>
@@ -182,9 +182,7 @@ const Faqs = () => {
 
         </div>
 
-
-             
- 
+        </div>
 
     </div>
 

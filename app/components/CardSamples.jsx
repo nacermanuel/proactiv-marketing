@@ -1,7 +1,12 @@
 
 const CardSamples = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full min-h-screen">
+    <div className="flex flex-col justify-center items-center w-full ">
+
+        <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
+
+
+
         <p className="fontTitle">Your Cards Represent Your Business</p>
         <div className="flex flex-row flex-wrap justify-around items-center">
                 <img className="w-[150px] h-[150px] overflow-hidden pb-3 rounded-lg samples-zoomable-imageLeft" src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686157767/CS7_lgs3ja.jpg" alt="" />
@@ -27,6 +32,10 @@ const CardSamples = () => {
                 <img src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686157364/CS6_zurcdm.jpg" alt="" />    
             </div>     */}
                                
+        </div>
+
+
+
         </div>
 
     </div>
