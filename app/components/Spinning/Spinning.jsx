@@ -92,7 +92,7 @@ export const Spinning = ({setCongrats,setResult}) => {
   return (
 
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
-      <div id='internalDIV' className='flex flex-col mx-5 my-4 items-center bg-white rounded-lg shadow-md relative'>
+      <div id='internalDIV' className='flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative'>
 
 
 
@@ -105,38 +105,42 @@ export const Spinning = ({setCongrats,setResult}) => {
       <div id='DIVsoftwarecomponents' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3 bg-[#ebebeb3f]'>
         <p className="fontSubTitle">Software Components</p>
         <ul className="fontGeneral">
-          <li className=" flex justify-around items-center h-fit border">
+          <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className=' w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral' style={{textAlign: 'center'}}>1.- Database</p>
             </div>
+            <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral' style={{textAlign: 'center'}}>2.- Telephone / Email Marketing</p>
             </div>
           </li>
 
-          <li className=" flex justify-around items-center h-fit border py-1">
+          <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral text-center' style={{textAlign: 'center'}}>3.- Referral Marketing</p>
             </div>
+            <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral' style={{textAlign: 'center'}}>4.- Gift Cards</p>
             </div>
           </li>
 
-          <li className=" flex justify-around items-center h-fit border py-1">
+          <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral text-center' style={{textAlign: 'center'}}>5.- Loyalty / Incentive Marketing</p>
             </div>
+            <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral' style={{textAlign: 'center'}}>6.- Diary System</p>
             </div>
           </li>
 
 
-          <li className=" flex justify-around items-center h-fit border py-1">
+          <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral text-center' style={{textAlign: 'center'}}>7.- Stock Control</p>
             </div>
+            <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[50%] h-[100%] flex justify-center items-center'>
               <p className='fontGeneral' style={{textAlign: 'center'}}>8.- Invoicing </p>
             </div>
