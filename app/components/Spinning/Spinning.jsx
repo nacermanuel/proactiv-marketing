@@ -99,7 +99,7 @@ export const Spinning = ({setCongrats,setResult}) => {
       {/* <p className="fontTitle">Spin The Wheel</p> */}
       {/* <p className="fontSubTitle whitespace-nowrap">To See How Many Free Months Use You Get</p>          */}
       <p className='fontTitle' style={{paddingBottom: "0"}}>Spin The Wheel</p>
-      <p className="fontAlternative" style={{ paddingTop: "0.5rem" , fontSize: "1.2rem"}}> To See How Many Free Months Use Of The Software You Get To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards ( <span className='italic'>value £53</span>)</p>         
+      <p className="fontAlternative" style={{ paddingTop: "0.5rem" , fontSize: "1.2rem"}}> To See How Many Free Months Use Of The Software You Get To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards (<span className='italic'>value £53</span>)</p>         
 
 
       <div id='DIVsoftwarecomponents' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3 bg-[#ebebeb3f]'>

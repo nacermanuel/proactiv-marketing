@@ -93,9 +93,9 @@ const SoftwareSubscription = () => {
   }
 
   return (
-    <div className="p-3">
+    <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
       <p className="fontTitle text-center colorPrimary">
-        Get your free software subscription
+        Get Your Free Software Subscription
       </p>
       {/* <p className="fontTitle my-8 text-center">
         You have won{" "}
@@ -113,7 +113,7 @@ const SoftwareSubscription = () => {
       </p> */}
 
 
-      <p className="fontSubTitle colorPrimary mb-2 text-center">{prize.description} <br />Software Subscription</p>
+      <p className="fontAlternative" style={{paddingBottom: "0"}}>{prize.description} <br />Software Subscription</p>
 
       <p className="fontGeneral" style={{textAlign: 'center'}}>
         After your FREE trial ONLY pay for what features you want to use. <br />
@@ -153,59 +153,50 @@ const SoftwareSubscription = () => {
       </ul> */}
 
       
-      <h4 className="mt-5 mb-3 colorThird">Price After Free Trial</h4>
-      <table className="fontGeneral table-auto mx-auto">
+      <p className="fontAlternative" style={{paddingBottom: "0"}}>Price After Free Trial</p>
+      <table className="w-full">
         <thead>
           <tr className="border-t">
-            <th className="py-1 px-2">Package</th>
-            <th className="py-1 px-2">Component</th>
-            <th className="py-1 px-2">Monthly</th>
-            <th className="py-1 px-2">Quarterly</th>
+            <th className="resize-text py-1 px-0">Package</th>
+            <th className="resize-text py-1 px-0">Component</th>
+            <th className="resize-text py-1 px-0">Monthly</th>
+            <th className="resize-text py-1 px-0">Quarterly</th>
           </tr>
         </thead>
         <tbody>
           <tr className="border-b bg-neutral-200">
-            <td className="py-1 px-2">Silver</td>
-            <td className="py-1 px-2">Database + 1</td>
-            <td className="py-1 px-2">&#163;29.99</td>
-            <td className="py-1 px-2">&#163;79.99</td>
+            <td className="resize-text py-1 px-0">Silver</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-0">&#163;29.99</td>
+            <td className="resize-text py-1 px-0">&#163;79.99</td>
           </tr>
           <tr>
-            <td className="py-1 px-2">Gold</td>
-            <td className="py-1 px-2">Database + 3</td>
-            <td className="py-1 px-2">&#163;49.99</td>
-            <td className="py-1 px-2">&#163;135</td>
+            <td className="resize-text py-1 px-0">Gold</td>
+            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0">&#163;49.99</td>
+            <td className="resize-text py-1 px-0">&#163;135</td>
           </tr>
           <tr className="border-b bg-neutral-200">
-            <td className="py-1 px-2">Diamond</td>
-            <td className="py-1 px-2">All 8</td>
-            <td className="py-1 px-2">&#163;59.99</td>
-            <td className="py-1 px-2">&#163;155</td>
+            <td className="resize-text py-1 px-0">Diamond</td>
+            <td className="resize-text py-1 px-0">All 8</td>
+            <td className="resize-text py-1 px-0">&#163;59.99</td>
+            <td className="resize-text py-1 px-0">&#163;155</td>
           </tr>
         </tbody>
       </table>
-      <div className="my-8 text-center">
-        <h3 className="fontSubTitle">Please provide required information</h3>
-        <p className="text-xs"> * marked fields are mandatory</p>
+      <div className=" text-center">
+        <p className="fontAlternative" style={{paddingBottom: "4px"}}>Please provide required information</p>
+        {/* <p className="text-xs"> * marked fields are mandatory</p> */}
       </div>
-      <p className="fontGeneral mb-4">
+      <p className="fontGeneral mb-4" style={{textAlign: 'center'}}>
         Your free trial will end on{" "}
         <span className="font-semibold">{prize.date}</span>{" "}
       </p>
-      <p className="fontGeneral mb-2">
+      <p className="fontGeneral mb-2" style={{textAlign: 'center'}}>
         Please choose your Package after free trial period:
       </p>
       <div className="flex gap-4 fontGeneral">
-        <label>
-          <input
-            type="radio"
-            name="priceTrial"
-            value="Gold"
-            checked={packages === "Gold" ? true : false}
-            onChange={changepack}
-          />{" "}
-          Gold
-        </label>
+
         <label>
           <input
             type="radio"
@@ -216,6 +207,18 @@ const SoftwareSubscription = () => {
           />{" "}
           Silver
         </label>
+
+        <label>
+          <input
+            type="radio"
+            name="priceTrial"
+            value="Gold"
+            checked={packages === "Gold" ? true : false}
+            onChange={changepack}
+          />{" "}
+          Gold
+        </label>
+
         <label>
           <input
             type="radio"
@@ -253,7 +256,7 @@ const SoftwareSubscription = () => {
       {period !== 0 && (
         <div>
           <p className="fontGeneral mt-3">
-            Your 1t payment will be due on Mon Nov 20 2023 for{" "}
+            Your 1st payment will be due on Mon Nov 20 2023 for{" "}
             <span className="colorPrimary font-semibold">GBP {total}</span>
           </p>
           <p className="fontGeneral my-2">
@@ -352,7 +355,7 @@ const SoftwareSubscription = () => {
         />
 
         <button type="submit" className="px-4 py-2 buttonsMain" onClick={handleClick}>
-          Watch the video to understand the benefits!
+          Watch the video to fully <br />understand the benefits!
         </button>
       </form>
     </div>
