@@ -47,54 +47,58 @@ const ClaimGiftForm = ( ) => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
-        <p className="fontTitle">FREE to 100 Salon Owners - Value up to £653</p>
+        <p className="fontAlternative"> <span className="fontTitle" style={{ padding: "0"} }>FREE</span> to 100 Salon Owners - Value up to £653</p>
         <p className="fontTitle">Claim Your FREE Gift Today!</p>        
-         <label for="Name" className="fontForm mb-1">
+         {/* <label for="Name" className="fontForm mb-1">
           Full Name*
-        </label>       
+        </label>        */}
         <input
           type="text"
           name="fullname"
           value={data.fullname}
           onChange={handleChange}
+          placeholder="Full Name*"
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-         <label for="Business Name" className="fontForm mb-1">
+         {/* <label for="Business Name" className="fontForm mb-1">
           Business Name*
-        </label> 
+        </label>  */}
         <input
           type="text"
           name="businessname"
           value={data.businessname}
           onChange={handleChange}
+          placeholder="Business Name*"
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-         <label for="Email" className="fontForm mb-1">
+         {/* <label for="Email" className="fontForm mb-1">
           Email*
-        </label>         
+        </label>          */}
         <input
           type="email"
           name="email"
           value={data.email}
           onChange={handleChange}
+          placeholder="Email*"
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
 
 
-        <label for="Contact Number" className="fontForm mb-1">
+        {/* <label for="Contact Number" className="fontForm mb-1">
           Contact Number*
-        </label>          
+        </label>           */}
         <input
           type="tel"
           name="number"
           value={data.number}
           onChange={handleChange}
+          placeholder="Contact Number*"
           required
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />

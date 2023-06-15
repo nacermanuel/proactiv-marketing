@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  background-color: white;
+  background-color: #72cbf1b7;
   /* --main-bg-color: black;
     --text-color-primary: red;
     --text-color-secondary: blue; */
-  --color-primary: rgb(165, 42, 42);
+  --color-primary: #a52a2a;
   --color-secondary: #f6513ba9;
   --color-thrid: #d15d4ea9;
+  --color-blue: #4a6bb6;
 }
 
 .colorPrimary {
@@ -49,6 +50,19 @@
   line-height: 1;
   color: var(--color-secondary);
   text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.fontAlternative{
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--color-blue);
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
