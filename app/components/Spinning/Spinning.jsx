@@ -92,10 +92,59 @@ export const Spinning = ({setCongrats,setResult}) => {
   return (
 
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
+      <div id='internalDIV' className='flex flex-col mx-5 my-4 items-center bg-white rounded-lg shadow-md relative'>
+
+
+
       {/* <p className="fontTitle">Spin The Wheel</p> */}
       {/* <p className="fontSubTitle whitespace-nowrap">To See How Many Free Months Use You Get</p>          */}
-      <p className="fontTitle" style={{color: "#f6513ba9"}}> <span className='block'>Spin The Wheel</span>To See How Many Free Months Use You Get To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards (value £53)</p>         
-      
+      <p className='fontTitle' style={{paddingBottom: "0"}}>Spin The Wheel</p>
+      <p className="fontAlternative" style={{ paddingTop: "0.5rem" , fontSize: "1.2rem"}}> To See How Many Free Months Use Of The Software You Get To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards (value £53)</p>         
+
+
+      <div id='DIVsoftwarecomponents' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3 bg-[#ebebeb3f]'>
+        <p className="fontSubTitle">Software Components</p>
+        <ul className="fontGeneral">
+          <li className=" flex justify-around items-center h-fit border">
+            <div className=' w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>1.- Database</p>
+            </div>
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>2.- Telephone / Email Marketing</p>
+            </div>
+          </li>
+
+          <li className=" flex justify-around items-center h-fit border py-1">
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>3.- Referral Marketing</p>
+            </div>
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>4.- Gift Cards</p>
+            </div>
+          </li>
+
+          <li className=" flex justify-around items-center h-fit border py-1">
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>5.- Loyalty / Incentive Marketing</p>
+            </div>
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>6.- Diary System</p>
+            </div>
+          </li>
+
+
+          <li className=" flex justify-around items-center h-fit border py-1">
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>7.- Stock Control</p>
+            </div>
+            <div className='w-[50%] h-[100%] flex justify-center items-center'>
+              <p className='fontGeneral' style={{textAlign: 'center'}}>8.- Invoicing </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
       <div id='containerSpinner' className='h-auto w-[95%] flex flex-col justify-center items-center'>
         {/* <p>test: {prize}</p> */}
         <div className='flex justify-center items-center my-7 px-2 transform scale-100'>
@@ -120,52 +169,13 @@ export const Spinning = ({setCongrats,setResult}) => {
         <button className='px-6 py-2 bg-[#a52a2a] text-lg text-white rounded-lg opacity-50' disabled >Spin!</button>
       }
 
-      <div id='software components' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3'>
-        <p className="mt-5 mb-3 colorThird">Software Components</p>
-        <ul className="fontGeneral">
-          <li className=" flex justify-around items-center h-[65px]">
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>1.- Database</p>
-            </div>
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral' style={{textAlign: 'center'}}>2.- Telephone / Email Marketing</p>
-            </div>
-          </li>
-
-          <li className=" flex justify-around items-center h-[75px]">
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>3.- Referral Marketing</p>
-            </div>
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral' style={{textAlign: 'center'}}>4.- Gift Cards</p>
-            </div>
-          </li>
-
-          <li className=" flex justify-around items-center h-[60px]">
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>5.- Loyalty / Incentive Marketing</p>
-            </div>
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral' style={{textAlign: 'center'}}>6.- Diary System</p>
-            </div>
-          </li>
+      
+      
 
 
-          <li className=" flex justify-around items-center h-[60px]">
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral text-center' style={{textAlign: 'center'}}>7.- Stock Control</p>
-            </div>
-            <div className='border w-[50%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral' style={{textAlign: 'center'}}>8.- Invoicing </p>
-            </div>
-          </li>
 
-        </ul>
+
       </div>
-
-
-
-
     </div>
 
   )
