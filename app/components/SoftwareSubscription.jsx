@@ -256,8 +256,8 @@ const SoftwareSubscription = () => {
       {period !== 0 && (
         <div>
           <p className="fontGeneral mt-3">
-            Your 1st payment will be due on Mon Nov 20 2023 for{" "}
-            <span className="colorPrimary font-semibold">GBP {total}</span>
+            Your 1st payment will be due on {prize.date}{" "}
+            <span className="colorPrimary font-semibold">&#163;{total}</span>
           </p>
           <p className="fontGeneral my-2">
             Cancel at anytime by email to{" "}
@@ -269,86 +269,93 @@ const SoftwareSubscription = () => {
       )}
       <form
         id="form"
-        className="w-full flex flex-col px-4 py-8  bg-white rounded-lg shadow-md relative"
+        className="w-full flex flex-col px-4 py-4 bg-white relative"
       >
-        <label for="FullName" className="fontForm mb-1">
+        {/* <label for="FullName" className="fontForm mb-1">
           Full Name *
-        </label>
+        </label> */}
         <input
           required={true}
           id="YourName"
           type="text"
           name="fullname"
           onChange={handleChange}
+          placeholder="Full Name"
           value={data.fullname}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="Business" className="fontForm mb-1">
+        {/* <label for="Business" className="fontForm mb-1">
           Business Name *
-        </label>
+        </label> */}
         <input
           required={true}
           id="Business"
           type="text"
           name="businessname"
+          placeholder="Business Name"
           onChange={handleChange}          
           value={data.businessname}   
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="Industry" className="fontForm mb-1">
+        {/* <label for="Industry" className="fontForm mb-1">
           Industry *
-        </label>
+        </label> */}
         <input
           id="Industry"
           type="text"
           name="industry"
+          placeholder="Industry"
           onChange={handleChange}
           value={data.industry}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="Phone" className="fontForm mb-1">
-          Phone Nomber *
-        </label>
+        {/* <label for="Phone" className="fontForm mb-1">
+          Phone Number *
+        </label> */}
         <input
           required={true}
           id="Phone"
           type="text"
           name="number"
+          placeholder="Phone Number"
           onChange={handleChange}
           value={data.number}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="email" className="fontForm mb-1">
+        {/* <label for="email" className="fontForm mb-1">
           Email Address *
-        </label>
+        </label> */}
         <input
           required={true}
           id="email"
           type="text"
           name="email"
+          placeholder="Email Address"
           onChange={handleChange}
           value={data.email}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="web" className="fontForm mb-1">
+        {/* <label for="web" className="fontForm mb-1">
           Website Address
-        </label>
+        </label> */}
         <input
           id="web"
           type="text"
           name="web"
+          placeholder="Website Address"
           onChange={handleChange}
           value={data.web} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
-        <label for="Address" className="fontForm mb-1">
+        {/* <label for="Address" className="fontForm mb-1">
           Address *
-        </label>
+        </label> */}
         <input
           required={true}
           id="Address"
           type="text"
           name="address"
+          placeholder="Address"
           onChange={handleChange}
           value={data.address} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
