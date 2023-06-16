@@ -269,3 +269,25 @@
   text-align: center;
 
 }
+
+/* TAMANOS DE PLACEHOLDERS */
+
+input[name="average"]::placeholder {
+  font-size: 0.8rem;
+  /* Adjust the size as desired */
+}
+
+input[name="percentage"]::placeholder {
+  font-size: 0.8rem;
+  /* Adjust the size as desired */
+}
+
+input[name="cards"]::placeholder {
+  font-size: 0.8rem;
+  /* Adjust the size as desired */
+} 
+
+input[name="months"]::placeholder {
+  font-size: 0.8rem;
+  /* Adjust the size as desired */
+}

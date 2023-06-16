@@ -59,7 +59,7 @@ const ClaimGiftForm = ( ) => {
           onChange={handleChange}
           placeholder="Full Name*"
           required
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
+          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput "
         />
 
          {/* <label for="Business Name" className="fontForm mb-1">

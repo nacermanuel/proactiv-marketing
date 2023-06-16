@@ -9,45 +9,52 @@ const CardsFree = () => {
 
 
 
-        <label for="Average of customers per month" className="fontForm mb-1">
-          Average of customers per month*
-        </label>         
+        {/* <label for="Average of customers per month" className="fontForm mb-1">
+          Average No. of customers per month*
+        </label>          */}
         <input
           type="number"
+          name="average"
           required
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
+          placeholder="Average No. of customers per month"
+          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput "
         />
 
 
-        <label for="Percentage of customers going to give the card to" className="fontForm mb-1">
-          Percentage of customers going to give the card to*
-        </label>   
-        <div className="flex justify-between px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput">
+        {/* <label for="Percentage of customers going to give the card to" className="fontForm mb-1">
+          Percentage of customers going to give the cards to*
+        </label>    */}
+        <div className="flex justify-between items-center mb-4 rounded-lg border border-gray-300 focusInput">
             <input
             type="number"
             required
-            className="w-full"
+            className="w-full py-2 pl-4 pr-4"
+            placeholder="% of customers going to give the cards to"
+            name="percentage"
             min={1}
             max={100}
             />
-            <div type="submit">%</div>
+            <div className="text-center text-2xl">%</div>
         </div>
 
-        <label for="Card to each customer (2 or 3 cards per happy customer recommended)" className="fontForm mb-1">
-          Card to each customer (2 or 3 cards per happy customer recommended)*
+        <label for="Card to each customer (2 or 3 cards per happy customer recommended)" className="fontForm mb-1" style={{fontSize: "12px"}}>
+          (2 or 3 cards per happy customer recommended)
         </label>   
         <input
           type="number"
           required
+          name="cards"
+          placeholder="Cards to each customer "
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-        <label for="Number of months supply required" className="fontForm mb-1">
+        {/* <label for="Number of months supply required" className="fontForm mb-1">
           Number of months supply required*
-        </label>  
+        </label>   */}
         <input
           type="number"
           required
+          placeholder="Number of months supply required"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <button
