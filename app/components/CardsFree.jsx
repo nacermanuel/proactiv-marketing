@@ -1,12 +1,12 @@
 const CardsFree = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center pt-3">
 
       <form id="formulario" className="flex flex-col px-4 pb-8 mx-5 bg-white rounded-lg shadow-md relative">
 
         {/* <p id="close" className=" absolute top-0 right-0">X</p> */}
-        <p className="fontTitle">100 FREE PLASTIC CARDS</p>
-
+        <p className='fontAlternative' style={{padding: "0.5rem 0 0.2rem 0"}}>How many referral marketing cards do you need for your business?</p>
+        <p className='fontSubTitle' style={{padding: "0 0 0.2rem 0"}}>Input the information an estimate how many do you need:</p>
 
 
         {/* <label for="Average of customers per month" className="fontForm mb-1">
@@ -28,7 +28,7 @@ const CardsFree = () => {
             <input
             type="number"
             required
-            className="w-full py-2 pl-4 pr-4"
+            className="w-full py-2 pl-4 pr-4 rounded-lg border border-gray-300 focusInput"
             placeholder="% of customers going to give the cards to"
             name="percentage"
             min={1}
@@ -54,6 +54,7 @@ const CardsFree = () => {
         <input
           type="number"
           required
+          name="months"
           placeholder="Number of months supply required"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />

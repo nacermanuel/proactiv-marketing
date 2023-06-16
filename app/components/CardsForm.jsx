@@ -13,6 +13,7 @@ const CardsForm = () => {
 
       <div id="calculosOne" className="flex flex-col w-[90%] px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
 
+        <p className="fontTitle">100 FREE PLASTIC CARDS</p>
 
         <label for="Number of free cards" className="fontForm mb-1">
           Number of free cards
