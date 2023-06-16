@@ -28,17 +28,18 @@ const CardsFree = () => {
             <input
             type="number"
             required
-            className="w-full py-2 pl-4 pr-4 rounded-lg border border-gray-300 focusInput"
+            className="w-full py-2 pl-4 pr-4 rounded-lg focusInput"
             placeholder="% of customers going to give the cards to"
             name="percentage"
             min={1}
             max={100}
+            // style={{borderRight: "0"}}
             />
             <div className="text-center text-2xl">%</div>
         </div>
 
         <label for="Card to each customer (2 or 3 cards per happy customer recommended)" className="fontForm mb-1" style={{fontSize: "12px"}}>
-          (2 or 3 cards per happy customer recommended)
+          (Give 2 or 3 cards per happy customer recommended)
         </label>   
         <input
           type="number"
