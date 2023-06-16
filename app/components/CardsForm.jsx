@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import Modal from 'react-modal';
+import PriceCards from "./PriceCards";
 
 const CardsForm = () => {
     const [freeCards, setFreeCards] = useState(100)
@@ -66,7 +67,7 @@ const CardsForm = () => {
 
 
           <label for="Card price (GBP)" className="fontForm mb-1">
-            Card price
+            Cards price
           </label>          
         <div className="flex justify-between gap-2 items-center mb-4 "> 
           <input
@@ -74,7 +75,7 @@ const CardsForm = () => {
             value={ `£${(price * aditionalCards).toFixed(2).replace(',', '.')}`}
             type="text"
             placeholder="Please input number"
-            className="w-[75%] py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-[75%] py-2 pl-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
           <button 
             id="cardPrices" 
@@ -88,11 +89,29 @@ const CardsForm = () => {
             isOpen={isModalOpen}
             onRequestClose={closeModal}
             contentLabel="Card Prices Modal"
+            style={{
+              overlay:{
+                backgroundColor: "#96ade283",
+              },
+              content:{
+                backgroundColor: '#72cbf1',
+                height: '600px',
+                margin: 'auto',
+                borderRadius: '8px',
+                border: '1px solid #ccc',
+                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',                
+              }
+            }}
           >
             {/* Place your modal content here */}
             <p className="absolute top-0 right-1" onClick={closeModal}>X</p>
-            <div>
-              varios contenidos
+            <div className="flex flex-col justify-center items-center w-[98%] h-[98%] bg-white rounded-lg shadow-md relative">
+              <p className="fontAlternative">Cards price</p>
+              <PriceCards/>
             </div>
           </Modal>
 
@@ -129,8 +148,8 @@ const CardsForm = () => {
         </label>         
         <input
           disabled
-          value={(price * aditionalCards) + 37.5 + 14}
-          type="number"
+          value={`£${((price * aditionalCards) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
@@ -139,16 +158,16 @@ const CardsForm = () => {
           Select a payment option*
         </label>       
         <div className="flex justify-evenly">
-            <label><input type="radio" name="payment" checked required onChange={()=>setSelectedOption(true)}  />Full payment</label> 
-            <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Partial payment</label> 
+            <label><input type="radio" name="payment" checked required onChange={()=>setSelectedOption(true)}  />Full Deposit</label> 
+            <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Partial Deposit</label> 
         </div>
         <input 
-          value={(price * aditionalCards) + 37.5 + 14}
-          type="number"
+          value={`£${((price * aditionalCards) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
-        <p className="mb-4 text-xs">min GBP 50</p>
+        <p className="mb-4 text-xs">min £50</p>
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
