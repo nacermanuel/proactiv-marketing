@@ -5,13 +5,13 @@ import PriceCards from "./PriceCards";
 
 const CardsForm = () => {
     const [freeCards, setFreeCards] = useState(100)
-    const [aditionalCards, setAditionalCards] = useState(2100)
     const [price, setPrice] = useState(0.36)
     const [selectedOption, setSelectedOption] = useState(true);
     const [cardPrice] = useState(37.50)
     const [deliveryPrice] = useState(14.00)
     const [isModalOpen, setIsModalOpen] = useState(false);  
-
+    const [aditionalCards, setAditionalCards] = useState(2100)
+    
 
     const openModal = () => {
       setIsModalOpen(true);
@@ -34,7 +34,7 @@ const CardsForm = () => {
           Number of free cards
         </label>          
         <input
-          disabled
+          
           value={freeCards}
           type="number"
           placeholder="Please input number"
@@ -46,7 +46,7 @@ const CardsForm = () => {
           Additionl number of cards
         </label>        
         <input
-          disabled
+          
           value={aditionalCards}
           type="number"
           placeholder="Please input number"
@@ -57,7 +57,7 @@ const CardsForm = () => {
           Total number of cards needed
         </label>        
         <input
-          disabled
+          
           value={freeCards + aditionalCards}
           type="number"
           placeholder="Please input number"
@@ -71,7 +71,7 @@ const CardsForm = () => {
           </label>          
         <div className="flex justify-between gap-2 items-center mb-4 "> 
           <input
-            disabled
+            
             value={ `£${(price * aditionalCards).toFixed(2).replace(',', '.')}`}
             type="text"
             placeholder="Please input number"
@@ -125,7 +125,7 @@ const CardsForm = () => {
           Artwork/Design
         </label>           
         <input
-          disabled
+          
           value={`£${cardPrice.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
@@ -136,7 +136,7 @@ const CardsForm = () => {
           Courier delivery 
         </label>  
         <input
-          disabled
+          
           value={`£${deliveryPrice.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
@@ -147,7 +147,7 @@ const CardsForm = () => {
           Total price 
         </label>         
         <input
-          disabled
+          
           value={`£${((price * aditionalCards) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"

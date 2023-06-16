@@ -15,27 +15,27 @@ const PriceCards = () => {
         <tbody>
             <tr className="border-b bg-[#72cbf1]">
             <td className="py-2 px-4">100 to 499</td>
-            <td className="py-2 px-4">&pound;53</td>
+            <td className="py-2 px-4">&pound;53.00</td>
             </tr>
             <tr className="border-b bg-[#b4e6fcc4]">
             <td className="py-2 px-4">500 to 999</td>
-            <td className="py-2 px-4">&pound;45</td>
+            <td className="py-2 px-4">&pound;45.00</td>
             </tr>
             <tr className="border-b bg-[#72cbf1]">
             <td className="py-2 px-4">1000 to 2499</td>
-            <td className="py-2 px-4">&pound;40</td>
+            <td className="py-2 px-4">&pound;40.00</td>
             </tr>
             <tr className="border-b bg-[#b4e6fcc4]">
             <td className="py-2 px-4">2500 to 4999</td>
-            <td className="py-2 px-4">&pound;36</td>
+            <td className="py-2 px-4">&pound;36.00</td>
             </tr>
             <tr className="border-b bg-[#72cbf1]">
             <td className="py-2 px-4">5000 to 9999</td>
-            <td className="py-2 px-4">&pound;32</td>
+            <td className="py-2 px-4">&pound;32.00</td>
             </tr>
             <tr className="border-b bg-[#b4e6fcc4]">
             <td className="py-2 px-4">10000+</td>
-            <td className="py-2 px-4">&pound;30</td>
+            <td className="py-2 px-4">&pound;30.00</td>
             </tr>
         </tbody>
         </table>
