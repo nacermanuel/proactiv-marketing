@@ -3,14 +3,14 @@ import { useState } from "react"
 import Modal from 'react-modal';
 import PriceCards from "./PriceCards";
 
-const CardsForm = () => {
+const CardsForm = ({estimate}) => {
     const [freeCards, setFreeCards] = useState(100)
     const [price, setPrice] = useState(0.36)
     const [selectedOption, setSelectedOption] = useState(true);
     const [cardPrice] = useState(37.50)
     const [deliveryPrice] = useState(14.00)
-    const [isModalOpen, setIsModalOpen] = useState(false);  
-    const [aditionalCards, setAditionalCards] = useState(2100)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [addition, setAddition] = useState(estimate)  
     
 
     const openModal = () => {
@@ -21,6 +21,10 @@ const CardsForm = () => {
       setIsModalOpen(false);
     };
 
+    const handleChange =(e)=>{
+      setAddition(e.target.value)
+    }
+
 
 
   return (
@@ -30,35 +34,36 @@ const CardsForm = () => {
 
         <p className="fontTitle">100 FREE PLASTIC CARDS</p>
 
-        <label for="Number of free cards" className="fontForm mb-1">
+        <label htmlFor="Number of free cards" className="fontForm mb-1">
           Number of free cards
         </label>          
         <input
           
-          value={freeCards}
+          defaultValue={freeCards}
           type="number"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
 
-        <label for="Additionl number of cards" className="fontForm mb-1">
+        <label htmlFor="Additionl number of cards" className="fontForm mb-1">
           Additional number of cards (adjust accordingly)
         </label>        
         <input
           
-          value={aditionalCards}
+          value={addition}
+          onChange={handleChange}
           type="number"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <label for="Total Number of Cards" className="fontForm mb-1">
+        <label htmlFor="Total Number of Cards" className="fontForm mb-1">
           Total number of cards needed
         </label>        
         <input
           
-          value={freeCards + aditionalCards}
+          value={parseInt(freeCards) + parseInt(addition)}
           type="number"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -66,13 +71,13 @@ const CardsForm = () => {
 
 
 
-          <label for="Card price (GBP)" className="fontForm mb-1">
+          <label htmlFor="Card price (GBP)" className="fontForm mb-1">
             Cards price
           </label>          
         <div className="flex justify-between gap-2 items-center mb-4 "> 
           <input
             
-            value={ `£${(price * aditionalCards).toFixed(2).replace(',', '.')}`}
+            defaultValue={ `£${(price * parseInt(addition)).toFixed(2).replace(',', '.')}`}
             type="text"
             placeholder="Please input number"
             className="w-[75%] py-2 pl-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -121,40 +126,40 @@ const CardsForm = () => {
 
 
 
-        <label for="Artwork/Design (GBP)" className="fontForm mb-1">
+        <label htmlFor="Artwork/Design (GBP)" className="fontForm mb-1">
           Artwork/Design
         </label>           
         <input
           
-          value={`£${cardPrice.toFixed(2).replace(',', '.')}`}
+          defaultValue={`£${cardPrice.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <label for="Courier Delivery (GBP)" className="fontForm mb-1">
+        <label htmlFor="Courier Delivery (GBP)" className="fontForm mb-1">
           Courier delivery 
         </label>  
         <input
           
-          value={`£${deliveryPrice.toFixed(2).replace(',', '.')}`}
+          defaultValue={`£${deliveryPrice.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <label for="Total Price (GBP)" className="fontForm mb-1">
+        <label htmlFor="Total Price (GBP)" className="fontForm mb-1">
           Total price 
         </label>         
         <input
           
-          value={`£${((price * aditionalCards) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          value={`£${((price * parseInt(addition)) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <label for="Select a Payment Option" className="fontForm mb-1">
+        <label htmlFor="Select a Payment Option" className="fontForm mb-1">
           Select a payment option*
         </label>       
         <div className="flex justify-evenly">
@@ -162,7 +167,7 @@ const CardsForm = () => {
             <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Partial Deposit</label> 
         </div>
         <input 
-          value={`£${((price * aditionalCards) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          value={`£${((price * addition) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"

@@ -76,7 +76,7 @@ const CardsFree = () => {
             <div className="text-center text-2xl">%</div>
         </div>
 
-        <label for="Card to each customer (2 or 3 cards per happy customer recommended)" className="fontForm mb-1" style={{fontSize: "12px"}}>
+        <label htmlFor="Card to each customer (2 or 3 cards per happy customer recommended)" className="fontForm mb-1" style={{fontSize: "12px"}}>
           (Give 2 or 3 cards per happy customer recommended)
         </label>   
         <input
@@ -99,18 +99,21 @@ const CardsFree = () => {
           placeholder="Number of months supply required"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
+        <div className="flex justify-center items-center">
+          <p className=" fontAlternative" style={{paddingTop: "0"}}>{`Estimated: ${ Math.round((estimate.average * (estimate.percentage/100) * estimate.cards * estimate.months))}`}</p>
+        </div>
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
           onClick={handleClick}
         >
-          Calculate
+          Calculate Total
         </button>
       </form>
 
       <span className="w-full  h-1 block"></span> 
 
-      {calculate && <CardsForm/>}
+      {calculate && <CardsForm estimate={Math.round((estimate.average * (estimate.percentage/100) * estimate.cards * estimate.months))}/>}
 
 
 
