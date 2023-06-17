@@ -1,4 +1,40 @@
+'use client'
+
+import { useState } from "react"
+import CardsForm from "./CardsForm"
+
 const CardsFree = () => {
+  const [calculate, serCalculate] = useState(false)
+  const [estimate, setEstimate] = useState({average:'',percentage:'',cards:'',months:''})
+
+
+  const handleChange = (e) =>{
+    setEstimate({...estimate , [e.target.name]:e.target.value})
+  }  
+
+  const handleClick = (e)=>{
+    e.preventDefault()
+
+    if( 
+      estimate.average.length == 0 || 
+      estimate.percentage.length == 0 || 
+      estimate.cards.length == 0 || 
+      estimate.months.length == 0 
+      ){
+        alert('Complete all the fields')
+      }else if ( estimate.percentage < 0 || estimate.percentage>100 ) {
+        alert('Percentage must be between 1 - 100');
+      }  else {
+        serCalculate(true)
+      }
+      
+      
+      // localStorage.setItem('data', JSON.stringify(data));
+      // router.push('/funnel/spin');
+
+
+  }
+  
   return (
     <div className="flex flex-col justify-center items-center pt-3">
 
@@ -15,6 +51,7 @@ const CardsFree = () => {
         <input
           type="number"
           name="average"
+          onChange={handleChange}
           required
           placeholder="Average No. of customers per month"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput "
@@ -31,6 +68,7 @@ const CardsFree = () => {
             className="w-full py-2 pl-4 pr-4 rounded-lg focusInput"
             placeholder="% of customers going to give the cards to"
             name="percentage"
+            onChange={handleChange}
             min={1}
             max={100}
             // style={{borderRight: "0"}}
@@ -45,6 +83,7 @@ const CardsFree = () => {
           type="number"
           required
           name="cards"
+          onChange={handleChange}
           placeholder="Cards to each customer "
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
@@ -56,16 +95,25 @@ const CardsFree = () => {
           type="number"
           required
           name="months"
+          onChange={handleChange}
           placeholder="Number of months supply required"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
+          onClick={handleClick}
         >
           Calculate
         </button>
       </form>
+
+      <span className="w-full  h-1 block"></span> 
+
+      {calculate && <CardsForm/>}
+
+
+
     </div>
   )
 }

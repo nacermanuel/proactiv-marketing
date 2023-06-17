@@ -43,7 +43,7 @@ const CardsForm = () => {
 
 
         <label for="Additionl number of cards" className="fontForm mb-1">
-          Additionl number of cards
+          Additional number of cards (adjust accordingly)
         </label>        
         <input
           
