@@ -22,18 +22,18 @@ const Celebration = ({result}) => {
         router.push('/funnel/software');
     }
 
+//ACTIIIIIIIIIIIVAAAAAAAAAAAAAAAAARRRRRR ESTE USEEEEEEEEEEEE EFFECT
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //     // Call your action here
+    //     localStorage.setItem('software', JSON.stringify(result));
+    //     router.push('/funnel/software');
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-        // Call your action here
-        localStorage.setItem('software', JSON.stringify(result));
-        router.push('/funnel/software');
+    //     }, 5000);
 
-        }, 5000);
+    //     return () => clearTimeout(timer); // Clean up the timer on component unmount
 
-        return () => clearTimeout(timer); // Clean up the timer on component unmount
-
-    }, []);    
+    // }, []);    
 
 
   return (
@@ -42,6 +42,8 @@ const Celebration = ({result}) => {
         <p className='fontTitle absolute' style={{fontSize:"3rem" , color: 'white'}}>
             Congratulations! You have won {result.description} software valued &#163;{result.valued} to use for free up to {result.date} ! 
         </p>
+
+        <p className=' bg-white absolute text-[3rem]'>texto pruebas</p>
         <img className='h-[100vh]' style={{ maxWidth: 'none'}} src="https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif" alt="baloons" />
         {/* <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" /> */}
         

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
 :root {
   background-color: #72cbf1b7;
   /* --main-bg-color: black;
@@ -12,6 +14,10 @@
   --color-thrid: #d15d4ea9;
   --color-blue: #4a6bb6;
 }
+
+/* body{
+  font-family: 'Poppins', sans-serif;
+} */
 
 .colorPrimary {
   color: var(--color-primary);
@@ -31,7 +37,8 @@
 }
 
 .fontTitle {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
   font-size: 2rem;
   font-weight: 500;
   color: var(--color-primary);
@@ -44,7 +51,8 @@
 }
 
 .fontSubTitle {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1;
@@ -57,7 +65,8 @@
 }
 
 .fontAlternative{
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  /* font-family: 'Poppins', sans-serif; */
   color: var(--color-blue);
   font-size: 1.5rem;
   font-weight: 300;
