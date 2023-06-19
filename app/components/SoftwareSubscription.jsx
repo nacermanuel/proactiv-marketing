@@ -94,9 +94,10 @@ const SoftwareSubscription = () => {
 
   return (
     <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
-      <p className="fontTitle text-center colorPrimary">
-        Get Your Free Software Subscription
+      <p className="fontTitle text-center colorPrimary" style={{fontWeight: '700'}}>
+        Congratulations on winning!
       </p>
+
       {/* <p className="fontTitle my-8 text-center">
         You have won{" "}
         <span className="fontTitle" style={{color: "rgba(246, 81, 59, 0.664)"}}>
@@ -112,15 +113,11 @@ const SoftwareSubscription = () => {
         You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
       </p> */}
 
-
-      <p className="fontAlternative" style={{paddingBottom: "0"}}>{prize.description} <br />Software Subscription</p>
+      <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}>{prize.description}!!</p>
 
       <p className="fontGeneral" style={{textAlign: 'center'}}>
-        After your FREE trial ONLY pay for what features you want to use. <br />
         (NO CONTRACT - cancel at any time - 30 days notice)
       </p>
-
-      
       
       {/* <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
       <ul className="fontGeneral">
@@ -154,7 +151,61 @@ const SoftwareSubscription = () => {
 
       
       <p className="fontAlternative" style={{paddingBottom: "0"}}>Price After Free Trial</p>
-      <table className="w-full">
+      <table className="w-[95%] border rounded-lg">
+        <thead>
+          <tr>
+            <th className="resize-text py-1 px-0 w-[50%]">Package</th>
+            <th className="resize-text py-1 px-0 w-[50%]">Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b bg-neutral-200">
+            <td className="resize-text py-1 px-0">Silver</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b ">
+            <td className="resize-text py-1 px-0">Gold</td>
+            <td className="resize-text py-1 px-0">Database + 3</td>
+          </tr>
+          <tr className="border-b bg-neutral-200">
+            <td className="resize-text py-1 px-0">Diamond</td>
+            <td className="resize-text py-1 px-0">All 8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table className="w-[95%] border rounded-lg">
+        <thead>
+          <tr>
+            <th className="w-[4%]"> </th>
+            <th className="resize-text py-1 px-0 w-[32%]">Monthly</th>
+            <th className="resize-text py-1 px-0 w-[32%]">Quarterly</th>
+            <th className="resize-text py-1 px-0 w-[32%]">Annually</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="border-b bg-neutral-200">
+            <td>S.</td>
+            <td className="resize-text py-1 px-0">&#163;30.00</td>
+            <td className="resize-text py-1 px-0">&#163;80.00</td>
+            <td className="resize-text py-1 px-0">&#163;299.00</td>
+          </tr>
+          <tr className="border-b">
+            <td>G.</td>
+            <td className="resize-text py-1 px-0">&#163;50.00</td>
+            <td className="resize-text py-1 px-0">&#163;135.00</td>
+            <td className="resize-text py-1 px-0">&#163;499.00</td>
+          </tr>
+          <tr className="border-b bg-neutral-200">
+            <td>D.</td>
+            <td className="resize-text py-1 px-0">&#163;70.00</td>
+            <td className="resize-text py-1 px-0">&#163;180.00</td>
+            <td className="resize-text py-1 px-0">&#163;589.00</td>
+          </tr>          
+        </tbody>
+      </table>
+
+      {/* <table className="w-full">
         <thead>
           <tr className="border-t">
             <th className="resize-text py-1 px-0">Package</th>
@@ -166,24 +217,29 @@ const SoftwareSubscription = () => {
         <tbody>
           <tr className="border-b bg-neutral-200">
             <td className="resize-text py-1 px-0">Silver</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-0">2</td>
             <td className="resize-text py-1 px-0">&#163;29.99</td>
             <td className="resize-text py-1 px-0">&#163;79.99</td>
           </tr>
           <tr>
             <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0">4</td>
             <td className="resize-text py-1 px-0">&#163;49.99</td>
             <td className="resize-text py-1 px-0">&#163;135</td>
           </tr>
           <tr className="border-b bg-neutral-200">
             <td className="resize-text py-1 px-0">Diamond</td>
-            <td className="resize-text py-1 px-0">All 8</td>
+            <td className="resize-text py-1 px-0">8(all)</td>
             <td className="resize-text py-1 px-0">&#163;59.99</td>
             <td className="resize-text py-1 px-0">&#163;155</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+
+      <p className="fontGeneral py-2" style={{textAlign: 'center'}}>
+        After your FREE trial, ONLY pay for what features you want to use. <br />
+      </p>
+
       <div className=" text-center">
         <p className="fontAlternative" style={{paddingBottom: "4px"}}>Please provide required information</p>
         {/* <p className="text-xs"> * marked fields are mandatory</p> */}
@@ -195,9 +251,9 @@ const SoftwareSubscription = () => {
       <p className="fontGeneral mb-2" style={{textAlign: 'center'}}>
         Please choose your Package after free trial period:
       </p>
-      <div className="flex gap-4 fontGeneral">
+      <div className="flex gap-4 fontGeneral pb-2">
 
-        <label>
+        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"
@@ -208,7 +264,7 @@ const SoftwareSubscription = () => {
           Silver
         </label>
 
-        <label>
+        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"
@@ -219,7 +275,7 @@ const SoftwareSubscription = () => {
           Gold
         </label>
 
-        <label>
+        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"

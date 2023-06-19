@@ -22,18 +22,18 @@ const Celebration = ({result}) => {
         router.push('/funnel/software');
     }
 
-//ACTIIIIIIIIIIIVAAAAAAAAAAAAAAAAARRRRRR ESTE USEEEEEEEEEEEE EFFECT
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //     // Call your action here
-    //     localStorage.setItem('software', JSON.stringify(result));
-    //     router.push('/funnel/software');
 
-    //     }, 5000);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+        // Call your action here
+        localStorage.setItem('software', JSON.stringify(result));
+        router.push('/funnel/software');
 
-    //     return () => clearTimeout(timer); // Clean up the timer on component unmount
+        }, 5000);
 
-    // }, []);    
+        return () => clearTimeout(timer); // Clean up the timer on component unmount
+
+    }, []);    
 
 
   return (
