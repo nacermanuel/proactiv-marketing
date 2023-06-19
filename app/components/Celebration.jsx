@@ -39,11 +39,24 @@ const Celebration = ({result}) => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-[#331C8D] overflow-hidden" onClick={clickCongrat}>
 
-        <p className='fontTitle absolute' style={{fontSize:"3rem" , color: 'white'}}>
-            Congratulations! You have won {result.description} software valued &#163;{result.valued} to use for free up to {result.date} ! 
+        {/* <p className='fontTitle absolute' style={{fontSize:"1rem" , color: 'white'}}>Congratulations!</p> */}
+        <p className='fontTitle absolute' style={{fontSize:"2rem" , color: 'white'}}>
+            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>Congratulations!</span><br />
+            <br className="my-4" />
+            You have won <br />
+            <br className="my-2" />
+            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.description}</span> 
+            <br />
+            <br className="my-2" />
+            software use. 
+            <br />
+            <br className="my-2" />           
+            Valued &#163;{result.valued} to use for free up to 
+            <br />
+            <br className="my-2" />
+            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.date} </span> 
         </p>
 
-        <p className=' bg-white absolute text-[3rem]'>texto pruebas</p>
         <img className='h-[100vh]' style={{ maxWidth: 'none'}} src="https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif" alt="baloons" />
         {/* <img src="https://media.giphy.com/media/BrFuiMe3YUt3laSeEO/giphy.gif" alt="" /> */}
         
@@ -52,8 +65,8 @@ const Celebration = ({result}) => {
             <Confetti
                 width={width}
                 height={height}
-                gravity={0.3}
-                numberOfPieces={400}
+                gravity={0.1}
+                numberOfPieces={100}
             />
         }
 
