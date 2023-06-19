@@ -95,7 +95,7 @@ const SoftwareSubscription = () => {
   return (
     <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
       <p className="fontTitle text-center colorPrimary" style={{fontWeight: '700'}}>
-        Congratulations on winning!
+        Congratulations on winning!!
       </p>
 
       {/* <p className="fontTitle my-8 text-center">
@@ -113,9 +113,11 @@ const SoftwareSubscription = () => {
         You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
       </p> */}
 
-      <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}>{prize.description}!!</p>
+      <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}>{prize.description} software subscription!!</p>
 
-      <p className="fontGeneral" style={{textAlign: 'center'}}>
+      <p className="fontSubTitle text-center" style={{fontSize:'1.5rem'}}>To go with your free plastic referal marketing cards.</p>
+
+      <p className="fontGeneral pb-3" style={{textAlign: 'center'}}>
         (NO CONTRACT - cancel at any time - 30 days notice)
       </p>
       
@@ -150,7 +152,7 @@ const SoftwareSubscription = () => {
       </ul> */}
 
       
-      <p className="fontAlternative" style={{paddingBottom: "0"}}>Price After Free Trial</p>
+      <p className="fontGeneral" style={{textAlign: 'center'}}>Price After Free Trial</p>
       <table className="w-[95%] border rounded-lg">
         <thead>
           <tr>
