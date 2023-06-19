@@ -2,49 +2,50 @@ import React from 'react'
 
 const PriceCards = () => {
   return (
-    <div>
 
+    <div className='w-full'>
 
-      <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Card prices</p>
+      <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Cards prices</p>
       <table className="w-full border rounded-lg">
         <thead>
           <tr className="border-b bg-[#7a94b3]">
-            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Quantities</th>
-            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Price</th>
-            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Discount</th>
+            <th className="resize-text py-1 px-2 w-[37%] text-white" style={{fontWeight:'700'}}>Quantities</th>
+            <th className="resize-text py-1 px-2 w-[30%] text-white" style={{fontWeight:'700'}}>Price</th>
+            <th className="resize-text py-1 px-2 w-[33%] text-white" style={{fontWeight:'700'}}>Discount</th>
           </tr>
         </thead>
         <tbody>
           <tr className="border-b bg-[#ffffff]">
-            <td className="resize-text py-1 px-0">Silver</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">100-499</td>
+            <td className="resize-text py-1 px-2">53p</td>
+            <td className="resize-text py-1 px-2">0%</td>
           </tr>
           <tr className="border-b bg-[#96cfd1]">
-            <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">Database + 3</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">500–999</td>
+            <td className="resize-text py-1 px-2">45p</td>
+            <td className="resize-text py-1 px-2">15%</td>
           </tr>
           <tr className="border-b bg-[#ffffff]">
-            <td className="resize-text py-1 px-0">Diamond</td>
-            <td className="resize-text py-1 px-0">All 8</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">1000-2499</td>
+            <td className="resize-text py-1 px-2">40p</td>
+            <td className="resize-text py-1 px-2">25%</td>
           </tr>
           <tr className="border-b bg-[#96cfd1]">
-            <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">Database + 3</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">2500-4999</td>
+            <td className="resize-text py-1 px-2">36p</td>
+            <td className="resize-text py-1 px-2">33%</td>
           </tr>
           <tr className="border-b bg-[#ffffff]">
-            <td className="resize-text py-1 px-0">Diamond</td>
-            <td className="resize-text py-1 px-0">All 8</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">5000-9999</td>
+            <td className="resize-text py-1 px-2">32p</td>
+            <td className="resize-text py-1 px-2">40%</td>
           </tr>
           <tr className="border-b bg-[#96cfd1]">
-            <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">Database + 3</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-2">10000+</td>
+            <td className="resize-text py-1 px-2">30p</td>
+            <td className="resize-text py-1 px-2">45%</td>
           </tr>
+
         </tbody>
       </table>
 

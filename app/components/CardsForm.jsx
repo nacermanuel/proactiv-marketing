@@ -96,13 +96,18 @@ const CardsForm = ({estimate}) => {
             contentLabel="Card Prices Modal"
             style={{
               overlay:{
-                
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',                                
               },
               content:{
+                top: 'auto',
+                left: 'auto',
+                right: 'auto',
+                bottom: 'auto',             
                 backgroundColor: '#99acff9c',
                 width: '90%',
                 height: '600px',
-                margin: 'auto',
                 borderRadius: '8px',
                 border: '1px solid #ccc',
                 boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
