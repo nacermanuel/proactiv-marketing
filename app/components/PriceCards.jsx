@@ -5,40 +5,48 @@ const PriceCards = () => {
     <div>
 
 
-        <table className="table-auto mx-auto border-collapse border border-gray-300">
+      <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Card prices</p>
+      <table className="w-full border rounded-lg">
         <thead>
-            <tr className="border-t">
-            <th className="py-2 px-4 bg-[#8c9ba1b9]">Quantities</th>
-            <th className="py-2 px-4 bg-[#8c9ba1b9]">Price</th>
-            </tr>
+          <tr className="border-b bg-[#7a94b3]">
+            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Quantities</th>
+            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Price</th>
+            <th className="resize-text py-1 px-0 w-[50%] text-white" style={{fontWeight:'700'}}>Discount</th>
+          </tr>
         </thead>
         <tbody>
-            <tr className="border-b bg-[#72cbf1]">
-            <td className="py-2 px-4">100 to 499</td>
-            <td className="py-2 px-4">&pound;53.00</td>
-            </tr>
-            <tr className="border-b bg-[#b4e6fcc4]">
-            <td className="py-2 px-4">500 to 999</td>
-            <td className="py-2 px-4">&pound;45.00</td>
-            </tr>
-            <tr className="border-b bg-[#72cbf1]">
-            <td className="py-2 px-4">1000 to 2499</td>
-            <td className="py-2 px-4">&pound;40.00</td>
-            </tr>
-            <tr className="border-b bg-[#b4e6fcc4]">
-            <td className="py-2 px-4">2500 to 4999</td>
-            <td className="py-2 px-4">&pound;36.00</td>
-            </tr>
-            <tr className="border-b bg-[#72cbf1]">
-            <td className="py-2 px-4">5000 to 9999</td>
-            <td className="py-2 px-4">&pound;32.00</td>
-            </tr>
-            <tr className="border-b bg-[#b4e6fcc4]">
-            <td className="py-2 px-4">10000+</td>
-            <td className="py-2 px-4">&pound;30.00</td>
-            </tr>
+          <tr className="border-b bg-[#ffffff]">
+            <td className="resize-text py-1 px-0">Silver</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b bg-[#96cfd1]">
+            <td className="resize-text py-1 px-0">Gold</td>
+            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b bg-[#ffffff]">
+            <td className="resize-text py-1 px-0">Diamond</td>
+            <td className="resize-text py-1 px-0">All 8</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b bg-[#96cfd1]">
+            <td className="resize-text py-1 px-0">Gold</td>
+            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b bg-[#ffffff]">
+            <td className="resize-text py-1 px-0">Diamond</td>
+            <td className="resize-text py-1 px-0">All 8</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
+          <tr className="border-b bg-[#96cfd1]">
+            <td className="resize-text py-1 px-0">Gold</td>
+            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0">Database + 1</td>
+          </tr>
         </tbody>
-        </table>
+      </table>
 
 
 

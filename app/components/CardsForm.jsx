@@ -32,7 +32,7 @@ const CardsForm = ({estimate}) => {
 
       <div id="calculosOne" className="flex flex-col w-[90%] px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
 
-        <p className="fontTitle">100 FREE PLASTIC CARDS</p>
+        <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>100 FREE PLASTIC CARDS</p>
 
         <label htmlFor="Number of free cards" className="fontForm mb-1">
           Number of free cards
@@ -96,10 +96,11 @@ const CardsForm = ({estimate}) => {
             contentLabel="Card Prices Modal"
             style={{
               overlay:{
-                backgroundColor: "#96ade283",
+                
               },
               content:{
-                backgroundColor: '#72cbf1',
+                backgroundColor: '#99acff9c',
+                width: '90%',
                 height: '600px',
                 margin: 'auto',
                 borderRadius: '8px',
@@ -114,8 +115,7 @@ const CardsForm = ({estimate}) => {
           >
             {/* Place your modal content here */}
             <p className="absolute top-0 right-1" onClick={closeModal}>X</p>
-            <div className="flex flex-col justify-center items-center w-[98%] h-[98%] bg-white rounded-lg shadow-md relative">
-              <p className="fontAlternative">Cards price</p>
+            <div className="flex flex-col justify-center items-center w-full h-full bg-[#99acff9c] rounded-lg shadow-md relative">
               <PriceCards/>
             </div>
           </Modal>
