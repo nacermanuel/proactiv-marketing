@@ -117,7 +117,7 @@ const SoftwareSubscription = () => {
 
       <p className="fontSubTitle text-center" style={{fontSize:'1.5rem'}}>To go with your free plastic referral marketing cards.</p>
 
-      <p className="fontGeneral pb-0 mb-3" style={{textAlign: 'center', fontStyle: 'italic'}}>
+      <p className="fontGeneral pb-0 mb-5" style={{textAlign: 'center', fontStyle: 'italic'}}>
         (NO CONTRACT - cancel at any time <br /> - 30 days notice)
       </p>
       
@@ -152,7 +152,7 @@ const SoftwareSubscription = () => {
       </ul> */}
 
       
-      <p className="fontGeneral pb-0" style={{fontWeight: '700', color: '#4a6bb6'}}>Price After Free Trial</p>
+      <p className="fontGeneral pb-0 underline" style={{fontWeight: '700', color: '#4a6bb6', fontSize:'1.5rem'}}>Price After Free Trial</p>
 
       <div id="tables" className="flex flex-col w-[95%] border-2 mb-5">
       <table className="w-[100%] border rounded-lg mb-0">
@@ -247,7 +247,7 @@ const SoftwareSubscription = () => {
       </p>
 
       <div className=" text-center">
-        <p className="fontAlternative" style={{paddingBottom: "4px"}}>Please provide required information</p>
+        <p className="fontAlternative" style={{paddingBottom: "4px", fontSize:'1rem'}}>Please provide required information</p>
         {/* <p className="text-xs"> * marked fields are mandatory</p> */}
       </div>
       <p className="fontGeneral mb-4" style={{textAlign: 'center'}}>
@@ -258,8 +258,8 @@ const SoftwareSubscription = () => {
         Please choose your package after free trial period:
       </p>
 
-      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1">
-        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
+      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1 w-[95%]">
+        <label className="text-red-700 text-[1rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"
@@ -270,7 +270,7 @@ const SoftwareSubscription = () => {
           Silver
         </label>
 
-        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
+        <label className="text-red-700 text-[1rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"
@@ -281,7 +281,7 @@ const SoftwareSubscription = () => {
           Gold
         </label>
 
-        <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
+        <label className="text-red-700 text-[1rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
             name="priceTrial"
@@ -294,7 +294,7 @@ const SoftwareSubscription = () => {
       </div>
       <p className="mb-3 text-[0.8rem] text-center">Extra special offer - Diamond plan for the price of gold for life.</p>
       
-      <div className="flex justify-center items-center gap-4 fontGeneral border-2 mb-2">
+      <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-5 w-[95%]">
         <label>
           <input
             type="radio"
@@ -333,7 +333,7 @@ const SoftwareSubscription = () => {
               {" "}will be due on <span style={{fontSize:'1.2rem'}}>{prize.date}</span> 
             
           </p>
-          <p className="fontGeneral my-2" style={{textAlign: 'center'}}>
+          <p className="fontGeneral mb-5" style={{textAlign: 'center'}}>
             Cancel at anytime by email to{" "}
             <span className="colorSecondary">
               admin@proactivmarketing.co.uk
