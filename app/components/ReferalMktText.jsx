@@ -23,7 +23,7 @@ const ReferalMktText = () => {
       
       <p className="fontGeneral">
       <span style={{fontWeight: "bold"}}>The Referral Marketing Concept </span>
-      This doesn’t work on cardboard cards. Why? Because cardboard cards are not kept and even for the small percentage that are, the QR Code won’t last too long. All it takes is a crease or smudge and its obsolete. Ovet 90% of of plastic cards are kept. Up to 30% are passed on during their 1st circulation. They last for decades so can be circulated 100’s of times in their lifetime. 
+      This doesn’t work on cardboard cards. Why? Because cardboard cards are not kept and even for the small percentage that are, the QR Code won’t last too long. All it takes is a crease or smudge and its obsolete. Over 90% of plastic cards are kept. Up to 30% are passed on during their 1st circulation. They last for decades so can be circulated 100’s of times in their lifetime. 
       </p>
 
 

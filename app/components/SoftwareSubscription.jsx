@@ -83,7 +83,7 @@ const SoftwareSubscription = () => {
         alert('Invalid number')
       } else{    
         localStorage.setItem('data', JSON.stringify(data));
-        router.push('/funnel/referal');
+        router.push('/funnel/referral');
       }
   }
 
