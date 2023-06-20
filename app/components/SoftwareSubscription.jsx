@@ -254,7 +254,7 @@ const SoftwareSubscription = () => {
         Please choose your Package after free trial period:
       </p>
 
-      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2">
+      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1">
         <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
@@ -288,9 +288,9 @@ const SoftwareSubscription = () => {
           Diamond
         </label>
       </div>
-      <p className="mb-2 text-[0.8rem]">Diamond plan for the price of gold for life.</p>
+      <p className="mb-3 text-[0.8rem]">Diamond plan for the price of gold for life.</p>
       
-      <div className="flex justify-center items-center gap-4 fontGeneral border-2">
+      <div className="flex justify-center items-center gap-4 fontGeneral border-2 mb-2">
         <label>
           <input
             type="radio"
