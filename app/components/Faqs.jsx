@@ -9,7 +9,7 @@ const Faqs = () => {
 
         <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
 
-        <p className="fontTitle">Frequently Asked Questions</p>
+        <p className="fontTitle" style={{fontWeight:'700'}}>Frequently Asked Questions</p>
 
         <div id="FAQs" className="flex flex-col justify-center items-center gap-2 w-full mt-3">
 

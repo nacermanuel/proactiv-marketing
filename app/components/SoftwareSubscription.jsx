@@ -117,7 +117,7 @@ const SoftwareSubscription = () => {
 
       <p className="fontSubTitle text-center" style={{fontSize:'1.5rem'}}>To go with your free plastic referal marketing cards.</p>
 
-      <p className="fontGeneral pb-3" style={{textAlign: 'center'}}>
+      <p className="fontGeneral pb-0" style={{textAlign: 'center', fontStyle: 'italic'}}>
         (NO CONTRACT - cancel at any time - 30 days notice)
       </p>
       
@@ -152,7 +152,7 @@ const SoftwareSubscription = () => {
       </ul> */}
 
       
-      <p className="fontGeneral" style={{textAlign: 'center'}}>Price After Free Trial</p>
+      <p className="fontGeneral pb-0" style={{textAlign: 'center', fontStyle: 'italic'}}>Price After Free Trial</p>
       <table className="w-[95%] border rounded-lg">
         <thead>
           <tr>
@@ -238,7 +238,7 @@ const SoftwareSubscription = () => {
         </tbody>
       </table> */}
 
-      <p className="fontGeneral py-2" style={{textAlign: 'center'}}>
+      <p className="fontGeneral pb-3" style={{textAlign: 'center', fontStyle: 'italic'}}>
         After your FREE trial, ONLY pay for what features you want to use. <br />
       </p>
 
@@ -253,8 +253,8 @@ const SoftwareSubscription = () => {
       <p className="fontGeneral mb-2" style={{textAlign: 'center'}}>
         Please choose your Package after free trial period:
       </p>
-      <div className="flex gap-4 fontGeneral pb-2">
 
+      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2">
         <label className="text-red-700 text-[1.2rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
@@ -288,8 +288,9 @@ const SoftwareSubscription = () => {
           Diamond
         </label>
       </div>
-
-      <div className="flex gap-4 fontGeneral">
+      <p className="mb-2 text-[0.8rem]">Diamond plan for the price of gold for life.</p>
+      
+      <div className="flex justify-center items-center gap-4 fontGeneral border-2">
         <label>
           <input
             type="radio"
