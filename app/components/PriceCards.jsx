@@ -5,13 +5,13 @@ const PriceCards = () => {
 
     <div className='w-full'>
 
-      <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Cards prices</p>
+      <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Card Prices</p>
       <table className="w-full border rounded-lg">
         <thead>
           <tr className="border-b bg-[#7a94b3]">
             <th className="resize-text py-1 px-2 w-[37%] text-white" style={{fontWeight:'700'}}>Quantities</th>
-            <th className="resize-text py-1 px-2 w-[30%] text-white" style={{fontWeight:'700'}}>Price</th>
-            <th className="resize-text py-1 px-2 w-[33%] text-white" style={{fontWeight:'700'}}>Discount</th>
+            <th className="resize-text py-1 px-2 w-[30%] text-white" style={{fontWeight:'700'}}>Price per Card</th>
+            <th className="resize-text py-1 px-2 w-[33%] text-white" style={{fontWeight:'700'}}>Quantity Discount</th>
           </tr>
         </thead>
         <tbody>

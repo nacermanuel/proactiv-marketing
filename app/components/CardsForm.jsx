@@ -164,20 +164,20 @@ const CardsForm = ({estimate}) => {
           className="font-bold px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <label htmlFor="Select a Payment Option" className="fontForm mb-1">
+        <label htmlFor="Select a Payment Option" className="fontForm mb-2">
           Select a payment option*
         </label>       
         <div className="flex justify-evenly">
             <label><input type="radio" name="payment" checked required onChange={()=>setSelectedOption(true)}  />Full Deposit</label> 
-            <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Partial Deposit</label> 
+            <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Deposit<p className="mb-0 text-xs" style={{textAlign:'center'}}>min £50</p> </label> 
         </div>
+        
         <input 
           value={`£${((price * addition) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
-        <p className="mb-4 text-xs">min £50</p>
         <button
           type="submit"
           className="px-4 py-2 buttonsMain"
