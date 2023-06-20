@@ -113,12 +113,12 @@ const SoftwareSubscription = () => {
         You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
       </p> */}
 
-      <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}>{prize.description} software subscription!!</p>
+      <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}> <span className="underline">{prize.description}</span>  software subscription!!</p>
 
-      <p className="fontSubTitle text-center" style={{fontSize:'1.5rem'}}>To go with your free plastic referal marketing cards.</p>
+      <p className="fontSubTitle text-center" style={{fontSize:'1.5rem'}}>To go with your free plastic referral marketing cards.</p>
 
-      <p className="fontGeneral pb-0" style={{textAlign: 'center', fontStyle: 'italic'}}>
-        (NO CONTRACT - cancel at any time - 30 days notice)
+      <p className="fontGeneral pb-0 mb-3" style={{textAlign: 'center', fontStyle: 'italic'}}>
+        (NO CONTRACT - cancel at any time <br /> - 30 days notice)
       </p>
       
       {/* <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
@@ -152,8 +152,10 @@ const SoftwareSubscription = () => {
       </ul> */}
 
       
-      <p className="fontGeneral pb-0" style={{textAlign: 'center', fontStyle: 'italic'}}>Price After Free Trial</p>
-      <table className="w-[95%] border rounded-lg">
+      <p className="fontGeneral pb-0" style={{fontWeight: '700', color: '#4a6bb6'}}>Price After Free Trial</p>
+
+      <div id="tables" className="flex flex-col w-[95%] border-2 mb-5">
+      <table className="w-[100%] border rounded-lg mb-0">
         <thead>
           <tr>
             <th className="resize-text py-1 px-0 w-[50%]">Package</th>
@@ -176,7 +178,7 @@ const SoftwareSubscription = () => {
         </tbody>
       </table>
 
-      <table className="w-[95%] border rounded-lg">
+      <table className="w-[100%] border rounded-lg mb-0">
         <thead>
           <tr>
             <th className="w-[4%]"> </th>
@@ -206,6 +208,8 @@ const SoftwareSubscription = () => {
           </tr>          
         </tbody>
       </table>
+      </div>
+
 
       {/* <table className="w-full">
         <thead>
@@ -251,7 +255,7 @@ const SoftwareSubscription = () => {
         <span className="font-semibold">{prize.date}</span>{" "}
       </p>
       <p className="fontGeneral mb-2" style={{textAlign: 'center'}}>
-        Please choose your Package after free trial period:
+        Please choose your package after free trial period:
       </p>
 
       <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1">
@@ -288,7 +292,7 @@ const SoftwareSubscription = () => {
           Diamond
         </label>
       </div>
-      <p className="mb-3 text-[0.8rem]">Diamond plan for the price of gold for life.</p>
+      <p className="mb-3 text-[0.8rem] text-center">Extra special offer - Diamond plan for the price of gold for life.</p>
       
       <div className="flex justify-center items-center gap-4 fontGeneral border-2 mb-2">
         <label>
@@ -311,14 +315,25 @@ const SoftwareSubscription = () => {
           />{" "}
           Quarterly
         </label>
+        <label>
+          <input
+            type="radio"
+            name="period"
+            value="Annually"
+            checked={period === "Annually" ? true : false}
+            onChange={changePeriod}
+          />{" "}
+          Annually
+        </label>
       </div>
       {period !== 0 && (
         <div>
-          <p className="fontGeneral mt-3">
-            Your 1st payment will be due on {prize.date}{" "}
-            <span className="colorPrimary font-semibold">&#163;{total}</span>
+          <p className="fontGeneral mt-3" style={{textAlign: 'center'}}>
+            Your 1st payment of <span className="colorPrimary font-semibold">&#163;{total}</span>
+              {" "}will be due on <span style={{fontSize:'1.2rem'}}>{prize.date}</span> 
+            
           </p>
-          <p className="fontGeneral my-2">
+          <p className="fontGeneral my-2" style={{textAlign: 'center'}}>
             Cancel at anytime by email to{" "}
             <span className="colorSecondary">
               admin@proactivmarketing.co.uk
@@ -420,8 +435,8 @@ const SoftwareSubscription = () => {
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
         />
 
-        <button type="submit" className="px-4 py-2 buttonsMain" onClick={handleClick}>
-          Watch the video to fully <br />understand the benefits!
+        <button type="submit" className="px-4 py-2 buttonsMain" onClick={handleClick} style={{textAlign:'center'}}>
+          Watch the short video to learn how to use your free gift!
         </button>
       </form>
     </div>

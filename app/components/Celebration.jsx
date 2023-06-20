@@ -18,22 +18,22 @@ const Celebration = ({result}) => {
 
     const router = useRouter();
     const clickCongrat = () => {
-        localStorage.setItem('software', JSON.stringify(result));
-        router.push('/funnel/software');
+        // localStorage.setItem('software', JSON.stringify(result));
+        // router.push('/funnel/software');
     }
 
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-        // Call your action here
-        localStorage.setItem('software', JSON.stringify(result));
-        router.push('/funnel/software');
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //     // Call your action here
+    //     localStorage.setItem('software', JSON.stringify(result));
+    //     router.push('/funnel/software');
 
-        }, 5000);
+    //     }, 5000);
 
-        return () => clearTimeout(timer); // Clean up the timer on component unmount
+    //     return () => clearTimeout(timer); // Clean up the timer on component unmount
 
-    }, []);    
+    // }, []);    
 
 
   return (

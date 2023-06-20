@@ -300,3 +300,10 @@ input[name="months"]::placeholder {
   font-size: 0.8rem;
   /* Adjust the size as desired */
 }
+
+/* BORDER DE LETRA */
+/* .outlined-text {
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: white;
+
+} */
