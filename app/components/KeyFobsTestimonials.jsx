@@ -24,7 +24,7 @@ const KeyFobsTestimonials = () => {
                         <p className='fontTitle' style={{color:'#4a6bb6'}}>Sandra Wright</p>
                         <p className="fontGeneral">
                             &quot;
-                            Don't go anywhere else! My family, friends and clients have had them on their key rings for a few years now, and they are still great condition. Fobs I had from another became discoloured & pealed.
+                            Don`t go anywhere else! My family, friends and clients have had them on their key rings for a few years now, and they are still great condition. Fobs I had from another became discoloured & pealed.
                             My husband also bought some. He is a car mechanic and is able to write MOT and service due dates on them. It is kept on the car/house keys and therefore is to hand when people want recommendations for our businesses. We are delighted
 
                             &quot;
