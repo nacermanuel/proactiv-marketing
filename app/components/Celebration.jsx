@@ -41,20 +41,23 @@ const Celebration = ({result}) => {
 
         {/* <p className='fontTitle absolute' style={{fontSize:"1rem" , color: 'white'}}>Congratulations!</p> */}
         <p className='fontTitle absolute' style={{fontSize:"2rem" , color: 'white'}}>
-            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>Congratulations!</span><br />
+            <span className='outlined-white' style={{fontWeight: '700', fontSize:'2.5rem'}}>Congratulations!</span><br />
             <br className="my-4" />
-            You have won <br />
+            <span >You have won</span>
+            <br />
             <br className="my-2" />
-            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.description}</span> 
+            <span className='outlined-text' style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.description}</span> 
             <br />
             <br className="my-2" />
             software use. 
             <br />
             <br className="my-2" />           
-            Valued &#163;{result.valued} to use for free up to 
+            <span className='outlined-text ' style={{fontWeight: '700', fontSize:'2.5rem'}}>Valued &#163;{result.valued}</span>
+            <br />
+            to use for free up to 
             <br />
             <br className="my-2" />
-            <span style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.date} </span> 
+            <span className='outlined-text ' style={{fontWeight: '700', fontSize:'2.5rem'}}>{result.date} </span> 
         </p>
 
         <img className='h-[100vh]' style={{ maxWidth: 'none'}} src="https://media.giphy.com/media/l4KhWPNyLHiB3TjVe/giphy.gif" alt="baloons" />
