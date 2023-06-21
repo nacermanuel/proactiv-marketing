@@ -2,9 +2,9 @@
 
 const SoftwareForYou = () => {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    // <div className="flex flex-col justify-center items-center min-h-screen md:w-[55%]">
 
-      <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
+      <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative md:w-[52%]">
 
         <p className="fontTitle" style={{fontWeight:'700'}}>The software if for you if you...</p>
         <div className="custom-bullets rounded-lg shadow-lg w-[90%] py-3 mb-4">
@@ -22,11 +22,11 @@ const SoftwareForYou = () => {
                 <li className="fontAlternative" style={{fontSize:'1rem'}}>Contact all or a chosen selection of your clients in one?   </li>
             </ul>           
         </div>
-        <p className="fontGeneral">Now is your chance to have more control of your business and to be able to influence your clients in a subtle & professional manner.</p>
+        <p className="fontGeneral py-4" style={{textAlign: 'center', padding:'10px 15px 10px 15px'}}>Now is your chance to have more control of your business and to be able to influence your clients in a subtle & professional manner.</p>
 
       </div>
 
-    </div>
+    // </div>
   )
 }
 

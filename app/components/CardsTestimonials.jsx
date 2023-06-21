@@ -2,9 +2,9 @@
 
 const CardsTestimonials = () => {
   return (
-    <div className="flex flex-col  items-center w-full">
+    <div className="flex flex-col  items-center w-full md:w-[52%]">
 
-        <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative h-[90vh]">
+        <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative h-[90vh] md:w-[100%]">
 
 
             <p className="fontTitle" style={{fontWeight:'700'}}>What Our Clients Say About Us</p>

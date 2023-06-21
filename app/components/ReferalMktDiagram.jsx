@@ -5,7 +5,7 @@ const ReferalMktDiagram = () => {
     return(
 
     
-    <div className="flex flex-col justify-center items-center h-full w-[100vw]">
+    <div className="flex flex-col justify-center items-center h-full w-[100vw] md:w-[55%]">
 
         <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
 
