@@ -2,14 +2,13 @@
 
 const CardsTestimonials = () => {
   return (
-    <div className="flex flex-col  items-center w-full md:w-[52%]">
+    <div className="flex flex-col  items-center bg-white rounded-lg shadow-md  w-[90%] md:w-[52%]">
 
-        <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative h-[90vh] md:w-[100%]">
-
+        <div className="flex flex-col mx-5 my-4 pb-2 items-center relative h-[90vh] md:w-[60%]">
 
             <p className="fontTitle" style={{fontWeight:'700'}}>What Our Clients Say About Us</p>
 
-            <div className="carousel-wrapper w-[80%] h-auto ">
+            <div className="carousel-wrapper w-[90%] h-auto ">
                 <span id="item-1"></span>
                 <span id="item-2"></span>
                 <span id="item-3"></span>

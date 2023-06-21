@@ -46,7 +46,7 @@ const KeyfobsPrice = () => {
 
   return (
 
-    <div className="flex flex-col mx-5 my-4 py-5 items-center bg-white rounded-lg shadow-md relative h-full">
+    <div className="flex flex-col mx-5 my-4 py-5 items-center bg-white rounded-lg shadow-md relative h-full md:w-[52%]">
 
       <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>Keyfobs Prices</p>
       <table className="w-[90%] border rounded-lg">

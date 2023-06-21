@@ -4,7 +4,7 @@ const KeyFobsSamples = () => {
   return (
 
 
-    <div className="flex flex-col justify-center items-center w-full ">
+    <div className="flex flex-col justify-center items-center w-full md:w-[55%]">
 
         <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
         <p className="fontTitle" style={{fontWeight:'700'}}>Keyfob Samples</p>
