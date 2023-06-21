@@ -1,12 +1,46 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const KeyfobsPrice = () => {
+    const [customers, setCustomers] = useState(0) 
+    const [price, setPrice] = useState(0.39)
 
+
+    useEffect(()=>{
+        let averagecustomers = JSON.parse(localStorage.getItem('customers'));
+        if(averagecustomers != ''){
+            setCustomers( parseInt(averagecustomers))
+        }
+    },[])
+
+
+    const handleChange = (e) =>{
+        setCustomers(e.target.value)
+    }
+
+
+    useEffect(()=>{
+
+        
+      if((customers * 1) >= 1 && (customers * 1) <= 499 ){
+        setPrice(0.39)
+      }else if((customers * 1) >= 500 && (customers * 1) <= 999 ){
+        setPrice(0.33)
+      }else if((customers * 1) >= 1000 && (customers * 1) <= 2499 ){
+        setPrice(0.30)
+      }else if((customers * 1) >= 2500 && (customers * 1) <= 4999 ){
+        setPrice(0.26)
+      }else if((customers * 1) >= 5000 && (customers * 1) <= 9999 ){
+        setPrice(0.24)
+      }else if((customers * 1) >= 10000 ){
+        setPrice(0.22)
+      }
+
+    },[customers])
 
 
     const handleClick = (e) =>{
-       e.preventDefault()
+        e.preventDefault()
     }
 
 
@@ -63,21 +97,23 @@ const KeyfobsPrice = () => {
 
         
         <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
-          Average no. of customers per month 
+          Average no. of customers per month <br />(1 KF per customers)
         </label>      
         <input
             type="number"
             name="average"
+            value={customers}
             required
+            onChange={handleChange}
             placeholder="Average no. of customers per month"
             className="w-full px-2 py-2 mb-2 rounded-lg border border-gray-300 focusInput "
         />
 
         <label htmlFor="Total Price" className="fontForm mb-1 w-full text-left">
-          Total price 
+          Total price - EXTRA 50% discount today only
         </label>         
         <input
-          value={`1`}
+          value={`£${(price*(customers*1)).toFixed(2).replace(',', '.')}`}
           type="text"
           className="font-bold w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
