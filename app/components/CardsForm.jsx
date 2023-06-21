@@ -13,6 +13,7 @@ const CardsForm = ({estimate}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [addition, setAddition] = useState(estimate);
     const [paymentOption, setPaymentOption] = useState('£50.00')
+    const [cardsData, setCardsData] = useState({needed:(estimate-100), totaldue: 0 , payment:0, option:''})
     
     const router = useRouter();
 
@@ -34,7 +35,10 @@ const CardsForm = ({estimate}) => {
     },[estimate])
 
     useEffect(()=>{
-      if((addition-freeCards) >= 100 && (addition-freeCards) <= 499 ){
+
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+
+      if((addition-freeCards) >= 1 && (addition-freeCards) <= 499 ){
         setPrice(0.53)
       }else if((addition-freeCards) >= 500 && (addition-freeCards) <= 999 ){
         setPrice(0.45)
@@ -47,12 +51,11 @@ const CardsForm = ({estimate}) => {
       }else if((addition-freeCards) >= 10000 ){
         setPrice(0.30)
       }
-
+      
 
     },[addition])
 
     const handelChangePayment = (e) => {
-      
       setPaymentOption(e.target.value)
     }
 
@@ -62,16 +65,22 @@ const CardsForm = ({estimate}) => {
 
       let deposit = parseFloat(paymentOption.replace('£',''))
       let full = ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14)
+            
       // alert(`${deposit} ${ full} ${typeof deposit} ${typeof full}`)
       if (deposit > full ){
         alert('Deposit can be higher than the total.')
       }else if (deposit < 50 ){
         alert('The minimum deposit is £50.00')
       }else{
+        localStorage.setItem('cardsdata', JSON.stringify(cardsData));
         router.push('/funnel/keyfobs');
       }
-      
     }
+
+    useEffect(()=>{
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+      
+    },[paymentOption])
 
 
 
@@ -220,7 +229,7 @@ const CardsForm = ({estimate}) => {
             <input 
               className="mr-1" 
               type="radio" 
-              name="payment" 
+              name="fullpayment" 
               checked={selectedOption}
               onChange={()=>setSelectedOption(true)} 
             />  <p>Full Payment</p>
@@ -230,7 +239,7 @@ const CardsForm = ({estimate}) => {
             <input 
               className="mr-1" 
               type="radio" 
-              name="payment"  
+              name="deposit"  
               checked={!selectedOption}
               onChange={()=>setSelectedOption(false) }
             /> 

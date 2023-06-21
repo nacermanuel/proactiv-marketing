@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CardsForm from "./CardsForm"
 
 const CardsFree = () => {
@@ -28,12 +28,11 @@ const CardsFree = () => {
         serCalculate(true)
       }
       
-      
-      // localStorage.setItem('data', JSON.stringify(data));
-      // router.push('/funnel/spin');
-
-
   }
+
+  useEffect(()=>{
+    localStorage.setItem('customers', JSON.stringify(estimate.average));
+  },[calculate])
   
   return (
     <div className="flex flex-col justify-center items-center pt-3">
