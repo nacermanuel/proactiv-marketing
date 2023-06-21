@@ -35,7 +35,7 @@ const CardsFree = () => {
   },[calculate])
   
   return (
-    <div className="flex flex-col justify-center items-center pt-3">
+    <div className="flex flex-col justify-center items-center pt-3 md:w-[55%]">
 
       <form id="formulario" className="flex flex-col px-4 pb-8 mx-5 bg-white rounded-lg shadow-md relative">
 

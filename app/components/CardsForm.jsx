@@ -87,7 +87,7 @@ const CardsForm = ({estimate}) => {
   return (
     <div className="flex flex-col justify-center items-center w-full min-h-screen">
 
-      <div id="calculosOne" className="flex flex-col w-[90%] px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
+      <div id="calculosOne" className="flex flex-col w-[90%] px-4 py-8 bg-white rounded-lg shadow-md relative md:w-[95%]">
 
         <p className="fontTitle text-center" style={{ fontWeight:'700', color:'#a52a2a' , padding: '5px 0 20px 0'}}>100 FREE PLASTIC CARDS</p>
 
@@ -155,19 +155,20 @@ const CardsForm = ({estimate}) => {
               overlay:{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',                                
+                justifyContent: 'center',                              
               },
               content:{
                 top: 'auto',
                 left: 'auto',
                 right: 'auto',
                 bottom: 'auto',             
-                backgroundColor: '#99acff9c',
                 width: '90%',
                 height: '600px',
-                borderRadius: '8px',
-                border: '1px solid #ccc',
-                boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+                backgroundColor: '#99acff15',
+             
+                // borderRadius: '8px',
+                // border: '1px solid #ccc',
+                // boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -176,9 +177,9 @@ const CardsForm = ({estimate}) => {
             }}
           >
             {/* Place your modal content here */}
-            <p className="absolute top-0 right-1" onClick={closeModal}>X</p>
-            <div className="flex flex-col justify-center items-center w-full h-full bg-[#99acff9c] rounded-lg shadow-md relative">
-              <PriceCards/>
+            
+            <div className="flex flex-col justify-center items-center w-full h-full rounded-lg shadow-md relative md:w-[55%] bg-[#99acffd8]">
+              <PriceCards closeModal={closeModal}/>
             </div>
           </Modal>
 
