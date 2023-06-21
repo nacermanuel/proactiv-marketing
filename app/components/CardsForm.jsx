@@ -1,17 +1,20 @@
 'use client'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Modal from 'react-modal';
 import PriceCards from "./PriceCards";
+import { useRouter } from 'next/navigation';
 
 const CardsForm = ({estimate}) => {
     const [freeCards, setFreeCards] = useState(100)
-    const [price, setPrice] = useState(0.36)
+    const [price, setPrice] = useState(0)
     const [selectedOption, setSelectedOption] = useState(true);
-    const [cardPrice] = useState(37.50)
+    const [artWork] = useState(37.50)
     const [deliveryPrice] = useState(14.00)
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [addition, setAddition] = useState(estimate)  
+    const [addition, setAddition] = useState(estimate);
+    const [paymentOption, setPaymentOption] = useState('£50.00')
     
+    const router = useRouter();
 
     const openModal = () => {
       setIsModalOpen(true);
@@ -23,6 +26,51 @@ const CardsForm = ({estimate}) => {
 
     const handleChange =(e)=>{
       setAddition(e.target.value)
+    }
+
+    useEffect(()=>{
+      setAddition(estimate)
+
+    },[estimate])
+
+    useEffect(()=>{
+      if((addition-freeCards) >= 100 && (addition-freeCards) <= 499 ){
+        setPrice(0.53)
+      }else if((addition-freeCards) >= 500 && (addition-freeCards) <= 999 ){
+        setPrice(0.45)
+      }else if((addition-freeCards) >= 1000 && (addition-freeCards) <= 2499 ){
+        setPrice(0.40)
+      }else if((addition-freeCards) >= 2500 && (addition-freeCards) <= 4999 ){
+        setPrice(0.36)
+      }else if((addition-freeCards) >= 5000 && (addition-freeCards) <= 9999 ){
+        setPrice(0.32)
+      }else if((addition-freeCards) >= 10000 ){
+        setPrice(0.30)
+      }
+
+
+    },[addition])
+
+    const handelChangePayment = (e) => {
+      
+      setPaymentOption(e.target.value)
+    }
+
+
+    const handleClick = (e)=>{
+      e.preventDefault()
+
+      let deposit = parseFloat(paymentOption.replace('£',''))
+      let full = ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14)
+      // alert(`${deposit} ${ full} ${typeof deposit} ${typeof full}`)
+      if (deposit > full ){
+        alert('Deposit can be higher than the total.')
+      }else if (deposit < 50 ){
+        alert('The minimum deposit is £50.00')
+      }else{
+        router.push('/funnel/keyfobs');
+      }
+      
     }
 
 
@@ -51,7 +99,7 @@ const CardsForm = ({estimate}) => {
         </label>        
         <input
           
-          value={addition}
+          value={(parseInt(addition))}
           onChange={handleChange}
           type="number"
           placeholder="Please input number"
@@ -63,7 +111,7 @@ const CardsForm = ({estimate}) => {
         </label>        
         <input
           
-          value={parseInt(freeCards) + parseInt(addition)}
+          value={(parseInt(addition) - parseInt(freeCards) )}
           type="number"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -77,7 +125,7 @@ const CardsForm = ({estimate}) => {
         <div className="flex justify-between gap-2 items-center mb-4 "> 
           <input
             
-            defaultValue={ `£${(price * parseInt(addition)).toFixed(2).replace(',', '.')}`}
+            value={ `£${(price * (parseInt(addition) - parseInt(freeCards) ) ).toFixed(2).replace(',', '.')}`}
             type="text"
             placeholder="Please input number"
             className="w-[75%] py-2 pl-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -136,7 +184,7 @@ const CardsForm = ({estimate}) => {
         </label>           
         <input
           
-          defaultValue={`£${cardPrice.toFixed(2).replace(',', '.')}`}
+          value={`£${artWork.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -147,7 +195,7 @@ const CardsForm = ({estimate}) => {
         </label>  
         <input
           
-          defaultValue={`£${deliveryPrice.toFixed(2).replace(',', '.')}`}
+          value={`£${deliveryPrice.toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -158,7 +206,7 @@ const CardsForm = ({estimate}) => {
         </label>         
         <input
           
-          value={`£${((price * parseInt(addition)) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          value={`£${((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
           type="text"
           placeholder="Please input number"
           className="font-bold px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
@@ -167,93 +215,52 @@ const CardsForm = ({estimate}) => {
         <label htmlFor="Select a Payment Option" className="fontForm mb-2">
           Select a payment option*
         </label>       
-        <div className="flex justify-evenly">
-            <label><input type="radio" name="payment" checked required onChange={()=>setSelectedOption(true)}  />Full Deposit</label> 
-            <label><input type="radio" name="payment"  onChange={()=>setSelectedOption(false)} />Deposit<p className="mb-0 text-xs" style={{textAlign:'center'}}>min £50</p> </label> 
+        <div className="flex justify-evenly mb-3">
+          <div className="flex justify-center items-center">
+            <input 
+              className="mr-1" 
+              type="radio" 
+              name="payment" 
+              checked={selectedOption}
+              onChange={()=>setSelectedOption(true)} 
+            />  <p>Full Payment</p>
+          </div>
+          <div className="flex ">
+
+            <input 
+              className="mr-1" 
+              type="radio" 
+              name="payment"  
+              checked={!selectedOption}
+              onChange={()=>setSelectedOption(false) }
+            /> 
+
+            <div className="flex flex-col justify-center items-center">
+            <p>Deposit</p><p className="mb-0 text-xs" style={{textAlign:'center'}}>(min £50)</p> 
+            </div>
+          </div>
         </div>
         
+        
+        
         <input 
-          value={`£${((price * addition) + 37.5 + 14).toFixed(2).replace(',', '.')}`}
+          value={ selectedOption ? `£${((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14).toFixed(2).replace(',', '.')}` : paymentOption}
+          //value={ selectedOption ? (price * (parseInt(addition) - parseInt(freeCards)) + 37.5 + 14) : paymentOption}
           type="text"
-          placeholder="Please input number"
+          onChange={handelChangePayment}
           className="font-bold px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
+        
+
         <button
           type="submit"
-          className="px-4 py-2 buttonsMain"
+          className="px-4 py-2 buttonsMain mt-3"
+          onClick={handleClick}
         >
           Place Order
         </button>        
-
-
-
-
         
       </div>
-
-
-
-
-    {/* <div className="flex justify-center w-full items-center min-h-screen bg-gray-100">
-      <form id="formulario" className="flex flex-col w-full px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
-        <p id="close" className=" absolute top-0 right-0">X</p>
-        <p className="fontTitle">Please provide required information</p>
-        <p className="fontForm">Your Name</p>
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-        <p className="fontForm">Your Business Name</p>
-        <input
-          type="text"
-          placeholder="Your Business Name"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-        <p className="fontForm">Industry</p>
-        <input
-          type="text"
-          placeholder="Your Industry"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />        
-        <p className="fontForm">Phone number</p>
-        <input
-          type="tel"
-          placeholder="Your Contact Number"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-        <p className="fontForm">Email Address</p>
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-        <p className="fontForm">Web site Address</p>
-        <input
-          type="url"
-          placeholder="Web site Address"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
-        <p className="fontForm">Address</p>
-        <textarea
-          type="url"
-          placeholder="Provide your Address"
-          className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-          rows={3}
-        />
-        <button
-          type="submit"
-          className="buttonsMain"
-        >
-          Place Order
-        </button>
-      </form>
-
-
-    </div> */}
-
-
-
 
     </div>
   )
