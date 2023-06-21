@@ -113,7 +113,7 @@ const KeyfobsPrice = () => {
           Total price - EXTRA 50% discount today only
         </label>         
         <input
-          value={`£${(price*(customers*1)).toFixed(2).replace(',', '.')}`}
+          value={`£${((price*(customers*1))*0.5).toFixed(2).replace(',', '.')}`}
           type="text"
           className="font-bold w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
