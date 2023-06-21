@@ -110,7 +110,7 @@ const SoftwareSubscription = () => {
   }
 
   return (
-    <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
+    <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative md:w-[55%]">
       <p className="fontTitle text-center colorPrimary" style={{fontWeight: '700'}}>
         Congratulations on winning!!
       </p>
@@ -127,8 +127,8 @@ const SoftwareSubscription = () => {
 
       <p className="fontGeneral pb-0 underline" style={{fontWeight: '700', color: '#4a6bb6', fontSize:'1.5rem'}}>Price After Free Trial</p>
 
-      <div id="tables" className="flex flex-col w-[95%] border-2 mb-5">
-      <table className="w-[100%] border rounded-lg mb-0">
+      <div id="tables" className="flex flex-col w-[95%] border-2 mb-5 md:w-[80%]">
+      <table className="w-[100%] border rounded-lg mb-0 ">
         <thead>
           <tr>
             <th className="resize-text py-1 px-0 w-[50%]">Package</th>
@@ -200,7 +200,7 @@ const SoftwareSubscription = () => {
         Please choose your package after free trial period:
       </p>
 
-      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1 w-[95%]">
+      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1 w-[95%] md:justify-around">
         <label className="text-red-700 text-[1rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
@@ -236,7 +236,7 @@ const SoftwareSubscription = () => {
       </div>
       <p className="mb-3 text-[0.8rem] text-center">Extra special offer - Diamond plan for the price of gold for life.</p>
       
-      <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-5 w-[95%]">
+      <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-5 w-[95%] md:justify-around">
         <label>
           <input
             type="radio"
