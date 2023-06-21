@@ -40,21 +40,27 @@ const SoftwareSubscription = () => {
   useEffect(() => {
     if (packages === "Silver") {
       if (period === "Monthly") {
-        setTotal(29.99);
-      } else {
-        setTotal(79.99);
+        setTotal(30.00);
+      } else if(period === "Quarterly") {
+        setTotal(80.00);
+      } else if(period === "Annually") {
+        setTotal(299.00);
       }
     } else if (packages == "Gold") {
       if (period === "Monthly") {
-        setTotal(49.99);
-      } else {
-        setTotal(135);
+        setTotal(50.00);
+      } else if(period === "Quarterly") {
+        setTotal(135.00);
+      } else if(period === "Annually") {
+        setTotal(499.00);
       }
-    } else {
+    } else if (packages == "Diamond"){
       if (period === "Monthly") {
-        setTotal(59.99);
-      } else {
-        setTotal(155);
+        setTotal(50.00);
+      } else if(period === "Quarterly") {
+        setTotal(135.00);
+      } else if(period === "Annually") {
+        setTotal(499.00);
       }
     }
   }, [packages, period]);
@@ -82,6 +88,7 @@ const SoftwareSubscription = () => {
       } else if (!numberRegex.test(data.number)) {
         alert('Invalid number')
       } else{    
+
         localStorage.setItem('data', JSON.stringify(data));
         router.push('/funnel/referral');
       }
