@@ -272,7 +272,7 @@ const SoftwareSubscription = () => {
         <div>
           <p className="fontGeneral mt-3" style={{textAlign: 'center'}}>
             Your 1st payment of <span className="colorPrimary font-semibold">&#163;{total}</span>
-              {" "}will be due on <span style={{fontSize:'1.2rem'}}>{prize.date}</span> 
+              {" "}will be due on <br /><span style={{fontSize:'1.2rem'}}>{prize.date}</span> 
             
           </p>
           <p className="fontGeneral mb-5" style={{textAlign: 'center'}}>
