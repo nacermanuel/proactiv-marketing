@@ -45,7 +45,7 @@ const ClaimGiftForm = ( ) => {
 
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen md:w-[55%]">
       <form id="formulario" className="flex flex-col px-4 py-8 mx-5 bg-white rounded-lg shadow-md relative">
         <p className="fontAlternative"> <span className="fontTitle" style={{ padding: "0"} }>FREE</span> to 100 Salon Owners - Value up to £653</p>
         <p className="fontTitle">Claim Your FREE Gift Today!</p>        

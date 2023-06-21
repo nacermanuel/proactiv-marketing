@@ -15,9 +15,12 @@
   --color-blue: #4a6bb6;
 }
 
-/* body{
-  font-family: 'Poppins', sans-serif;
-} */
+body{
+ display: flex;
+ flex-flow: column;
+ justify-content: center;
+ align-items: center;
+}
 
 .colorPrimary {
   color: var(--color-primary);

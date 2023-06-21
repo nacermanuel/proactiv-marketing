@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 
 const SoftwareSubscription = () => {
-  const [packages, setPackages] = useState("Diamond");
-  const [period, setPeriod] = useState("Quarterly");
+  const [packages, setPackages] = useState("Silver");
+  const [period, setPeriod] = useState("Monthly");
   const [total, setTotal] = useState();
   const [prize, setPrize] = useState({})
-  const [data, setData] = useState({fullname:'',businessname:'',email:'',number:'',industry:'',web:'',address:''})
+  const [data, setData] = useState({fullname:'',businessname:'',email:'',number:'',industry:'',web:'',address:'',periodselested:'Monthly', packageselected:'Silver'})
 
 
   const router = useRouter();
@@ -23,19 +23,29 @@ const SoftwareSubscription = () => {
 
     let dataStored = JSON.parse(localStorage.getItem('data'));
     if( dataStored.fullname?.length == 0 || dataStored.email.length == 0 || dataStored == 'undefined'){
-      setData({fullname:'none',businessname:'none',email:'none',number:'none',industry:'none',web:'none',address:'none'})
+      setData({...data, fullname:'none',businessname:'none',email:'none',number:'none',industry:'none',web:'none',address:'none',periodselested:'', packageselected:''})
+      console.log('entro a if falso');
     }else{
       setData({...data, fullname: dataStored.fullname , businessname: dataStored.businessname, email: dataStored.email, number: dataStored.number})
+      console.log('entro a if correcto');
+      console.log(dataStored.fullname);
     }    
 
   },[])
 
   const changePeriod = (e) => {
     setPeriod(e.target.value);
+    setData({...data,periodselested:e.target.value})
   };
   const changepack = (e) => {
     setPackages(e.target.value);
+    setData({...data,packageselected:e.target.value})
   };
+
+
+  // useEffect(()=>{
+  //   setData({...data,periodselested:period,packageselected:packages})
+  // },[packages,period])
 
   useEffect(() => {
     if (packages === "Silver") {
@@ -105,20 +115,6 @@ const SoftwareSubscription = () => {
         Congratulations on winning!!
       </p>
 
-      {/* <p className="fontTitle my-8 text-center">
-        You have won{" "}
-        <span className="fontTitle" style={{color: "rgba(246, 81, 59, 0.664)"}}>
-          6 months FREE + 6 months{" "}
-          <span className="fontTitle text-[1rem] font-bold">
-            <sup>1</sup>/<sub>2</sub>
-          </span>{" "}
-          price!!
-        </span>
-      </p> */}
-
-      {/* <p className="fontTitle my-8 text-center">
-        You have won {`6 Months FREE`} software valued &#163;{`XX,XX`} to use for free up to --date- (our DIAMOND package) 
-      </p> */}
 
       <p className="fontTitle text-center" style={{fontWeight: '700', color: '#4a6bb6'}}> <span className="underline">{prize.description}</span>  software subscription!!</p>
 
@@ -128,37 +124,7 @@ const SoftwareSubscription = () => {
         (NO CONTRACT - cancel at any time <br /> - 30 days notice)
       </p>
       
-      {/* <h4 className="mt-5 mb-3 colorThird">Sofware Components</h4>
-      <ul className="fontGeneral">
-        <li className="border p-1">
-          <span className="mx-5">1</span> Database
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">2</span> Referral Marketing &#40;NEW
-          Customers&#41;
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">3</span> Gift Cards &#40;Improve Cashflow&#41;
-        </li>
-        <li className="border p-1 flex gap-1">
-          <span className="mx-5">4</span>{" "}
-          <span>Loyalty / Incentives &#40;Increase revenue & Profits&#41;</span>
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">5</span> Digital Diary
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">6</span> Stock Control
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">7</span> Invoicing
-        </li>
-        <li className="border p-1">
-          <span className="mx-5">8</span> Email & Text Marketing
-        </li>
-      </ul> */}
 
-      
       <p className="fontGeneral pb-0 underline" style={{fontWeight: '700', color: '#4a6bb6', fontSize:'1.5rem'}}>Price After Free Trial</p>
 
       <div id="tables" className="flex flex-col w-[95%] border-2 mb-5">
@@ -217,37 +183,6 @@ const SoftwareSubscription = () => {
       </table>
       </div>
 
-
-      {/* <table className="w-full">
-        <thead>
-          <tr className="border-t">
-            <th className="resize-text py-1 px-0">Package</th>
-            <th className="resize-text py-1 px-0">Component</th>
-            <th className="resize-text py-1 px-0">Monthly</th>
-            <th className="resize-text py-1 px-0">Quarterly</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="border-b bg-neutral-200">
-            <td className="resize-text py-1 px-0">Silver</td>
-            <td className="resize-text py-1 px-0">2</td>
-            <td className="resize-text py-1 px-0">&#163;29.99</td>
-            <td className="resize-text py-1 px-0">&#163;79.99</td>
-          </tr>
-          <tr>
-            <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">4</td>
-            <td className="resize-text py-1 px-0">&#163;49.99</td>
-            <td className="resize-text py-1 px-0">&#163;135</td>
-          </tr>
-          <tr className="border-b bg-neutral-200">
-            <td className="resize-text py-1 px-0">Diamond</td>
-            <td className="resize-text py-1 px-0">8(all)</td>
-            <td className="resize-text py-1 px-0">&#163;59.99</td>
-            <td className="resize-text py-1 px-0">&#163;155</td>
-          </tr>
-        </tbody>
-      </table> */}
 
       <p className="fontGeneral pb-3" style={{textAlign: 'center', fontStyle: 'italic'}}>
         After your FREE trial, ONLY pay for what features you want to use. <br />
