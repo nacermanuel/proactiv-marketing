@@ -108,7 +108,7 @@ const CardsForm = ({estimate}) => {
         </label>        
         <input
           
-          value={(parseInt(addition))}
+          value={(parseInt(addition) - parseInt(freeCards) )}
           onChange={handleChange}
           type="number"
           placeholder="Please input number"
@@ -120,7 +120,7 @@ const CardsForm = ({estimate}) => {
         </label>        
         <input
           
-          value={(parseInt(addition) - parseInt(freeCards) )}
+          value={(parseInt(addition))}
           type="number"
           placeholder="Please input number"
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"

@@ -4,7 +4,8 @@ import React, { useEffect, useState } from 'react'
 const KeyfobsPrice = () => {
     const [customers, setCustomers] = useState(0) 
     const [price, setPrice] = useState(0.39)
-
+    const [rings, setRings] = useState(0)
+    const [optionsyes, setOptionsyes] = useState('Yes')
 
     useEffect(()=>{
         let averagecustomers = JSON.parse(localStorage.getItem('customers'));
@@ -12,6 +13,11 @@ const KeyfobsPrice = () => {
             setCustomers( parseInt(averagecustomers))
         }
     },[])
+
+
+    const includeRing = (e) =>{
+      setOptionsyes(e.target.value)
+    }
 
 
     const handleChange = (e) =>{
@@ -35,6 +41,9 @@ const KeyfobsPrice = () => {
       }else if((customers * 1) >= 10000 ){
         setPrice(0.22)
       }
+
+      setRings(Math.ceil(customers/100))
+
 
     },[customers])
 
@@ -97,7 +106,7 @@ const KeyfobsPrice = () => {
 
         
         <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
-          Average no. of customers per month <br />(1 KF per customers)
+          Number of customers
         </label>      
         <input
             type="number"
@@ -109,21 +118,101 @@ const KeyfobsPrice = () => {
             className="w-full px-2 py-2 mb-2 rounded-lg border border-gray-300 focusInput "
         />
 
-        <label htmlFor="Total Price" className="fontForm mb-1 w-full text-left">
+        {/* <label htmlFor="Total Price" className="fontForm mb-1 w-full text-left">
           Total price - EXTRA 50% discount today only
-        </label>         
+        </label>          */}
         <input
-          value={`£${((price*(customers*1))*0.5).toFixed(2).replace(',', '.')}`}
+          value={`£${((price*(customers*1))).toFixed(2).replace(',', '.')}`}
           type="text"
-          className="font-bold w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          className="w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
+        <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
+
+        <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
+          Today`s price
+        </label>         
+        <input 
+          value={`£${((price*(customers*1))*0.5).toFixed(2).replace(',', '.')}`}
+          type="text" 
+          className="font-bold text-[1.2rem] w-full px-2 pt-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+
+        <p className="fontSubTitle text-center" style={{fontSize: '1.5rem', fontWeight: '700', color: '#4a6bb6', lineHeight:'1.2'}}>
+          Split Rings <br /> Bag of 100 / £6
+        </p>
+
+        <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
+          Rings
+        </label>      
+        <input
+            type="number"
+            name="RINGS"
+            value={rings*100}
+            required
+            onChange={handleChange}
+            placeholder="Average no. of customers per month"
+            className="w-full px-2 py-2 mb-2 rounded-lg border border-gray-300 focusInput "
+        />
+        <input
+          value={`£${((6*rings)).toFixed(2).replace(',', '.')}`}
+          type="text"
+          className="w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+        <img className='rounded-lg md:w-[50%]' src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687585809/splitrings_oxa6ym.png" alt="ringbag" />
+
+
+        <label htmlFor="Todays price" className="fontForm w-full text-center mt-3">
+          Include:
+        </label> 
+        <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-3 w-[60%] rounded-lg md:justify-around">
+          <label className='text-[1.5rem] font-bold'>
+            <input
+              type="radio"
+              name="optionsyes"
+              value="Yes"
+              checked={optionsyes === "Yes" ? true : false}
+              onChange={includeRing}
+            />{" "}
+            Yes
+          </label>
+          <label className='text-[1.5rem] font-bold'>
+            <input
+              type="radio"
+              name="optionsyes"
+              value="No"
+              checked={optionsyes === "No" ? true : false}
+              onChange={includeRing}
+            />{" "}
+            No
+          </label>
+        </div>
+
+        <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
+
+        <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
+          Today`s price
+        </label>         
+        <input 
+          value={`£${((6*rings*0.5)).toFixed(2).replace(',', '.')}`}
+          type="text" 
+          className="font-bold text-[1.2rem] w-full px-2 pt-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+
+        <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
+          Total:
+        </label>         
+        <input 
+          value={`£${( optionsyes === 'Yes' ? (6*rings*0.5) + ((price*(customers*1))*0.5) : ((price*(customers*1))*0.5) ).toFixed(2).replace(',', '.')}`}
+          type="text" 
+          className="font-bold text-[1.5rem] w-full px-2 pt-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />        
 
         <button
           type="submit"
           className="px-4 py-2 buttonsMain mt-3"
           onClick={handleClick}
         >
-          Place Order
+          Continue
         </button>   
 
 

@@ -131,22 +131,22 @@ const SoftwareSubscription = () => {
       <table className="w-[100%] border rounded-lg mb-0 ">
         <thead>
           <tr>
-            <th className="resize-text py-1 px-0 w-[50%]">Package</th>
-            <th className="resize-text py-1 px-0 w-[50%]">Features</th>
+            <th className="resize-text py-1 px-0 w-[50%]" style={{border: 'none'}}>Package</th>
+            <th className="resize-text py-1 px-0 w-[50%]" style={{border: 'none'}}>Features</th>
           </tr>
         </thead>
         <tbody>
           <tr className="border-b bg-neutral-200">
-            <td className="resize-text py-1 px-0">Silver</td>
-            <td className="resize-text py-1 px-0">Database + 1</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>Silver</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>Database + 1</td>
           </tr>
           <tr className="border-b ">
-            <td className="resize-text py-1 px-0">Gold</td>
-            <td className="resize-text py-1 px-0">Database + 3</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>Gold</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>Database + 3</td>
           </tr>
           <tr className="border-b bg-neutral-200">
-            <td className="resize-text py-1 px-0">Diamond</td>
-            <td className="resize-text py-1 px-0">All 8</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>Diamond</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>All 8</td>
           </tr>
         </tbody>
       </table>
@@ -154,30 +154,30 @@ const SoftwareSubscription = () => {
       <table className="w-[100%] border rounded-lg mb-0">
         <thead>
           <tr>
-            <th className="w-[4%]"> </th>
-            <th className="resize-text py-1 px-0 w-[32%]">Monthly</th>
-            <th className="resize-text py-1 px-0 w-[32%]">Quarterly</th>
-            <th className="resize-text py-1 px-0 w-[32%]">Annually</th>
+            <th className="w-[4%]" style={{border: 'none'}}> </th>
+            <th className="resize-text py-1 px-0 w-[32%]" style={{border: 'none'}}>Monthly</th>
+            <th className="resize-text py-1 px-0 w-[32%]" style={{border: 'none'}}>Quarterly</th>
+            <th className="resize-text py-1 px-0 w-[32%]" style={{border: 'none'}}>Annually</th>
           </tr>
         </thead>
         <tbody>
           <tr className="border-b bg-neutral-200">
-            <td>S.</td>
-            <td className="resize-text py-1 px-0">&#163;30.00</td>
-            <td className="resize-text py-1 px-0">&#163;80.00</td>
-            <td className="resize-text py-1 px-0">&#163;299.00</td>
+            <td style={{border: 'none'}}>S.</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;30.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;80.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;299.00</td>
           </tr>
           <tr className="border-b">
-            <td>G.</td>
-            <td className="resize-text py-1 px-0">&#163;50.00</td>
-            <td className="resize-text py-1 px-0">&#163;135.00</td>
-            <td className="resize-text py-1 px-0">&#163;499.00</td>
+            <td style={{border: 'none'}}>G.</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;50.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;135.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;499.00</td>
           </tr>
           <tr className="border-b bg-neutral-200">
-            <td>D.</td>
-            <td className="resize-text py-1 px-0">&#163;70.00</td>
-            <td className="resize-text py-1 px-0">&#163;180.00</td>
-            <td className="resize-text py-1 px-0">&#163;589.00</td>
+            <td style={{border: 'none'}}>D.</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;70.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;180.00</td>
+            <td className="resize-text py-1 px-0" style={{border: 'none'}}>&#163;589.00</td>
           </tr>          
         </tbody>
       </table>
