@@ -7,12 +7,12 @@ const KeyfobsPrice = () => {
     const [rings, setRings] = useState(0)
     const [optionsyes, setOptionsyes] = useState('Yes')
 
-    useEffect(()=>{
-        let averagecustomers = JSON.parse(localStorage.getItem('customers'));
-        if(averagecustomers != ''){
-            setCustomers( parseInt(averagecustomers))
-        }
-    },[])
+    // useEffect(()=>{
+    //     let averagecustomers = JSON.parse(localStorage.getItem('customers'));
+    //     if(averagecustomers != ''){
+    //         setCustomers( parseInt(averagecustomers))
+    //     }
+    // },[])
 
 
     const includeRing = (e) =>{
@@ -106,7 +106,7 @@ const KeyfobsPrice = () => {
 
         
         <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
-          Number of customers
+          Total number of customers
         </label>      
         <input
             type="number"
@@ -114,13 +114,13 @@ const KeyfobsPrice = () => {
             value={customers}
             required
             onChange={handleChange}
-            placeholder="Average no. of customers per month"
+            placeholder="Input total number of customers"
             className="w-full px-2 py-2 mb-2 rounded-lg border border-gray-300 focusInput "
         />
 
-        {/* <label htmlFor="Total Price" className="fontForm mb-1 w-full text-left">
-          Total price - EXTRA 50% discount today only
-        </label>          */}
+        <label htmlFor="Total Price" className="fontForm mb-1 w-full text-left">
+          Total Keyfob price
+        </label>         
         <input
           value={`£${((price*(customers*1))).toFixed(2).replace(',', '.')}`}
           type="text"
@@ -129,7 +129,7 @@ const KeyfobsPrice = () => {
         <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
 
         <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
-          Today`s price
+          Today`s total
         </label>         
         <input 
           value={`£${((price*(customers*1))*0.5).toFixed(2).replace(',', '.')}`}
@@ -138,10 +138,10 @@ const KeyfobsPrice = () => {
         />
 
         <p className="fontSubTitle text-center" style={{fontSize: '1.5rem', fontWeight: '700', color: '#4a6bb6', lineHeight:'1.2'}}>
-          Split Rings <br /> Bag of 100 / £6
+          Split Rings <br /> Bag of 100 rings / £6
         </p>
 
-        <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
+        {/* <label htmlFor="Average no. of customers per month" className="fontForm mb-1 w-full text-left">
           Rings
         </label>      
         <input
@@ -157,11 +157,11 @@ const KeyfobsPrice = () => {
           value={`£${((6*rings)).toFixed(2).replace(',', '.')}`}
           type="text"
           className="w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
+        /> */}
         <img className='rounded-lg md:w-[50%]' src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687585809/splitrings_oxa6ym.png" alt="ringbag" />
+        <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
 
-
-        <label htmlFor="Todays price" className="fontForm w-full text-center mt-3">
+        <label htmlFor="Todays price" className="fontForm w-full text-center mt-1">
           Include:
         </label> 
         <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-3 w-[60%] rounded-lg md:justify-around">
@@ -187,9 +187,9 @@ const KeyfobsPrice = () => {
           </label>
         </div>
 
-        <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
 
-        <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
+
+        {/* <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
           Today`s price
         </label>         
         <input 
@@ -205,7 +205,7 @@ const KeyfobsPrice = () => {
           value={`£${( optionsyes === 'Yes' ? (6*rings*0.5) + ((price*(customers*1))*0.5) : ((price*(customers*1))*0.5) ).toFixed(2).replace(',', '.')}`}
           type="text" 
           className="font-bold text-[1.5rem] w-full px-2 pt-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />        
+        />         */}
 
         <button
           type="submit"

@@ -22,7 +22,7 @@ const SoftwareForYou = () => {
                 <li className="fontAlternative" style={{fontSize:'1rem'}}>Contact all or a chosen selection of your clients in one?   </li>
             </ul>           
         </div>
-        <p className="fontGeneral py-4" style={{textAlign: 'center', padding:'10px 15px 10px 15px'}}>Now is your chance to have more control of your business and to be able to influence your clients in a subtle & professional manner.</p>
+        <p className="fontGeneral py-4" style={{textAlign: 'center', padding:'10px 15px 10px 15px', color: '#d15d4ea9', fontSize:'1rem'}}>Now is your chance to have more control of your business and to be able to influence your clients in a subtle & professional manner.</p>
 
       </div>
 
