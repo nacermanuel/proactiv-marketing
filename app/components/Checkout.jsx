@@ -38,7 +38,7 @@ const Checkout = () => {
     useEffect(()=>{
 
         if(keyfobdata != ''){
-            setKftotal((keyfobdata.customers * keyfobdata.price).toFixed(2).replace(',', '.') )
+            setKftotal(((keyfobdata.customers * keyfobdata.price) * 0.5).toFixed(2).replace(',', '.') )
 
             if(keyfobdata.addrings == 'No'){
                 setSrtotal('0.00')
@@ -93,7 +93,7 @@ const Checkout = () => {
           </tr>
           <tr className="border-b bg-[#96cfd1]">
             <td className="resize-text py-1 px-2">
-                { cardsdata.needed + 100} Cards <br />
+                { cardsdata.needed + 100} Cards - ( {cardsdata.option} ) <br />
                 (100 free cards + { cardsdata.needed })
             </td>
             <td className="resize-text py-1 px-2">&#163; {cTotal} </td>
@@ -131,6 +131,7 @@ const Checkout = () => {
             required
             // onChange={handleChange}
             placeholder="1234 1234 1234 1234"
+            maxLength="12"
             className="w-[85%] px-2 py-2 mb-2 rounded-lg border border-gray-300 focusInput "
         />   
 

@@ -55,6 +55,15 @@ const CardsForm = ({estimate}) => {
 
     },[addition])
 
+
+    useEffect(()=>{
+      console.log('cambio por price')
+      console.log(price);
+      console.log(parseInt(addition) - parseInt(freeCards));
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+    },[price])
+
+
     const handelChangePayment = (e) => {
       setPaymentOption(e.target.value)
     }

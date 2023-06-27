@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 const KeyfobsPrice = () => {
     const [customers, setCustomers] = useState(0) 
     const [price, setPrice] = useState(0.39)
-    const [rings, setRings] = useState(0)
+    const [bagsRings, setBagsrings] = useState(0)
     const [optionsyes, setOptionsyes] = useState('Yes')
 
     const router = useRouter();
@@ -45,7 +45,7 @@ const KeyfobsPrice = () => {
         setPrice(0.22)
       }
 
-      setRings(Math.ceil(customers/100))
+      setBagsrings(Math.ceil(customers/100))
 
 
     },[customers])
@@ -178,7 +178,7 @@ const KeyfobsPrice = () => {
         <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
 
         <label htmlFor="Todays price" className="fontForm w-full text-center mt-1">
-          Include:
+          Include {bagsRings} bags for £{bagsRings*3}
         </label> 
         <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-3 w-[60%] rounded-lg md:justify-around">
           <label className='text-[1.5rem] font-bold'>
