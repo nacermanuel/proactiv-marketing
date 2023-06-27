@@ -1,5 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation';
 
 const KeyfobsPrice = () => {
     const [customers, setCustomers] = useState(0) 
@@ -7,6 +8,8 @@ const KeyfobsPrice = () => {
     const [rings, setRings] = useState(0)
     const [optionsyes, setOptionsyes] = useState('Yes')
 
+    const router = useRouter();
+    
     // useEffect(()=>{
     //     let averagecustomers = JSON.parse(localStorage.getItem('customers'));
     //     if(averagecustomers != ''){
@@ -50,6 +53,19 @@ const KeyfobsPrice = () => {
 
     const handleClick = (e) =>{
         e.preventDefault()
+
+
+        if( customers < 0 ){
+            alert('Invalid number')
+        } else{    
+          
+          localStorage.setItem('keyfobs', JSON.stringify({customers: customers, price: price, addrings: optionsyes}));
+          
+          router.push('/funnel/order');
+        }        
+
+
+
     }
 
 
