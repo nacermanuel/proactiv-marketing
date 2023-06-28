@@ -24,14 +24,14 @@ const Celebration = ({result}) => {
 
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-        // Call your action here
-        localStorage.setItem('software', JSON.stringify(result));
-        router.push('/funnel/software');
+        // const timer = setTimeout(() => {
+        // // Call your action here
+        // localStorage.setItem('software', JSON.stringify(result));
+        // router.push('/funnel/software');
 
-        }, 5000);
+        // }, 5000);
 
-        return () => clearTimeout(timer); // Clean up the timer on component unmount
+        // return () => clearTimeout(timer); // Clean up the timer on component unmount
 
     }, []);    
 
@@ -52,7 +52,7 @@ const Celebration = ({result}) => {
             software use. 
             <br />
             <br className="my-2" />           
-            <span className='outlined-text ' style={{fontWeight: '700', fontSize:'2.5rem'}}>Valued &#163;{result.valued}</span>
+            <span className='outlined-red ' style={{fontWeight: '700', fontSize:'2.5rem'}}>Valued @ &#163;{result.valued}</span>
             <br />
             to use for free up to 
             <br />
