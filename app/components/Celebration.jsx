@@ -24,14 +24,14 @@ const Celebration = ({result}) => {
 
 
     useEffect(() => {
-        // const timer = setTimeout(() => {
-        // // Call your action here
-        // localStorage.setItem('software', JSON.stringify(result));
-        // router.push('/funnel/software');
+        const timer = setTimeout(() => {
+        // Call your action here
+        localStorage.setItem('software', JSON.stringify(result));
+        router.push('/funnel/software');
 
-        // }, 5000);
+        }, 5000);
 
-        // return () => clearTimeout(timer); // Clean up the timer on component unmount
+        return () => clearTimeout(timer); // Clean up the timer on component unmount
 
     }, []);    
 
