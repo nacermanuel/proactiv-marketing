@@ -6,7 +6,7 @@ const SoftwareForYou = () => {
 
       <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative md:w-[52%]">
 
-        <p className="fontTitle" style={{fontWeight:'700'}}>The software if for you if you...</p>
+        <p className="fontTitle" style={{fontWeight:'700'}}>The software is for you if you...</p>
         <div className="custom-bullets rounded-lg shadow-lg w-[90%] py-3 mb-4">
             <ul>
                 <li className="fontAlternative" style={{fontSize:'1rem'}}>Would like to attract new clients for free without advertising? </li>
