@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation';
 
 const Checkout = () => {
     const [softwaredata, setSoftwaredata] = useState('');
@@ -8,6 +9,8 @@ const Checkout = () => {
     const [cTotal, setCtotal] = useState('')
     const [kfTotal, setKftotal] = useState('')
     const [srTotal, setSrtotal] = useState('')
+
+    const router = useRouter();
 
     useEffect(()=>{
         let storageSoft = JSON.parse(localStorage.getItem('software'));
@@ -54,7 +57,8 @@ const Checkout = () => {
 
     const handleClick = (e) =>{
         e.preventDefault()
-
+        
+        router.push('/funnel/thanks');
 
         // if( customers < 0 ){
         //     alert('Invalid number')
