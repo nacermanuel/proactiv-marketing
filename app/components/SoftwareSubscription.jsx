@@ -89,7 +89,7 @@ const SoftwareSubscription = () => {
       data.email.length == 0 || 
       data.number.length == 0 ||
       data.industry.length == 0 ||
-      // data.web.length == 0 ||
+      data.web.length == 0 ||
       data.address.length == 0 
       ){
         alert('Complete the fields')
@@ -200,7 +200,7 @@ const SoftwareSubscription = () => {
         Please choose your package after free trial period:
       </p>
 
-      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 mb-1 w-[95%] md:justify-around">
+      <div className="flex gap-4 justify-center items-center fontGeneral py-2 border-2 w-[95%] md:justify-around">
         <label className="text-red-700 text-[1rem]" style={{fontWeight: '700'}}>
           <input
             type="radio"
@@ -234,7 +234,12 @@ const SoftwareSubscription = () => {
           Diamond
         </label>
       </div>
-      <p className="mb-3 text-[0.8rem] text-center">Extra special offer - Diamond plan for the price of gold for life.</p>
+      <div className="bg-[#d15d4ea9] w-[95%] my-2">
+        <p className="my-1 text-[1rem] text-center text-white" style={{ fontWeight: '500' }}>
+          Extra special offer! <br />
+         Diamond plan for the price of gold for life
+        </p>
+      </div>
       
       <div className="flex justify-center items-center gap-4 fontGeneral py-2 border-2 mb-5 w-[95%] md:justify-around">
         <label>
@@ -320,7 +325,7 @@ const SoftwareSubscription = () => {
           id="Industry"
           type="text"
           name="industry"
-          placeholder="Industry"
+          placeholder="*Industry"
           onChange={handleChange}
           value={data.industry}  
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
@@ -358,7 +363,7 @@ const SoftwareSubscription = () => {
           id="web"
           type="text"
           name="web"
-          placeholder="Website Address"
+          placeholder="*Website Address"
           onChange={handleChange}
           value={data.web} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"
@@ -371,7 +376,7 @@ const SoftwareSubscription = () => {
           id="Address"
           type="text"
           name="address"
-          placeholder="Address"
+          placeholder="*Postal Address"
           onChange={handleChange}
           value={data.address} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"

@@ -5,7 +5,7 @@ const ReferalMktText = () => {
 
       <div className="flex flex-col mx-5 my-4 pb-2 items-center bg-white rounded-lg shadow-md relative">
 
-      <p className="fontTitle" style={{fontWeight:'700'}}>Watch The Short Video And Read The Text</p>
+      <p className="fontTitle" style={{fontWeight:'700'}}>Watch This Short Video</p>
 
       <video controls className="w-[80vw] rounded-md md:w-[45%]" poster={"https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686090940/pos_w900d9.png"}>
         <source src={'https://res.cloudinary.com/dbhtt5ozr/video/upload/v1686088948/VIDEO_2_FINAL_v4_1_ithsyz.mp4'} type="video/mp4" />
