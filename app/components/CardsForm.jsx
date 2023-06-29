@@ -12,7 +12,7 @@ const CardsForm = ({estimate}) => {
     const [deliveryPrice] = useState(14.00)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [addition, setAddition] = useState(estimate);
-    const [paymentOption, setPaymentOption] = useState('£50.00')
+    const [paymentOption, setPaymentOption] = useState('£51.50')
     const [cardsData, setCardsData] = useState({needed:(estimate-100), totaldue: 0 , payment:0, option:''})
     
     const router = useRouter();
@@ -36,7 +36,7 @@ const CardsForm = ({estimate}) => {
 
     useEffect(()=>{
 
-      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'full payment':'deposit') })
 
       if((addition-freeCards) >= 1 && (addition-freeCards) <= 499 ){
         setPrice(0.53)
@@ -60,7 +60,7 @@ const CardsForm = ({estimate}) => {
       console.log('cambio por price')
       console.log(price);
       console.log(parseInt(addition) - parseInt(freeCards));
-      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'full payment':'deposit') })
     },[price])
 
 
@@ -78,8 +78,8 @@ const CardsForm = ({estimate}) => {
       // alert(`${deposit} ${ full} ${typeof deposit} ${typeof full}`)
       if (deposit > full ){
         alert('Deposit can be higher than the total.')
-      }else if (deposit < 50 ){
-        alert('The minimum deposit is £50.00')
+      }else if (deposit < 51.50 ){
+        alert('The minimum deposit is £51.50')
       }else{
         localStorage.setItem('cardsdata', JSON.stringify(cardsData));
         router.push('/funnel/keyfobs');
@@ -87,7 +87,7 @@ const CardsForm = ({estimate}) => {
     }
 
     useEffect(()=>{
-      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'fullpayment':'deposit') })
+      setCardsData({needed:(addition-freeCards), totaldue: ((price * (parseInt(addition) - parseInt(freeCards))) + 37.5 + 14) , payment: parseFloat(paymentOption.replace('£','')), option: (selectedOption?'full payment':'deposit') })
       
     },[paymentOption])
 
@@ -239,7 +239,7 @@ const CardsForm = ({estimate}) => {
             <input 
               className="mr-1" 
               type="radio" 
-              name="fullpayment" 
+              name="full payment" 
               checked={selectedOption}
               onChange={()=>setSelectedOption(true)} 
             />  <p>Full Payment</p>
@@ -255,7 +255,7 @@ const CardsForm = ({estimate}) => {
             /> 
 
             <div className="flex flex-col justify-center items-center">
-            <p>Deposit</p><p className="mb-0 text-xs" style={{textAlign:'center'}}>(min £50)</p> 
+            <p>Deposit</p><p className="mb-0 text-xs" style={{textAlign:'center'}}>(min £51.50)</p> 
             </div>
           </div>
         </div>

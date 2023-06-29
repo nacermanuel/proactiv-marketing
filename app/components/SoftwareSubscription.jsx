@@ -363,7 +363,7 @@ const SoftwareSubscription = () => {
           id="web"
           type="text"
           name="web"
-          placeholder="*Website Address"
+          placeholder="Website Address"
           onChange={handleChange}
           value={data.web} 
           className="px-4 py-2 mb-4 rounded-lg border border-gray-300 focusInput"

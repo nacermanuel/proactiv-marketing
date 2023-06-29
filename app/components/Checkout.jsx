@@ -9,6 +9,7 @@ const Checkout = () => {
     const [cTotal, setCtotal] = useState('')
     const [kfTotal, setKftotal] = useState('')
     const [srTotal, setSrtotal] = useState('')
+    const [deposit, setDeposit] = useState((parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)))
 
     const router = useRouter();
 
@@ -30,7 +31,7 @@ const Checkout = () => {
 
     useEffect(()=>{
         if(cardsdata != ''){
-            if(cardsdata.option == 'fullpayment'){
+            if(cardsdata.option == 'full payment'){
                 setCtotal(cardsdata.totaldue.toFixed(2).replace(',', '.'))
             } else{
                 setCtotal(cardsdata.payment.toFixed(2).replace(',', '.'))
@@ -53,7 +54,14 @@ const Checkout = () => {
 
     },[keyfobdata])
 
+    useEffect(()=>{
+      setDeposit((parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)))
+    },[cTotal,kfTotal,srTotal])
 
+
+    const handleDeposit = (e)=>{
+      setDeposit(e.target.value)
+    }
 
     const handleClick = (e) =>{
         e.preventDefault()
@@ -89,16 +97,17 @@ const Checkout = () => {
         <tbody>
           <tr className="border-b bg-[#ffffff]">
             <td className="resize-text py-1 px-2">
-                Software Subscription 
-                <br /> {softwaredata.description}
+              Referral Marketing Cards
+                {/* Software Subscription 
+                <br /> {softwaredata.description} */}
 
             </td>
-            <td className="resize-text py-1 px-2">&#163; 0.00</td>
+            <td className="resize-text py-1 px-2">FREE</td>
           </tr>
           <tr className="border-b bg-[#96cfd1]">
             <td className="resize-text py-1 px-2">
-                { cardsdata.needed + 100} Cards - ( {cardsdata.option} ) <br />
-                (100 free cards + { cardsdata.needed })
+                { cardsdata.needed } Additional Cards <br /> ( {cardsdata.option} ) <br />
+                {/* (100 free cards + { cardsdata.needed }) */}
             </td>
             <td className="resize-text py-1 px-2">&#163; {cTotal} </td>
           </tr>
@@ -118,7 +127,32 @@ const Checkout = () => {
         </tbody>
       </table>
 
-        <p className="fontTitle text-center" style={{ fontWeight:'700', color:'black' , margin: '5px 0 10px 0'}}>Total: &#163;{ (parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)).toFixed(2).replace(',', '.') }</p>      
+      <div className='w-[95%] flex items-center pt-3'>
+        <p className="fontTitle  w-[80%]" style={{ fontWeight:'700', color:'black' , margin: '3px 0 4px 0', fontSize:'1rem' , padding: '0 0 0 0', textAlign:'end'}}>Total:</p>
+        <p className="fontTitle text-center w-[20%]" style={{ fontWeight:'700', color:'black' , margin: '3px 0 4px 0', fontSize:'1rem', padding: '0 0 0 0'}}>&#163;{ (parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)).toFixed(2).replace(',', '.') }</p>
+      </div>
+
+      <div className='w-[95%] flex items-center pt-3'>
+        <p className="fontTitle w-[80%]" style={{ fontWeight:'700', color:'black' , margin: '3px 0 4px 0', fontSize:'0.8rem', padding: ' 0 5px 0 0', textAlign:'end'}}>Deposit (today):</p>
+        {/* <p className="fontTitle text-center" style={{ fontWeight:'700', color:'black' , margin: '5px 0 10px 0'}}>&#163;{ (parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)).toFixed(2).replace(',', '.') }</p> */}
+        <input 
+          type="number"
+          name='deposit'
+          value={deposit}
+          onChange={handleDeposit}
+          className="font-bold w-[20%] h-fit px-1 py-1 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+
+      <div className='w-[95%] flex items-center pt-3'>
+        <p className="fontTitle w-[80%]" style={{ fontWeight:'700', color:'black' , margin: '3px 0 4px 0', fontSize:'0.8rem', padding: ' 0 5px 0 0', textAlign:'end'}}>Balance Due (before despatch):</p>
+        {/* <p className="fontTitle text-center" style={{ fontWeight:'700', color:'black' , margin: '5px 0 10px 0'}}>&#163;{ (parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal)).toFixed(2).replace(',', '.') }</p> */}
+        <input 
+          type="number"
+          value={(parseFloat(cTotal) + parseFloat(kfTotal) + parseFloat(srTotal))-deposit}
+          className="font-bold w-[20%] h-fit px-1 py-1 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
 
 
         {/* PAYMENT METHOD */}

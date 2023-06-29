@@ -145,7 +145,7 @@ const KeyfobsPrice = () => {
         <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
 
         <label htmlFor="Todays price" className="fontForm mb-1 w-full text-left">
-          Today`s total
+          Today`s price
         </label>         
         <input 
           value={`£${((price*(customers*1))*0.5).toFixed(2).replace(',', '.')}`}
@@ -153,7 +153,7 @@ const KeyfobsPrice = () => {
           className="font-bold text-[1.2rem] w-full px-2 pt-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
 
-        <p className="fontSubTitle text-center" style={{fontSize: '1.5rem', fontWeight: '700', color: '#4a6bb6', lineHeight:'1.2'}}>
+        <p className="fontSubTitle text-center" style={{fontSize: '1.5rem', fontWeight: '700', color: '#4a6bb6', lineHeight:'1.2', paddingBottom: '5px'}}>
           Split Rings <br /> Bag of 100 rings / £6
         </p>
 
@@ -174,8 +174,8 @@ const KeyfobsPrice = () => {
           type="text"
           className="w-full px-2 py-2 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         /> */}
-        <img className='rounded-lg md:w-[50%]' src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687585809/splitrings_oxa6ym.png" alt="ringbag" />
         <p className="text-red-700 text-[1.5rem]" style={{fontWeight: '700'}}>50% DISCOUNT TODAY!</p>
+        <img className='rounded-lg md:w-[50%]' src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687585809/splitrings_oxa6ym.png" alt="ringbag" />
 
         <label htmlFor="Todays price" className="fontForm w-full text-center mt-1">
           Include {bagsRings} bags for £{bagsRings*3}
