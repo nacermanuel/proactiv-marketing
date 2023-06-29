@@ -99,7 +99,7 @@ export const Spinning = ({setCongrats,setResult}) => {
       {/* <p className="fontTitle">Spin The Wheel</p> */}
       {/* <p className="fontSubTitle whitespace-nowrap">To See How Many Free Months Use You Get</p>          */}
       <p className='fontTitle' style={{paddingBottom: "0", fontWeight:'600'}}>Spin The Wheel</p>
-      <p className="fontAlternative" style={{ paddingTop: "0.5rem" , fontSize: "1.2rem" , textAlign: 'justify'}}> To See How Many Free Months Use Of The Software You Win To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards <span className='italic' style={{fontSize:'0.8rem'}}>[total value up to £53]</span></p>         
+      <p className="fontAlternative" style={{ paddingTop: "0.5rem" , fontSize: "1.2rem" , textAlign: 'justify'}}> To See How Many Free Months Use Of The Software You Win To Go With Your <span className='font-bold text-[#ff0000]'>100 FREE</span>  Plastic Referral Marketing Cards <span className='italic' style={{fontSize:'0.8rem'}}>[total value up to £653]</span></p>         
 
 
       <div id='DIVsoftwarecomponents' className='flex flex-col justify-center items-center w-[90%] rounded-lg shadow-lg pb-2 mb-3 bg-[#ebebeb86]'>
@@ -107,42 +107,50 @@ export const Spinning = ({setCongrats,setResult}) => {
         <ul className="fontGeneral">
           <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className=' w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%]' style={{textAlign: 'start'}}>1.- Database</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>1.-</p>
+              <p className='fontGeneral w-[100%]' style={{textAlign: 'start' , padding:'0 0 0 0'}}> Database</p>
             </div>
             <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%]' style={{textAlign: 'start'}}>2.- Telephone / Email Marketing</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>2.-</p>              
+              <p className='fontGeneral w-[100%]' style={{textAlign: 'start', padding:'0 0 0 0'}}>Telephone / Email Marketing</p>
             </div>
           </li>
 
           <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start'}}>3.- Referral Marketing</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>3.-</p> 
+              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start', padding:'0 0 0 0'}}>Referral Marketing</p>
             </div>
             <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%]' style={{textAlign: 'start'}}>4.- Gift Cards</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>4.-</p>               
+              <p className='fontGeneral w-[100%]' style={{textAlign: 'start', padding:'0 0 0 0'}}>Gift Cards</p>
             </div>
           </li>
 
           <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start'}}>5.- Loyalty / Incentive Marketing</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>5.-</p>                
+              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start', padding:'0 0 0 0'}}>Loyalty / Incentive Marketing</p>
             </div>
             <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%]' style={{textAlign: 'start'}}>6.- Diary System</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>6.-</p>                
+              <p className='fontGeneral w-[100%]' style={{textAlign: 'start', padding:'0 0 0 0'}}>Diary System</p>
             </div>
           </li>
 
 
           <li className=" flex justify-around items-center h-fit border-2 border-[#a52a2a49] py-1">
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start'}}>7.- Stock Control</p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>7.-</p>  
+              <p className='fontGeneral w-[100%] text-center' style={{textAlign: 'start', padding:'0 0 0 0'}}>Stock Control</p>
             </div>
             <span className='w-[2px] h-[30px] bg-[#a52a2a49]'></span>
             <div className='w-[95%] h-[100%] flex justify-center items-center'>
-              <p className='fontGeneral w-[100%]' style={{textAlign: 'start'}}>8.- Invoicing </p>
+              <p className='fontGeneral' style={{textAlign: 'start', padding: '0 4px 0 2px'}}>8.-</p>                
+              <p className='fontGeneral w-[100%]' style={{textAlign: 'start', padding:'0 0 0 0'}}>Invoicing </p>
             </div>
           </li>
         </ul>
