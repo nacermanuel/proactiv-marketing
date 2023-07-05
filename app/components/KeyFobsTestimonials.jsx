@@ -11,10 +11,10 @@ const KeyFobsTestimonials = () => {
 
             <div className="carousel-wrapper w-[90%] h-auto ">
                 <span id="item-1"></span>
-                {/* <span id="item-2"></span>
+                <span id="item-2"></span>
                 <span id="item-3"></span>
                 <span id="item-4"></span>
-                <span id="item-5"></span> */}
+                {/* <span id="item-5"></span> */}
 
                 {/* ITEM OPEN */}
                 <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-1 shadow-lg bg-[#d6d6d665]">
@@ -37,49 +37,53 @@ const KeyFobsTestimonials = () => {
 
                 
                 {/* ITEM OPEN */}
-                {/* <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-2 shadow-lg bg-[#d6d6d665]">
-                    <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687151480/BENTLEYS_Mesa_de_trabajo_1_wzvoxb.png" alt="" />
+                <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-2 shadow-lg bg-[#d6d6d665]">
+                    {/* <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687151480/BENTLEYS_Mesa_de_trabajo_1_wzvoxb.png" alt="" /> */}
                     <div className="flex flex-col justify-between items-center gap-2 mt-2">
+                        <p className='fontTitle' style={{color:'#4a6bb6'}}>Mandy Anderson</p>
                         <p className="fontGeneral">
                             &quot;
-                            Our customers always comment on how good the appointment cards look. They are excellent value for money. We have saved lots on printing costs since we introduced them.
+                            We have used this company for a number of years to supply our MOT/service keyfob reminders. Their product is good quality and delivery is prompt. Overall they are a decent company to do business with and we don't get bombarded with marketing calls or material from them.
+
                             &quot;
                         </p>
                     </div>
                     <a className="arrow arrow-prev" href="#item-1"></a>
                     <a className="arrow arrow-next" href="#item-3"></a>
-                </div> */}
+                </div>
                 {/* ITEM CLOSE */}
 
                 {/* ITEM OPEN */}
-                {/* <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-3 shadow-lg bg-[#d6d6d665]">
-                    <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687152031/scco-1_Mesa_de_trabajo_1_copia_jcyesi.png" alt="" />
+                <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-3 shadow-lg bg-[#d6d6d665]">
+                    {/* <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687152031/scco-1_Mesa_de_trabajo_1_copia_jcyesi.png" alt="" /> */}
                     <div className="flex flex-col justify-between items-center gap-2">
+                        <p className='fontTitle' style={{color:'#4a6bb6'}}>Neil Barrett</p>
                         <p className="fontGeneral">
                             &quot;
-                            People are bringing their cards back. Our issue with customers forgetting their appointments is now a thing of the past.
+                            I've used the olastic kev fobs as service reminders but they also double up for making sure our customers have our contact details to hand. We have a lot of repeat customers who re-use the key fobs which saves me ordering more, they've lasted years already, Happy with the product and service
                             &quot;
                         </p>
                     </div>
                     <a className="arrow arrow-prev" href="#item-2"></a>
                     <a className="arrow arrow-next" href="#item-4"></a>
-                </div> */}
+                </div>
                 {/* ITEM CLOSE */}
 
 
                 {/* ITEM OPEN */}
-                {/* <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-4 shadow-lg bg-[#d6d6d665]">
-                    <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687152301/Sinsssaaaa_t%C3%ADtulo-1-03_j4n92h.png" alt="" />
+                <div className="flex flex-col justify-center h-[70vh] items-center carousel-item rounded-lg item-4 shadow-lg bg-[#d6d6d665]">
+                    {/* <img className="rounded-lg" style={{height:'5rem' , marginBottom: '10px'}} src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1687152301/Sinsssaaaa_t%C3%ADtulo-1-03_j4n92h.png" alt="" /> */}
                     <div className="flex flex-col justify-between items-center gap-2">
+                        <p className='fontTitle' style={{color:'#4a6bb6'}}>Donald Beckett</p>
                         <p className="fontGeneral">
                             &quot;
-                            We are finding customers are now bringing their cards in so they are working very well for us.
+                            I purchased key fobs for my mobility shop as a reminder for our customers to service their scooters. I'm very happy with the quality of the key fobs and I expect our customers will be re-using them after each service.
                             &quot;
                         </p>
                     </div>
                     <a className="arrow arrow-prev" href="#item-3"></a>
                     <a className="arrow arrow-next" href="#item-1"></a>
-                </div> */}
+                </div>
                 {/* ITEM CLOSE */}
 
 

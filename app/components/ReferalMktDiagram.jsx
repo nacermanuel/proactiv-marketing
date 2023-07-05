@@ -15,7 +15,7 @@ const ReferalMktDiagram = () => {
             <Image fill src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686092919/Captura_de_pantalla_2023-06-06_180710_b16wfs.png" alt="diagram" />
         </div> */}
 
-        <img src="https://res.cloudinary.com/dbhtt5ozr/image/upload/v1686092919/Captura_de_pantalla_2023-06-06_180710_b16wfs.png" alt="diagram" />
+        <img className="w-[90%]" src="https://res.cloudinary.com/dbew7ibhf/image/upload/v1688568479/Diagram_abrv2r.png" alt="diagram" />
 
         </div>
 
