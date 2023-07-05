@@ -43,7 +43,7 @@ const KeyFobsTestimonials = () => {
                         <p className='fontTitle' style={{color:'#4a6bb6'}}>Mandy Anderson</p>
                         <p className="fontGeneral">
                             &quot;
-                            We have used this company for a number of years to supply our MOT/service keyfob reminders. Their product is good quality and delivery is prompt. Overall they are a decent company to do business with and we don't get bombarded with marketing calls or material from them.
+                            We have used this company for a number of years to supply our MOT/service keyfob reminders. Their product is good quality and delivery is prompt. Overall they are a decent company to do business with and we don`t get bombarded with marketing calls or material from them.
 
                             &quot;
                         </p>
@@ -60,7 +60,7 @@ const KeyFobsTestimonials = () => {
                         <p className='fontTitle' style={{color:'#4a6bb6'}}>Neil Barrett</p>
                         <p className="fontGeneral">
                             &quot;
-                            I've used the olastic kev fobs as service reminders but they also double up for making sure our customers have our contact details to hand. We have a lot of repeat customers who re-use the key fobs which saves me ordering more, they've lasted years already, Happy with the product and service
+                            I`ve used the olastic kev fobs as service reminders but they also double up for making sure our customers have our contact details to hand. We have a lot of repeat customers who re-use the key fobs which saves me ordering more, they`ve lasted years already, Happy with the product and service
                             &quot;
                         </p>
                     </div>
@@ -77,7 +77,7 @@ const KeyFobsTestimonials = () => {
                         <p className='fontTitle' style={{color:'#4a6bb6'}}>Donald Beckett</p>
                         <p className="fontGeneral">
                             &quot;
-                            I purchased key fobs for my mobility shop as a reminder for our customers to service their scooters. I'm very happy with the quality of the key fobs and I expect our customers will be re-using them after each service.
+                            I purchased key fobs for my mobility shop as a reminder for our customers to service their scooters. I`m very happy with the quality of the key fobs and I expect our customers will be re-using them after each service.
                             &quot;
                         </p>
                     </div>
